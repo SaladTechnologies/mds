@@ -6,7 +6,7 @@ The test.py is run When the container starts:
 
 (2)Run the OpenMM benchmark.py to conduct the test using 5 models and print the results.
 
-(3)Send the result to Salad's job recording System.
+(3)Send the result to Salad's job recording System (AWS DynamoDB).
 
 (4)Exit.
 
@@ -107,4 +107,4 @@ REPORTING_API_KEY: ******
 
 DURATION: 60
 
-DEVICE: CUDA
+DEVICE: CPU

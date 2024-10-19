@@ -6,7 +6,7 @@ The gromacs_test.py is run when the container starts:
 
 (2)Run the 'gmx mdrun' command to conduct the test using 6 models and print the results.
 
-(3)Send the result to Salad's job recording System.
+(3)Send the result to Salad's job recording System (AWS DynamoDB).
 
 (4)Exit.
 
@@ -38,7 +38,7 @@ docker run --rm --gpus all -it docker.io/saladtechnologies/mds:001-gromacs-bench
 
 docker run --rm --gpus all -it docker.io/saladtechnologies/mds:001-gromacs-benchmark /bin/bash
 
-##### Local Test, and send the test result to the job recording System
+### Local Test, and send the test result to the job recording System
 
 docker run --rm --gpus all -it \
 
