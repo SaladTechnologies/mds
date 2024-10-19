@@ -1,0 +1,17 @@
+# Select a base image: https://hub.docker.com/r/continuumio/miniconda3
+FROM continuumio/miniconda3:23.10.0-1 
+
+RUN conda install -c conda-forge openmm=8.0.0 cudatoolkit=11.8 python-dotenv requests -y
+#RUN conda install -c conda-forge openmm=8.1.1 cudatoolkit=11.8 python-dotenv requests -y
+
+# only clone the latest commit of the branch
+WORKDIR /app
+RUN git clone --depth 1 --branch 8.0.0 https://github.com/openmm/openmm.git
+#RUN git clone --depth 1 --branch 8.1.1 https://github.com/openmm/openmm.git
+
+COPY test.py /app/openmm/examples
+
+WORKDIR /app/openmm/examples
+#CMD ["python", "-m", "openmm.testInstallation"]
+CMD ["python", "test.py"]
+

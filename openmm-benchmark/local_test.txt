@@ -1,0 +1,155 @@
+
+ubuntu@asus:~/mds$ docker run --rm --gpus all -it docker.io/saladtechnologies/mds:002-openmm-benchmark
+
+************************************************************ The system info:
+{'test_device': 'CUDA', 'salad-machine-id': 'LOCAL', 'salad-container-group-id': 'LOCAL_TEST', 'cuda_version': '12.6', 'nvidia_driver': '560.94', 'gpu': 'NVIDIA GeForce RTX 3090', 'vram_total': '24576 MiB', 'vram_used': '646 MiB', 'vram_free': '23681 MiB', 'vram_utilization': '0 %', 'gpu_temperature': '44', 'gpu_utilization': '2 %', 'vram_available': '0.964'}
+
+************************************************************ Run the model: pme
+hostname: aae5d55f9378
+timestamp: 2024-10-18T23:49:00.690250
+openmm_version: 8.0.0.dev-a780005
+cpuinfo: AMD Ryzen 9 5900X 12-Core Processor
+cpuarch:
+system: Linux
+nvidia_driver: 560.94
+gpu: NVIDIA GeForce RTX 3090
+test: pme
+constraints: HBonds
+hydrogen_mass: 1.5
+cutoff: 0.9
+ensemble: NVT
+precision: single
+timestep_in_fs: 4.0
+platform: CUDA
+platform_properties: {'DeviceIndex': '0', 'DeviceName': 'NVIDIA GeForce RTX 3090', 'UseBlockingSync': 'false', 'Precision': 'single', 'UseCpuPme': 'false', 'CudaCompiler': '/usr/local/cuda/bin/nvcc', 'TempDirectory': '/tmp', 'CudaHostCompiler': '', 'DisablePmeStream': 'false', 'DeterministicForces': 'false'}
+steps: 173596
+elapsed_time: 57.810942
+ns_per_day: 1037.7754716399534
+
+
+************************************************************ Run the model: apoa1pme
+hostname: aae5d55f9378
+timestamp: 2024-10-18T23:50:03.692006
+openmm_version: 8.0.0.dev-a780005
+cpuinfo: AMD Ryzen 9 5900X 12-Core Processor
+cpuarch:
+system: Linux
+nvidia_driver: 560.94
+gpu: NVIDIA GeForce RTX 3090
+test: apoa1pme
+constraints: HBonds
+hydrogen_mass: 1.5
+cutoff: 0.9
+ensemble: NVT
+precision: single
+timestep_in_fs: 4.0
+platform: CUDA
+platform_properties: {'DeviceIndex': '0', 'DeviceName': 'NVIDIA GeForce RTX 3090', 'UseBlockingSync': 'false', 'Precision': 'single', 'UseCpuPme': 'false', 'CudaCompiler': '/usr/local/cuda/bin/nvcc', 'TempDirectory': '/tmp', 'CudaHostCompiler': '', 'DisablePmeStream': 'false', 'DeterministicForces': 'false'}
+steps: 67990
+elapsed_time: 59.688274
+ns_per_day: 393.6676741565688
+
+
+************************************************************ Run the model: amber20-cellulose
+hostname: aae5d55f9378
+timestamp: 2024-10-18T23:51:11.543900
+openmm_version: 8.0.0.dev-a780005
+cpuinfo: AMD Ryzen 9 5900X 12-Core Processor
+cpuarch:
+system: Linux
+nvidia_driver: 560.94
+gpu: NVIDIA GeForce RTX 3090
+Downloading https://ambermd.org/Amber20_Benchmark_Suite.tar.gz
+Extracting Amber20_Benchmark_Suite.tar.gz
+test: amber20-cellulose
+cutoff: 0.9
+constraints: HBonds
+hydrogen_mass: 1.5
+ensemble: NVT
+precision: single
+timestep_in_fs: 4.0
+platform: CUDA
+platform_properties: {'DeviceIndex': '0', 'DeviceName': 'NVIDIA GeForce RTX 3090', 'UseBlockingSync': 'false', 'Precision': 'single', 'UseCpuPme': 'false', 'CudaCompiler': '/usr/local/cuda/bin/nvcc', 'TempDirectory': '/tmp', 'CudaHostCompiler': '', 'DisablePmeStream': 'false', 'DeterministicForces': 'false'}
+steps: 11618
+elapsed_time: 57.879736
+ns_per_day: 69.37109733879917
+
+
+************************************************************ Run the model: amber20-stmv
+hostname: aae5d55f9378
+timestamp: 2024-10-18T23:52:32.268529
+openmm_version: 8.0.0.dev-a780005
+cpuinfo: AMD Ryzen 9 5900X 12-Core Processor
+cpuarch:
+system: Linux
+nvidia_driver: 560.94
+gpu: NVIDIA GeForce RTX 3090
+test: amber20-stmv
+cutoff: 0.9
+constraints: HBonds
+hydrogen_mass: 1.5
+ensemble: NVT
+precision: single
+timestep_in_fs: 4.0
+platform: CUDA
+platform_properties: {'DeviceIndex': '0', 'DeviceName': 'NVIDIA GeForce RTX 3090', 'UseBlockingSync': 'false', 'Precision': 'single', 'UseCpuPme': 'false', 'CudaCompiler': '/usr/local/cuda/bin/nvcc', 'TempDirectory': '/tmp', 'CudaHostCompiler': '', 'DisablePmeStream': 'false', 'DeterministicForces': 'false'}
+steps: 4127
+elapsed_time: 61.088265
+ns_per_day: 23.34803910374603
+
+
+************************************************************ Run the model: amoebapme
+hostname: aae5d55f9378
+timestamp: 2024-10-18T23:54:17.920406
+openmm_version: 8.0.0.dev-a780005
+cpuinfo: AMD Ryzen 9 5900X 12-Core Processor
+cpuarch:
+system: Linux
+nvidia_driver: 560.94
+gpu: NVIDIA GeForce RTX 3090
+test: amoebapme
+epsilon: 1e-05
+constraints: None
+hydrogen_mass: 1
+ensemble: NVT
+precision: single
+timestep_in_fs: 2.0
+platform: CUDA
+platform_properties: {'DeviceIndex': '0', 'DeviceName': 'NVIDIA GeForce RTX 3090', 'UseBlockingSync': 'false', 'Precision': 'single', 'UseCpuPme': 'false', 'CudaCompiler': '/usr/local/cuda/bin/nvcc', 'TempDirectory': '/tmp', 'CudaHostCompiler': '', 'DisablePmeStream': 'false', 'DeterministicForces': 'false'}
+steps: 8555
+elapsed_time: 59.526707
+ns_per_day: 24.8342983259598
+
+
+************************************************************ The final result:
+test_device : CUDA
+salad-machine-id : LOCAL
+salad-container-group-id : LOCAL_TEST
+cuda_version : 12.6
+nvidia_driver : 560.94
+gpu : NVIDIA GeForce RTX 3090
+vram_total : 24576 MiB
+vram_used : 646 MiB
+vram_free : 23681 MiB
+vram_utilization : 0 %
+gpu_temperature : 44
+gpu_utilization : 2 %
+vram_available : 0.964
+cpuinfo : AMD Ryzen 9 5900X 12-Core Processor
+pme_steps : 173596
+pme_elapsed_time : 57.810942
+pme_ns_per_day : 1037.775472
+apoa1pme_steps : 67990
+apoa1pme_elapsed_time : 59.688274
+apoa1pme_ns_per_day : 393.667674
+amber20-cellulose_steps : 11618
+amber20-cellulose_elapsed_time : 57.879736
+amber20-cellulose_ns_per_day : 69.371097
+amber20-stmv_steps : 4127
+amber20-stmv_elapsed_time : 61.088265
+amber20-stmv_ns_per_day : 23.348039
+amoebapme_steps : 8555
+amoebapme_elapsed_time : 59.526707
+amoebapme_ns_per_day : 24.834298
+test_time : 392.969
+************************************************************ The end
