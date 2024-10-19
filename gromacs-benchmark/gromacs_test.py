@@ -3,19 +3,26 @@ import requests
 import os
 import time
 from dotenv import load_dotenv
+
+
 load_dotenv()
+os.makedirs('outputs', exist_ok=True)
 
 
 g_start = time.perf_counter()
 
 
 Is_Debug = True
-duration = os.getenv("DURATION", 60)
-device = os.getenv("DEVICE", "CUDA") # CPU, 16 x vCPU
-models = ['pme','apoa1pme','amber20-cellulose','amber20-stmv','amoebapme']
+cores = os.getenv("CORES", "8")
+nsteps = os.getenv("NSTEPS", "200000")
+device = os.getenv("DEVICE", "CUDA") # 
+models = ['1','2','3','4','5','6']
+
 
 result = {}
 result['test_device'] = device
+
+
 result['salad-machine-id']         = os.getenv("SALAD_MACHINE_ID", "LOCAL")  # Passed by SaladCloud
 result['salad-container-group-id'] = os.getenv("SALAD_CONTAINER_GROUP_ID", "LOCAL_TEST") # Passed by SaladCloud
 
@@ -50,7 +57,7 @@ try:
 except Exception as e:
     g_end = time.perf_counter()
     result['test_time'] = "{:.3f}".format(g_end - g_start)  
-    result['error'] = f"An error occurred while running nvidia-smi: {e}" 
+    result['error'] = f"An error occurred while running {cmd} : {e}" 
     print(result)
     if benchmark_url != "":
         requests.post( f"{benchmark_url}/{benchmark_sl_id}",json=result,headers=benchmark_headers)
@@ -64,21 +71,32 @@ print(result)
 try:
     for model in models:
         print("*" * 60,"Run the model:",model)
-        cmd = f"python benchmark.py --platform={device} --test={model} --seconds={duration}"
+        
+        if device == 'CUDA':
+            cmd = f"gmx mdrun -s systems/{model}.tpr -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp {cores} -pin on -pinstride 1 -nsteps {nsteps} -deffnm outputs/{model}"
+        else:
+            cmd = f"gmx mdrun -s systems/{model}.tpr -nb cpu -pme cpu -bonded cpu -update cpu -ntmpi 1 -ntomp {cores} -pin on -pinstride 1 -nsteps {nsteps} -deffnm outputs/{model}"
+     
+        temp_start = time.perf_counter()
         output = subprocess.check_output(cmd, shell=True, text=True)
+        temp_end = time.perf_counter()
 
-        print(output)
+        file = f"outputs/{model}.log"
 
-        output = output.split("\n")
-        if model == "pme":
-            result ['cpuinfo'] = getValue(output,'cpuinfo')
-        result[model + '_steps']        = getValue(output,'steps')
-        result[model + '_elapsed_time'] = "{:.6f}".format( float(getValue(output,'elapsed_time')))
-        result[model + '_ns_per_day']   = "{:.6f}".format( float(getValue(output,'ns_per_day'))) 
+        with open(file, 'r') as f:
+            output = f.read()           
+        
+        output = output.split("\n")[-4]
+        output = output.split()[1]
+
+        result[model + '_steps']        = nsteps
+        result[model + '_elapsed_time'] = "{:.6f}".format( temp_end - temp_start )
+        result[model + '_ns_per_day']   = "{:.6f}".format( float(output)) 
+
 except Exception as e:
     g_end = time.perf_counter()
     result['test_time'] = "{:.3f}".format(g_end - g_start)  
-    result['error'] = f"An error occurred while running the benchmarking: {e}"
+    result['error'] = f"An error occurred while running {cmd} : {e}"
     print(result)
     if benchmark_url != "":
         requests.post( f"{benchmark_url}/{benchmark_sl_id}",json=result,headers=benchmark_headers)
@@ -109,28 +127,30 @@ cuda_version : 12.6
 nvidia_driver : 560.94
 gpu : NVIDIA GeForce RTX 3090
 vram_total : 24576 MiB
-vram_used : 646 MiB
-vram_free : 23681 MiB
+vram_used : 628 MiB
+vram_free : 23699 MiB
 vram_utilization : 0 %
-gpu_temperature : 44
+gpu_temperature : 40
 gpu_utilization : 2 %
 vram_available : 0.964
-cpuinfo : AMD Ryzen 9 5900X 12-Core Processor
-pme_steps : 173596
-pme_elapsed_time : 57.810942
-pme_ns_per_day : 1037.775472
-apoa1pme_steps : 67990
-apoa1pme_elapsed_time : 59.688274
-apoa1pme_ns_per_day : 393.667674
-amber20-cellulose_steps : 11618
-amber20-cellulose_elapsed_time : 57.879736
-amber20-cellulose_ns_per_day : 69.371097
-amber20-stmv_steps : 4127
-amber20-stmv_elapsed_time : 61.088265
-amber20-stmv_ns_per_day : 23.348039
-amoebapme_steps : 8555
-amoebapme_elapsed_time : 59.526707
-amoebapme_ns_per_day : 24.834298
-test_time : 392.969
+1_steps : 200000
+1_elapsed_time : 97.772689
+1_ns_per_day : 178.075000
+2_steps : 200000
+2_elapsed_time : 65.786156
+2_ns_per_day : 531.461000
+3_steps : 200000
+3_elapsed_time : 167.381495
+3_ns_per_day : 213.344000
+4_steps : 200000
+4_elapsed_time : 298.425179
+4_ns_per_day : 117.933000
+5_steps : 200000
+5_elapsed_time : 995.262838
+5_ns_per_day : 34.807000
+6_steps : 200000
+6_elapsed_time : 1791.016135
+6_ns_per_day : 19.340000
+test_time : 3415.719
 ************************************************************ The end
 '''

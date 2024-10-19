@@ -1,0 +1,288 @@
+ubuntu@asus:~/mds$ docker run --rm --gpus all -it docker.io/saladtechnologies/mds:001-gromacs-benchmark
+
+************************************************************ The system info:
+{'test_device': 'CUDA', 'salad-machine-id': 'LOCAL', 'salad-container-group-id': 'LOCAL_TEST', 'cuda_version': '12.6', 'nvidia_driver': '560.94', 'gpu': 'NVIDIA GeForce RTX 3090', 'vram_total': '24576 MiB', 'vram_used': '628 MiB', 'vram_free': '23699 MiB', 'vram_utilization': '0 %', 'gpu_temperature': '40', 'gpu_utilization': '2 %', 'vram_available': '0.964'}
+
+************************************************************ Run the model: 1
+                :-) GROMACS - gmx mdrun, 2024.2-conda_forge (-:
+
+Executable:   /opt/conda/bin.AVX2_256/gmx
+Data prefix:  /opt/conda
+Working dir:  /app
+Command line:
+  gmx mdrun -s systems/1.tpr -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -nsteps 200000 -deffnm outputs/1
+
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file systems/1.tpr, VERSION 2020.1 (single precision)
+Note: file tpx version 119, software tpx version 133
+
+Overriding nsteps with value passed on the command line: 200000 steps, 200 ps
+Changing nstlist from 10 to 100, rlist from 1.6 to 1.6
+
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 8 OpenMP threads
+
+starting mdrun 'lopls hexane and R143a'
+200000 steps,    200.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:      776.296       97.038      800.0
+                 (ns/day)    (hour/ns)
+Performance:      178.075        0.135
+
+GROMACS reminds you: "I went to Venice and looked at the paintings of Canaletto to understand how he presented perspective, and it turned out it was an exponential law. If I had published this, maybe there would be a Karplus law in art theory as well as the Karplus equation in NMR" (Martin Karplus, Nobel lecture 2013)
+
+************************************************************ Run the model: 2
+                :-) GROMACS - gmx mdrun, 2024.2-conda_forge (-:
+
+Executable:   /opt/conda/bin.AVX2_256/gmx
+Data prefix:  /opt/conda
+Working dir:  /app
+Command line:
+  gmx mdrun -s systems/2.tpr -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -nsteps 200000 -deffnm outputs/2
+
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file systems/2.tpr, VERSION 2019.3 (single precision)
+Note: file tpx version 116, software tpx version 133
+
+Overriding nsteps with value passed on the command line: 200000 steps, 400 ps
+Changing nstlist from 20 to 100, rlist from 1.224 to 1.347
+
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 8 OpenMP threads
+
+starting mdrun 'Protein in water'
+200000 steps,    400.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:      520.219       65.029      800.0
+                 (ns/day)    (hour/ns)
+Performance:      531.461        0.045
+
+GROMACS reminds you: "Your Shopping Techniques are Amazing" (Gogol Bordello)
+
+************************************************************ Run the model: 3
+                :-) GROMACS - gmx mdrun, 2024.2-conda_forge (-:
+
+Executable:   /opt/conda/bin.AVX2_256/gmx
+Data prefix:  /opt/conda
+Working dir:  /app
+Command line:
+  gmx mdrun -s systems/3.tpr -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -nsteps 200000 -deffnm outputs/3
+
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file systems/3.tpr, VERSION 2019.5 (single precision)
+Note: file tpx version 116, software tpx version 133
+
+Overriding nsteps with value passed on the command line: 200000 steps, 400 ps
+Changing nstlist from 20 to 100, rlist from 1.207 to 1.324
+
+
+Update groups can not be used for this system because atoms that are (in)directly constrained together are interdispersed with other atoms
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 8 OpenMP threads
+
+starting mdrun 'b2ar_EPI'
+200000 steps,    400.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     1295.926      161.993      800.0
+                 (ns/day)    (hour/ns)
+Performance:      213.344        0.112
+
+GROMACS reminds you: "I was elected to lead, not to read" (President A. Schwarzenegger)
+
+************************************************************ Run the model: 4
+                :-) GROMACS - gmx mdrun, 2024.2-conda_forge (-:
+
+Executable:   /opt/conda/bin.AVX2_256/gmx
+Data prefix:  /opt/conda
+Working dir:  /app
+Command line:
+  gmx mdrun -s systems/4.tpr -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -nsteps 200000 -deffnm outputs/4
+
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file systems/4.tpr, VERSION 2020.4 (single precision)
+Note: file tpx version 119, software tpx version 133
+
+Overriding nsteps with value passed on the command line: 200000 steps, 400 ps
+Changing nstlist from 10 to 100, rlist from 1.4 to 1.534
+
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 8 OpenMP threads
+
+starting mdrun 'Protein in water'
+200000 steps,    400.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     2344.375      293.050      800.0
+                 (ns/day)    (hour/ns)
+Performance:      117.933        0.204
+
+GROMACS reminds you: "Science progresses best when observations force us to alter our preconceptions." (Vera Rubin)
+
+************************************************************ Run the model: 5
+                :-) GROMACS - gmx mdrun, 2024.2-conda_forge (-:
+
+Executable:   /opt/conda/bin.AVX2_256/gmx
+Data prefix:  /opt/conda
+Working dir:  /app
+Command line:
+  gmx mdrun -s systems/5.tpr -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -nsteps 200000 -deffnm outputs/5
+
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file systems/5.tpr, VERSION 2020 (single precision)
+Note: file tpx version 119, software tpx version 133
+
+Overriding nsteps with value passed on the command line: 200000 steps, 400 ps
+Changing nstlist from 20 to 100, rlist from 1.211 to 1.327
+
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 8 OpenMP threads
+
+starting mdrun 'Title'
+200000 steps,    400.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     7943.301      992.918      800.0
+                 (ns/day)    (hour/ns)
+Performance:       34.807        0.690
+
+GROMACS reminds you: "In this house, we OBEY the laws of thermodynamics!" (Homer Simpson)
+
+************************************************************ Run the model: 6
+                :-) GROMACS - gmx mdrun, 2024.2-conda_forge (-:
+
+Executable:   /opt/conda/bin.AVX2_256/gmx
+Data prefix:  /opt/conda
+Working dir:  /app
+Command line:
+  gmx mdrun -s systems/6.tpr -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -nsteps 200000 -deffnm outputs/6
+
+The current CPU can measure timings more accurately than the code in
+gmx mdrun was configured to use. This might affect your simulation
+speed as accurate timings are needed for load-balancing.
+Please consider rebuilding gmx mdrun with the GMX_USE_RDTSCP=ON CMake option.
+Reading file systems/6.tpr, VERSION 2020 (single precision)
+Note: file tpx version 119, software tpx version 133
+
+Overriding nsteps with value passed on the command line: 200000 steps, 400 ps
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.339
+
+
+1 GPU selected for this run.
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
+PP tasks will do (non-perturbed) short-ranged and most bonded interactions on the GPU
+PP task will update and constrain coordinates on the GPU
+PME tasks will do all aspects on the GPU
+Using 1 MPI thread
+Using 8 OpenMP threads
+
+starting mdrun 'ConvertedSystem'
+200000 steps,    400.0 ps.
+
+Writing final coordinates.
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    14296.096     1787.019      800.0
+                 (ns/day)    (hour/ns)
+Performance:       19.340        1.241
+
+GROMACS reminds you: "You Own the Sun" (Throwing Muses)
+
+************************************************************ The final result:
+test_device : CUDA
+salad-machine-id : LOCAL
+salad-container-group-id : LOCAL_TEST
+cuda_version : 12.6
+nvidia_driver : 560.94
+gpu : NVIDIA GeForce RTX 3090
+vram_total : 24576 MiB
+vram_used : 628 MiB
+vram_free : 23699 MiB
+vram_utilization : 0 %
+gpu_temperature : 40
+gpu_utilization : 2 %
+vram_available : 0.964
+1_steps : 200000
+1_elapsed_time : 97.772689
+1_ns_per_day : 178.075000
+2_steps : 200000
+2_elapsed_time : 65.786156
+2_ns_per_day : 531.461000
+3_steps : 200000
+3_elapsed_time : 167.381495
+3_ns_per_day : 213.344000
+4_steps : 200000
+4_elapsed_time : 298.425179
+4_ns_per_day : 117.933000
+5_steps : 200000
+5_elapsed_time : 995.262838
+5_ns_per_day : 34.807000
+6_steps : 200000
+6_elapsed_time : 1791.016135
+6_ns_per_day : 19.340000
+test_time : 3415.719
+
+************************************************************ The end

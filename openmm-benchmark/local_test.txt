@@ -1,4 +1,3 @@
-
 ubuntu@asus:~/mds$ docker run --rm --gpus all -it docker.io/saladtechnologies/mds:002-openmm-benchmark
 
 ************************************************************ The system info:
@@ -152,4 +151,5 @@ amoebapme_steps : 8555
 amoebapme_elapsed_time : 59.526707
 amoebapme_ns_per_day : 24.834298
 test_time : 392.969
+
 ************************************************************ The end
