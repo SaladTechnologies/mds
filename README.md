@@ -12,3 +12,6 @@ Job Queue - Salad Kelpie, Cloud Storage - Cloudflare R2
 
 Job Queue - AWS SQS, Cloud Storage - Cloudflare R2
 
+### Demo App 3
+
+Job Queue - Salad Job Queue, Cloud Storage - Cloudflare R2
