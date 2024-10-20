@@ -1,0 +1,92 @@
+
+###################################### The job input is just uploaded
+
+----------------------> job0
+-----> intput:
+1
+100
+-----> state - running data:
+-----> state - logs:
+-----> output:
+
+###################################### A node is processing the job after it is submitted to the Kelpie platform
+# The running data and logs are saving regularly 
+
+----------------------> job0
+-----> intput:
+1
+100
+-----> state - running data:
+12
+78
+-----> state - logs:
+9d8e79e1-54b4-db50-944c-c2ca6c126d20 6
+9d8e79e1-54b4-db50-944c-c2ca6c126d20 12
+-----> output:
+
+###################################### Interrupted
+# The previous node is down
+# A new node is allocated to continue the job execution
+
+----------------------> job0
+-----> intput:
+1
+100
+-----> state - running data:
+36
+666
+-----> state - logs:
+9d8e79e1-54b4-db50-944c-c2ca6c126d20 6
+9d8e79e1-54b4-db50-944c-c2ca6c126d20 12
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 18
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 24
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 30
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 36
+-----> output:
+
+###################################### Finished
+# 4 nodes have participated in executing this job.
+
+----------------------> job0
+-----> intput:
+1
+100
+-----> state - running data:
+96
+4656
+-----> state - logs:
+9d8e79e1-54b4-db50-944c-c2ca6c126d20 6
+9d8e79e1-54b4-db50-944c-c2ca6c126d20 12
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 18
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 24
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 30
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 36
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 42
+0df8e98a-d387-da57-8ec8-67a9f41482ab 48
+0df8e98a-d387-da57-8ec8-67a9f41482ab 54
+0df8e98a-d387-da57-8ec8-67a9f41482ab 60
+0df8e98a-d387-da57-8ec8-67a9f41482ab 66
+0df8e98a-d387-da57-8ec8-67a9f41482ab 72
+0df8e98a-d387-da57-8ec8-67a9f41482ab 78
+82b14ad8-64bf-6653-9bd1-28e1588e61ba 84
+82b14ad8-64bf-6653-9bd1-28e1588e61ba 90
+82b14ad8-64bf-6653-9bd1-28e1588e61ba 96
+-----> output:
+5050
+9d8e79e1-54b4-db50-944c-c2ca6c126d20 6
+9d8e79e1-54b4-db50-944c-c2ca6c126d20 12
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 18
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 24
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 30
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 36
+8742ad91-216c-6d5d-ba0b-2d71e74e1ed3 42
+0df8e98a-d387-da57-8ec8-67a9f41482ab 48
+0df8e98a-d387-da57-8ec8-67a9f41482ab 54
+0df8e98a-d387-da57-8ec8-67a9f41482ab 60
+0df8e98a-d387-da57-8ec8-67a9f41482ab 66
+0df8e98a-d387-da57-8ec8-67a9f41482ab 72
+0df8e98a-d387-da57-8ec8-67a9f41482ab 78
+82b14ad8-64bf-6653-9bd1-28e1588e61ba 84
+82b14ad8-64bf-6653-9bd1-28e1588e61ba 90
+82b14ad8-64bf-6653-9bd1-28e1588e61ba 96
+82b14ad8-64bf-6653-9bd1-28e1588e61ba 100

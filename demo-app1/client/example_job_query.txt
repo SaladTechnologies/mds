@@ -1,0 +1,58 @@
+# The job is being processed by some node
+
+{
+    "id": "f8952c89-2f81-4c57-926f-e7f5861e6a8e",
+    "user_id": "e243fb7b-f580-41e7-a851-161ffe74a920",
+    "status": "running",                                 # The status is running now
+    "created": "2024-10-20T14:08:33.000Z",
+    "started": "2024-10-20T14:08:37.000Z",
+    "heartbeat": "2024-10-20T14:09:38.000Z",
+    "num_failures": 0,
+    "machine_id": "9d8e79e1-54b4-db50-944c-c2ca6c126d20", # The node that is processing the job now
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "STATE_SAVING_INTERVAL": "60.0",
+        "STEP_RUNNING_TIME": "10.0"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "8e78dce7-08b8-4854-b6ea-67a6bb6bcf03",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 3,
+    "sync": {
+        "before": [
+            {
+                "bucket": "transcripts",
+                "prefix": "demoapp1/job0/input/",
+                "local_path": "/app/data/input/",
+                "direction": "download"
+            },
+            {
+                "bucket": "transcripts",
+                "prefix": "demoapp1/job0/state/",
+                "local_path": "/app/data/state/",
+                "direction": "download"
+            }
+        ],
+        "during": [
+            {
+                "bucket": "transcripts",
+                "prefix": "demoapp1/job0/state/",
+                "local_path": "/app/data/state/",
+                "direction": "upload"
+            }
+        ],
+        "after": [
+            {
+                "bucket": "transcripts",
+                "prefix": "demoapp1/job0/output/",
+                "local_path": "/app/data/output/",
+                "direction": "upload"
+            }
+        ]
+    }
+}

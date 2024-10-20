@@ -1,0 +1,56 @@
+# The job is just submitted to the Kelpie platform
+
+{
+    "id": "f8952c89-2f81-4c57-926f-e7f5861e6a8e",
+    "user_id": "e243fb7b-f580-41e7-a851-161ffe74a920",
+    "status": "pending",                             # The initial status is pending
+    "created": "2024-10-20T14:08:33.000Z",
+    "num_failures": 0,
+    "machine_id": null,                              # No machine is taking this job now  
+    "command": "python",
+    "arguments": [
+        "/app/main.py"                               # This code is run by the Kelpie worker
+    ],
+    "environment": {
+        "STATE_SAVING_INTERVAL": "60.0",             # The parameters to run the code
+        "STEP_RUNNING_TIME": "10.0"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "8e78dce7-08b8-4854-b6ea-67a6bb6bcf03",   # The container group to process the job
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 0,
+    "sync": {
+        "before": [
+            {
+                "bucket": "transcripts",
+                "prefix": "demoapp1/job0/input/",
+                "local_path": "/app/data/input/",
+                "direction": "download"    # The Kelpie worker will download this folder before running the code
+            },
+            {
+                "bucket": "transcripts",
+                "prefix": "demoapp1/job0/state/",
+                "local_path": "/app/data/state/",
+                "direction": "download"    # The Kelpie worker will download this folder before running the code
+            }
+        ],
+        "during": [
+            {
+                "bucket": "transcripts",
+                "prefix": "demoapp1/job0/state/",
+                "local_path": "/app/data/state/",
+                "direction": "upload"      # The Kelpie worker will upload this folder if any changes occur while the code is running
+            }
+        ],
+        "after": [
+            {
+                "bucket": "transcripts",
+                "prefix": "demoapp1/job0/output/",
+                "local_path": "/app/data/output/",
+                "direction": "upload"      # The Kelpie worker will upload this folder when the code exit(0)
+            }
+        ]
+    }
+}
