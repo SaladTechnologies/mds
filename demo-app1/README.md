@@ -4,12 +4,13 @@ This demo app is designed to run long-running tasks on SaladCloud (GPU Compute) 
 
 It consists of two parts:
 
-1. The image - The application to be run on SaladCloud (or local), which includes both the Kelpie worker (executable) and the application code.
+(1)The image - The application to be run on SaladCloud (or local), which includes both the Kelpie worker (executable) and the application code.
 
-The Kelpie worker retrieves jobs from the Kelpie platfrom (a cloud service), runs the code and manages data synchronization using AWS S3 API.
+The Kelpie worker retrieves jobs — such as calculating the sum of the series from start to end — from the Kelpie platfrom (a cloud service), runs the code and manages data synchronization using AWS S3 API, and returns the job results to the Kelpie platfrom.
 
-The code calculates the sum of the series from start to end, which could take long time (a few hours or days) and may be interrupted during the job execution. So, it saves the current state at specific intervals (configurable) to ensure progress is preserved. When a node is down and another node takes the unfinished job, the code needs to resume the previous state and continue the execution.
+The code calculates the sum of the series, which could take long time (a few hours or days) and may be interrupted during the job execution. So, it saves the current state at specific intervals (configurable) to ensure progress is preserved. When a node is down and another node takes the unfinished job, the code needs to resume the previous state and continue the execution.
 
+Here is the referrence desgin for the application:
 https://github.com/SaladTechnologies/mds/blob/main/reference%20desgin.png
 
 For testing, you can run this image locally while still utilizing the Kelpie platform.
@@ -29,11 +30,11 @@ export AWS_ACCESS_KEY_ID=************
 export AWS_SECRET_ACCESS_KEY=************
 
 
-2. The client, provides several tools to manage the cloud storage and jobs.
+(2)The client, provides several tools (example code) to interact with the cloud storage - Cloudflare R2 and the job queue - the Kelpie platform.
 
 1_upload_job_input.py, upload the job inputs to cloud storage.
 
-2_sumbit_job.py, submit jobs to the Kelpie platform, and keeps the job IDs in the job_history.txt file.
+2_submit_job.py, submit jobs to the Kelpie platform, and keeps the job IDs in the job_history.txt file.
 
 7_queue_job.py, query job status (PENDING, RUNNING, FAILELD, COMPLETED) from the Kelpie platform using the job IDs.
 
@@ -50,7 +51,7 @@ During a test, you can check the cloud storage in real time:
 0_cloud_strorage_check.py, show the contect in cloud stroage.
 
 
-You can manage all the settings in the config.py file.
+You can manage all the settings in the config.py file:
 
 The CONTAINER_GROUP_ID ensures that jobs submitted to the Kelpie platform are processed only by instances within a specific container group. It must match the actual SALAD_CONTAINER_GROUP_ID when running the image on SaladCloud. You can retrieve this ID (using env command) by logging into any running instance on SaladCloud.
 
