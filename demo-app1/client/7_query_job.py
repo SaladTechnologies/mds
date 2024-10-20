@@ -1,5 +1,5 @@
-from config import TASK_NUMBER, BUCKET_NAME, REMOTE_FOLDER
-from config import JOB_HISTORY, CONTAINER_GROUP_ID
+from config import TASK_NUMBER
+from config import JOB_HISTORY
 from config import KELPIE_API_KEY, KELPIE_API_URL
 import requests
 import json

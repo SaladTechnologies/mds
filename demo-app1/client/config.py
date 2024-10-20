@@ -11,7 +11,7 @@ when running the image on SaladCloud. You can retrieve this ID (using env comman
 running instance on SaladCloud.
 
 If you run the image locally, the CONTAINER_GROUP_ID in the config.py file needs to 
-match the environment variable - SALAD_CONTAINER_GROUP_ID used running the image.
+match the environment variable - SALAD_CONTAINER_GROUP_ID used while running the image.
 '''
 
 #CONTAINER_GROUP_ID = "LOCAL_TEST"   

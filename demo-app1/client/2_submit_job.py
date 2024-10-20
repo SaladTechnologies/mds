@@ -30,7 +30,7 @@ for i in range(TASK_NUMBER):
           "bucket": BUCKET_NAME,
           "prefix": f"{REMOTE_FOLDER}/job{i}/state",
           "local_path": "/app/data/state/",
-          "direction": "download"   # downloading state and log
+          "direction": "download"   # downloading state - running data and logs
         }
       ],
       "during": [
@@ -38,7 +38,7 @@ for i in range(TASK_NUMBER):
           "bucket": BUCKET_NAME,
           "prefix": f"{REMOTE_FOLDER}/job{i}/state",
           "local_path": "/app/data/state/",
-          "direction": "upload"     # uploading state and log
+          "direction": "upload"     # uploading state - running data and logs
         }
       ],
       "after": [

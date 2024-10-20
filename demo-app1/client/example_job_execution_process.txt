@@ -10,7 +10,7 @@
 -----> output:
 
 ###################################### A node is processing the job after it is submitted to the Kelpie platform
-# The running data and logs are saving regularly 
+# The running data and logs are being saved regularly 
 
 ----------------------> job0
 -----> intput:
