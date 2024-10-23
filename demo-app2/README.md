@@ -18,7 +18,7 @@ If a node goes down and another node picks up the unfinished job, the main threa
 
 Here is the referrence desgin for the application: 
 
-https://github.com/SaladTechnologies/mds/blob/main/reference%20desgin.png
+https://github.com/SaladTechnologies/mds/blob/main/SCE%20Architectural%20Overview/5%20reference%20design%20for%20long-running%20tasks.png
 
 For testing, you can run this image locally while still utilizing AWS SQS and Cloudflare R2.
 
