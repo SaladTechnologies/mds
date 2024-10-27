@@ -1,4 +1,4 @@
-#### Introduction
+### Introduction
 
 This demo app is designed to run long-running tasks on SaladCloud (GPU Compute) using AWS SQS (Job Queue) and Cloudflare R2 (AWS S3-Compatible Cloud Storage).
 

@@ -10,26 +10,20 @@ The Kelpie worker retrieves jobs — such as calculating the sum of the series f
 
 The code calculates the sum of the series, which could take long time (a few hours or days) and may be interrupted during the job execution. So, it saves the current state at specific intervals (configurable) to ensure progress is preserved. When a node is down and another node takes the unfinished job, the code needs to resume the previous state and continue the execution.
 
-Here is the referrence desgin for the application:
-
-https://github.com/SaladTechnologies/mds/blob/main/SCE%20Architectural%20Overview/5%20reference%20design%20for%20long-running%20tasks.png
+Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE%20Architectural%20Overview/5%20reference%20design%20for%20long-running%20tasks.png) for the application.
 
 For testing, you can run this image locally while still utilizing the Kelpie platform.
 
 You need the access to the Kelple platform and a bucket in Cloudflare R2 (AWS S3 Compatible) to run this image.
 
+```
 export KELPIE_API_URL=https://kelpie.saladexamples.com
-
 export KELPIE_API_KEY=<GET_A_KEY_FROM_SALAD>
-
 export AWS_ENDPOINT_URL=https://************.r2.cloudflarestorage.com
-
 export AWS_REGION=auto
-
 export AWS_ACCESS_KEY_ID=************
-
 export AWS_SECRET_ACCESS_KEY=************
-
+```
 
 (2)The client, provides several tools (example code) to interact with the cloud storage - Cloudflare R2 and the job queue - the Kelpie platform.
 
@@ -77,56 +71,40 @@ https://github.com/SaladTechnologies/kelpie-api
 
 The SALAD_CONTAINER_GROUP_ID needs to match the CONTAINER_GROUP_ID used by the client. You can assign any name for the SALAD_MACHINE_ID. When running multiple instances locally, each instance should have a unique SALAD_MACHINE_ID.
 
+```
 docker run --rm -it \
-
 -e KELPIE_API_URL=$KELPIE_API_URL \
-
 -e KELPIE_API_KEY=$KELPIE_API_KEY \
-
 -e AWS_ENDPOINT_URL=$AWS_ENDPOINT_URL \
-
 -e AWS_REGION=$AWS_REGION \
-
 -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
-
 -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
-
 -e SALAD_CONTAINER_GROUP_ID='LOCAL_TEST' \
-
 -e SALAD_MACHINE_ID='LOCAL_001' \
-
 docker.io/saladtechnologies/mds:demo-app1
-
+```
 
 ### Run the image on SaladCloud
 
 The SALAD_CONTAINER_GROUP_ID and the SALAD_MACHINE_ID will be automatcially assigned by SaladCloud.
 
+```
 Image Source: docker.io/saladtechnologies/mds:demo-app1
-
 Replica Count & Resource Types,  based on requirements
-
 Environment Variables:
-
 KELPIE_API_URL: https://kelpie.saladexamples.com
-
 KELPIE_API_KEY: <GET_A_KEY_FROM_SALAD>
-
 AWS_ENDPOINT_URL: https://************.r2.cloudflarestorage.com
-
 AWS_REGION: auto
-
 AWS_ACCESS_KEY_ID: ************
-
 AWS_SECRET_ACCESS_KEY: ************
-
+```
 
 ### Build and push the container image
 
+```
 docker image build -t docker.io/saladtechnologies/mds:demo-app1 -f Dockerfile .
-
 docker push docker.io/saladtechnologies/mds:demo-app1
-
 docker rm -f $(docker container ps -aq)
-
 docker rmi $(docker images -f dangling=true -q)
+```
