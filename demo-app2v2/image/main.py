@@ -263,10 +263,10 @@ while True:
     if g_abort:
         vtr_queue.put( None ) # Notify the VTR thread to stop extending the visibility timeout
         time.sleep(2)         # Ensure the VTR thread stops extending the visibility timeout
-        # We will not delete the job from AWS SQS in this case !!!
+        # Job Abortion: We will not delete the job from AWS SQS in this case, because it is not finished !!!
         continue # next job or node reallocation
 
-    # The job is finished at this point
+    # The simulation is finished at this point.
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     g_logs.append(f'Machine ID: {salad_machine_id} - UTC Time: {now} - The job is done') # add this node info
@@ -296,9 +296,14 @@ while True:
         # Reason 1: The network performance of the node is too bad               
         # Reason 2: The code has no access to the cloud storage, or it doesn't exist             
         g_continue_node = False  # Intolerable
+        
+        vtr_queue.put( None ) # Notify the VTR thread to stop extending the visibility timeout
+        time.sleep(2)         # Ensure the VTR thread stops extending the visibility timeout
+        # Job Abortion: We will not delete the job from AWS SQS in this case, because the job is not uploaded successfully !!!
+        continue # node reallocation
     
     vtr_queue.put( None ) # Notify the VTR thread to stop extending the visibility timeout
     time.sleep(2)         # Ensure the VTR thread stops extending the visibility timeout
     Delete_A_Job(job) # We don't verify whether it is succeed
-    continue # next job or node reallocation
+    continue # next job 
  
