@@ -1,0 +1,6 @@
+boto3
+python-dotenv
+requests
+fastapi[standard]
+pythonping
+speedtest-cli

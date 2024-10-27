@@ -1,3 +1,4 @@
+.venv
 gromacs-benchmark/systems
 access.txt
 
@@ -15,9 +16,19 @@ demo-app2/image/backup
 demo-app2/image/data
 demo-app2/image/__pycache__
 
+demo-app2v2/client/.env
+demo-app2v2/client/__pycache__
+demo-app2v2/client/job_history.txt
+demo-app2v2/client/reset.sh
 
+demo-app2v2/image/.env
+demo-app2v2/image/backup
+demo-app2v2/image/data
+demo-app2v2/image/__pycache__
 
+demo-app2v2/README.md
+demo-app2v2/notes.txt
 
-
+demo-app3
 
 
