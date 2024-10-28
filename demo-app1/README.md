@@ -10,7 +10,7 @@ The Kelpie worker retrieves jobs — such as calculating the sum of the series f
 
 The code calculates the sum of the series, which could take long time (a few hours or days) and may be interrupted during the job execution. So, it saves the current state at specific intervals (configurable) to ensure progress is preserved. When a node is down and another node takes the unfinished job, the code needs to resume the previous state and continue the execution.
 
-Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE%20Architectural%20Overview/5%20reference%20design%20for%20long-running%20tasks.png) for the application.
+Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE_Architectural_Overview/5_long_running_tasks.png) for the application.
 
 For testing, you can run this image locally while still utilizing the Kelpie platform.
 

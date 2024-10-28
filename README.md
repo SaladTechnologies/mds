@@ -2,7 +2,7 @@ This repository contains resources for molecular dynamics simulations, including
 
 ### SaladCloud SCE Architectural Overview
 
-https://github.com/SaladTechnologies/mds/tree/main/SCE%20Architectural%20Overview
+https://github.com/SaladTechnologies/mds/blob/main/SCE_Architectural_Overview
 
 ### Tutorials
 

@@ -4,7 +4,7 @@ This demo app is designed to run long-running tasks on SaladCloud (GPU Compute) 
 
 Here is [the test result and analysis with 5 jobs with each running 20 hours](test_result_analysis_5_jobs_each_20_hours.txt).
 
-Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE%20Architectural%20Overview/5%20reference%20design%20for%20long-running%20tasks.png) for the application.
+Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE_Architectural_Overview/5_long_running_tasks.png) for the application.
 
 Its consists of two parts:
 
