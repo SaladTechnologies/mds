@@ -1,6 +1,6 @@
 ### Introduction
 
-The test.py is run When the container starts:
+The test.py is run when the container starts:
 
 - Gather the environment info, include GPU, CPU and software versions.
 
