@@ -198,13 +198,10 @@ while True:
             t_end = time.perf_counter()
             if (t_end - t_start) > step_running_time:
                 break
-
-        time_end = time.perf_counter()
         ########## # GPU Compute: end
 
-        if (time_end - time_start) < state_saving_internal:
-            continue
-
+        time_end = time.perf_counter()
+        
         ############################################################################
         # Monitor the system: visibility timeout, network performance and errors, processing capability 
         t_vt_health = Get_Visibility_Timeout_Health()
@@ -216,7 +213,7 @@ while True:
             g_abort = True 
             print("Abort the job execution !!!!!!")
             break
-        elif t_length > 1 or t_error > 0: # the previous uploads failed or piled up
+        elif t_length >= 3 or t_error > 0: # the previous uploads failed or piled up
             g_abort = True 
             g_continue_node = False
             print("Abort the job execution !!!!!!")
@@ -230,7 +227,12 @@ while True:
         #   break
         else:
             pass
+        ############################################################################
 
+        if (time_end - time_start) < state_saving_internal: 
+            continue
+
+        # After passing the health check and the designated time, save the state
         now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         percentage = "{:0.2%}".format((t_step - g_start) / (g_end - g_start))
         g_logs.append(f'UTC Time: {now} - the current step: {t_step}, finished {percentage}') # Record this event

@@ -83,13 +83,17 @@ def Renew_A_Job(job, description=""):
     if temp > VISIBILITY_TIMEOUT:
         print(40 * "R" + " {}: ".format(description), end="")
         print("running {} seconds, already times out", flush=True)
-        # Will not update the time in this case
+        # Will not update the time in this case; after this point, it will always return False
         return False  
     try:
         if temp > RENEWAL_TIME:
+            # The successful rate is around 99.9% with the test
+            # Maybe add a retry if the API call fails (to prevent against temporary network errors or others)
             sqs_client.change_message_visibility( QueueUrl=queue_url, ReceiptHandle=job['handle'],
                                                   VisibilityTimeout = VISIBILITY_TIMEOUT )
-            job['time'] = current_time
+            
+            job['time'] = current_time # Not able to update the time if the API call fails, and then it will always return False
+            
             print(40 * "R" + " {}: ".format(description), end="")
             #print("only {} seconds remaining, ".format(VISIBILITY_TIMEOUT - temp), end="")
             print("the visibility timeout is extended and the time is updated", flush=True)
@@ -105,12 +109,13 @@ def VT_Renewal(queue):
     job = None    
     while True:
         time.sleep(1)
-        if (queue.qsize() > 0): # new job
+
+        if (queue.qsize() > 0): # the new job handle or None
             job = queue.get()
             queue.task_done()     # task done     
             #print(40 * "R" + " The VTR thread: receive " + json.dumps(job), flush=True)
             print(40 * "R" + " The VTR thread: received the signal", flush=True)
-            g_visibility_timeout_health = True
+            g_visibility_timeout_health = True # Reset the value when recieving a new handle
 
         if job != None:
             g_visibility_timeout_health = Renew_A_Job(job, "The VTR thread") # will update the job["time"]

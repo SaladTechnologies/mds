@@ -1,0 +1,755 @@
+############################################ Test Introduction
+
+Five jobs, each running 20 hours.
+
+The job is to calculate the summary: 1 + 2 + .... + 1200 (720600)
+Each step takes 1 minute, and 1200 steps takes 20 hours.
+
+Select nodes equipped with 16GB VRAM GPUs that also provide 20+ Mbps download and 5+ Mbps upload speeds.
+
+############################################ Analysis
+
+Totally 8 nodes were used to run these 5 jobs:
+- 5 nodes were allocated at the start when the container group was launched.
+- 3 additional nodes were reallocated during execution. 
+  (nodes going down, not triggered by the code )
+
+These 5 jobs have been interrupted 9 times during the 20-hour period:
+- 3 times by node reallocation (nodes going down)
+- 6 times by AWS SQS Timeout (the API call - change_message_visibility returning errors)
+
+A dedicated thread was used to monitor and extend the timeout, ensuring no timing was missed.
+So the 6 errors were due to API call failures. Over the 20-hour period, 6,000 API calls were made 
+(60 calls/hour x 20 hours x 5 jobs), with an approximate success rate of 99.9%.
+
+job0, used 3 nodes and was interrupted 2 times (1 timeout error,  1 node down)
+job1, used 2 nodes and was interrupted 1 time  (1 timeout error)
+job2, used 3 nodes and was interrupted 2 time  (1 timeout error,  1 node down)
+job3, used 4 nodes and was interrupted 3 times (2 timeout errors, 1 node down)
+job4, used 2 nodes and was interrupted 1 time  (1 timeout error)
+
+After a job interruption, a new node will take over the job, 
+resuming from the last saved state file, and continue the execution.
+
+############################################ Node Info
+                
+Machine ID                              No    Number of Uses   
+1d9bc8c1-ca90-2e53-b22b-3688733141ad	1        2 
+01a6e657-0728-4553-865a-8433b88c970c	2      1
+43e5835f-6a38-ee57-bc7c-383d34d2924c	3          3 
+620f9151-3ff5-c350-9660-7949e423c0d3	4        2 
+ecf5e78b-6fae-e15c-97e0-20b3be601949	5      1
+bf4c6fb7-8bd9-5c5e-a4fc-48189bbb1eb5	6        2
+2757f48f-60fb-745b-b987-418475172de7	7        2
+dde6ca53-e56e-1154-9dd3-386ca9e7f60e	8      1
+
+
+# Nodes used by Job 0                                No
+1d9bc8c1-ca90-2e53-b22b-3688733141ad    1
+01a6e657-0728-4553-865a-8433b88c970c        2
+43e5835f-6a38-ee57-bc7c-383d34d2924c            3    
+
+# Nodes used by Job 1
+620f9151-3ff5-c350-9660-7949e423c0d3                4
+1d9bc8c1-ca90-2e53-b22b-3688733141ad    1
+
+# Nodes used by Job 2
+ecf5e78b-6fae-e15c-97e0-20b3be601949                    5
+bf4c6fb7-8bd9-5c5e-a4fc-48189bbb1eb5                        6
+2757f48f-60fb-745b-b987-418475172de7                            7 
+
+# Nodes used by Job 3
+43e5835f-6a38-ee57-bc7c-383d34d2924c            3
+dde6ca53-e56e-1154-9dd3-386ca9e7f60e                                8
+43e5835f-6a38-ee57-bc7c-383d34d2924c            3
+bf4c6fb7-8bd9-5c5e-a4fc-48189bbb1eb5                        6
+
+# Nodes used by Job 4
+2757f48f-60fb-745b-b987-418475172de7                            7
+620f9151-3ff5-c350-9660-7949e423c0d3                4
+
+
+############################################ Job Info
+
+python 0_cloud_storage_check.py
+
+
+--------------------------------------------> job0
+-----> input:
+1
+1200
+-----> state:
+1
+1200
+1200
+720600
+-----> logs:
+Machine ID: 1d9bc8c1-ca90-2e53-b22b-3688733141ad - UTC Time: 2024-10-27 15:52:02 - {"DL Mbps": 851, "UL Mbps": 208, "Latency to US-East ms": 107.65, "Latency to EU-Cent ms": 23.96, "GPU": "NVIDIA GeForce RTX 4070 Ti SUPER", "CUDA": 12.4, "VRAM MiB": "16376 MiB", "VRAM_Free": "15951 MiB"}
+UTC Time: 2024-10-27 16:02:04 - the current step: 10, finished 0.75%
+UTC Time: 2024-10-27 16:12:04 - the current step: 20, finished 1.58%
+UTC Time: 2024-10-27 16:22:04 - the current step: 30, finished 2.42%
+UTC Time: 2024-10-27 16:32:04 - the current step: 40, finished 3.25%
+UTC Time: 2024-10-27 16:42:04 - the current step: 50, finished 4.09%
+UTC Time: 2024-10-27 16:52:04 - the current step: 60, finished 4.92%
+UTC Time: 2024-10-27 17:02:04 - the current step: 70, finished 5.75%
+UTC Time: 2024-10-27 17:12:04 - the current step: 80, finished 6.59%
+UTC Time: 2024-10-27 17:22:04 - the current step: 90, finished 7.42%
+UTC Time: 2024-10-27 17:32:04 - the current step: 100, finished 8.26%
+UTC Time: 2024-10-27 17:42:04 - the current step: 110, finished 9.09%
+UTC Time: 2024-10-27 17:52:04 - the current step: 120, finished 9.92%
+UTC Time: 2024-10-27 18:02:04 - the current step: 130, finished 10.76%
+UTC Time: 2024-10-27 18:12:04 - the current step: 140, finished 11.59%
+UTC Time: 2024-10-27 18:22:04 - the current step: 150, finished 12.43%
+UTC Time: 2024-10-27 18:32:04 - the current step: 160, finished 13.26%
+UTC Time: 2024-10-27 18:42:04 - the current step: 170, finished 14.10%
+UTC Time: 2024-10-27 18:52:04 - the current step: 180, finished 14.93%
+UTC Time: 2024-10-27 19:02:04 - the current step: 190, finished 15.76%
+UTC Time: 2024-10-27 19:12:04 - the current step: 200, finished 16.60%
+UTC Time: 2024-10-27 19:22:04 - the current step: 210, finished 17.43%
+UTC Time: 2024-10-27 19:32:04 - the current step: 220, finished 18.27%
+UTC Time: 2024-10-27 19:42:04 - the current step: 230, finished 19.10%
+UTC Time: 2024-10-27 19:52:04 - the current step: 240, finished 19.93%
+UTC Time: 2024-10-27 20:02:04 - the current step: 250, finished 20.77%
+UTC Time: 2024-10-27 20:12:04 - the current step: 260, finished 21.60%
+UTC Time: 2024-10-27 20:22:04 - the current step: 270, finished 22.44%
+UTC Time: 2024-10-27 20:32:04 - the current step: 280, finished 23.27%
+UTC Time: 2024-10-27 20:42:04 - the current step: 290, finished 24.10%
+UTC Time: 2024-10-27 20:52:04 - the current step: 300, finished 24.94%
+UTC Time: 2024-10-27 21:02:04 - the current step: 310, finished 25.77%
+UTC Time: 2024-10-27 21:12:04 - the current step: 320, finished 26.61%
+UTC Time: 2024-10-27 21:22:04 - the current step: 330, finished 27.44%
+UTC Time: 2024-10-27 21:32:04 - the current step: 340, finished 28.27%
+UTC Time: 2024-10-27 21:42:04 - the current step: 350, finished 29.11%
+UTC Time: 2024-10-27 21:52:04 - the current step: 360, finished 29.94%
+UTC Time: 2024-10-27 22:02:04 - the current step: 370, finished 30.78%
+UTC Time: 2024-10-27 22:12:04 - the current step: 380, finished 31.61%
+UTC Time: 2024-10-27 22:22:04 - the current step: 390, finished 32.44%
+UTC Time: 2024-10-27 22:32:04 - the current step: 400, finished 33.28%
+UTC Time: 2024-10-27 22:42:04 - the current step: 410, finished 34.11%
+UTC Time: 2024-10-27 22:52:04 - the current step: 420, finished 34.95%
+UTC Time: 2024-10-27 23:02:04 - the current step: 430, finished 35.78%
+UTC Time: 2024-10-27 23:12:04 - the current step: 440, finished 36.61%
+UTC Time: 2024-10-27 23:22:04 - the current step: 450, finished 37.45%
+UTC Time: 2024-10-27 23:32:04 - the current step: 460, finished 38.28%
+UTC Time: 2024-10-27 23:42:04 - the current step: 470, finished 39.12%
+UTC Time: 2024-10-27 23:52:04 - the current step: 480, finished 39.95%
+UTC Time: 2024-10-28 00:02:04 - the current step: 490, finished 40.78%
+UTC Time: 2024-10-28 00:12:04 - the current step: 500, finished 41.62%
+UTC Time: 2024-10-28 00:22:04 - the current step: 510, finished 42.45%
+UTC Time: 2024-10-28 00:32:04 - the current step: 520, finished 43.29%
+UTC Time: 2024-10-28 00:42:04 - the current step: 530, finished 44.12%
+UTC Time: 2024-10-28 00:52:04 - the current step: 540, finished 44.95%
+UTC Time: 2024-10-28 01:02:04 - the current step: 550, finished 45.79%
+Machine ID: 01a6e657-0728-4553-865a-8433b88c970c - UTC Time: 2024-10-28 01:02:55 - {"DL Mbps": 27, "UL Mbps": 25, "Latency to US-East ms": 164.13, "Latency to EU-Cent ms": 84.63, "GPU": "NVIDIA GeForce RTX 4080", "CUDA": 12.6, "VRAM MiB": "16376 MiB", "VRAM_Free": "15820 MiB"}
+UTC Time: 2024-10-28 01:12:56 - the current step: 560, finished 46.62%
+UTC Time: 2024-10-28 01:22:56 - the current step: 570, finished 47.46%
+UTC Time: 2024-10-28 01:32:56 - the current step: 580, finished 48.29%
+UTC Time: 2024-10-28 01:42:56 - the current step: 590, finished 49.12%
+UTC Time: 2024-10-28 01:52:56 - the current step: 600, finished 49.96%
+UTC Time: 2024-10-28 02:02:56 - the current step: 610, finished 50.79%
+UTC Time: 2024-10-28 02:12:56 - the current step: 620, finished 51.63%
+UTC Time: 2024-10-28 02:22:56 - the current step: 630, finished 52.46%
+UTC Time: 2024-10-28 02:32:56 - the current step: 640, finished 53.29%
+UTC Time: 2024-10-28 02:42:56 - the current step: 650, finished 54.13%
+UTC Time: 2024-10-28 02:52:56 - the current step: 660, finished 54.96%
+UTC Time: 2024-10-28 03:02:56 - the current step: 670, finished 55.80%
+UTC Time: 2024-10-28 03:12:56 - the current step: 680, finished 56.63%
+UTC Time: 2024-10-28 03:22:56 - the current step: 690, finished 57.46%
+UTC Time: 2024-10-28 03:32:56 - the current step: 700, finished 58.30%
+UTC Time: 2024-10-28 03:42:56 - the current step: 710, finished 59.13%
+UTC Time: 2024-10-28 03:52:56 - the current step: 720, finished 59.97%
+UTC Time: 2024-10-28 04:02:56 - the current step: 730, finished 60.80%
+UTC Time: 2024-10-28 04:12:56 - the current step: 740, finished 61.63%
+UTC Time: 2024-10-28 04:22:56 - the current step: 750, finished 62.47%
+UTC Time: 2024-10-28 04:32:56 - the current step: 760, finished 63.30%
+UTC Time: 2024-10-28 04:42:56 - the current step: 770, finished 64.14%
+UTC Time: 2024-10-28 04:52:56 - the current step: 780, finished 64.97%
+UTC Time: 2024-10-28 05:02:56 - the current step: 790, finished 65.80%
+UTC Time: 2024-10-28 05:12:56 - the current step: 800, finished 66.64%
+UTC Time: 2024-10-28 05:22:56 - the current step: 810, finished 67.47%
+UTC Time: 2024-10-28 05:32:56 - the current step: 820, finished 68.31%
+UTC Time: 2024-10-28 05:42:56 - the current step: 830, finished 69.14%
+UTC Time: 2024-10-28 05:52:56 - the current step: 840, finished 69.97%
+UTC Time: 2024-10-28 06:02:56 - the current step: 850, finished 70.81%
+UTC Time: 2024-10-28 06:12:56 - the current step: 860, finished 71.64%
+UTC Time: 2024-10-28 06:22:56 - the current step: 870, finished 72.48%
+UTC Time: 2024-10-28 06:32:56 - the current step: 880, finished 73.31%
+UTC Time: 2024-10-28 06:42:56 - the current step: 890, finished 74.15%
+UTC Time: 2024-10-28 06:52:56 - the current step: 900, finished 74.98%
+UTC Time: 2024-10-28 07:02:56 - the current step: 910, finished 75.81%
+UTC Time: 2024-10-28 07:12:56 - the current step: 920, finished 76.65%
+UTC Time: 2024-10-28 07:22:56 - the current step: 930, finished 77.48%
+UTC Time: 2024-10-28 07:32:56 - the current step: 940, finished 78.32%
+UTC Time: 2024-10-28 07:42:56 - the current step: 950, finished 79.15%
+UTC Time: 2024-10-28 07:52:56 - the current step: 960, finished 79.98%
+UTC Time: 2024-10-28 08:02:56 - the current step: 970, finished 80.82%
+UTC Time: 2024-10-28 08:12:56 - the current step: 980, finished 81.65%
+UTC Time: 2024-10-28 08:22:56 - the current step: 990, finished 82.49%
+UTC Time: 2024-10-28 08:32:56 - the current step: 1000, finished 83.32%
+UTC Time: 2024-10-28 08:42:56 - the current step: 1010, finished 84.15%
+UTC Time: 2024-10-28 08:52:56 - the current step: 1020, finished 84.99%
+UTC Time: 2024-10-28 09:02:56 - the current step: 1030, finished 85.82%
+UTC Time: 2024-10-28 09:12:56 - the current step: 1040, finished 86.66%
+UTC Time: 2024-10-28 09:22:56 - the current step: 1050, finished 87.49%
+UTC Time: 2024-10-28 09:32:56 - the current step: 1060, finished 88.32%
+UTC Time: 2024-10-28 09:42:56 - the current step: 1070, finished 89.16%
+UTC Time: 2024-10-28 09:52:56 - the current step: 1080, finished 89.99%
+UTC Time: 2024-10-28 10:02:56 - the current step: 1090, finished 90.83%
+UTC Time: 2024-10-28 10:12:56 - the current step: 1100, finished 91.66%
+UTC Time: 2024-10-28 10:22:56 - the current step: 1110, finished 92.49%
+UTC Time: 2024-10-28 10:32:56 - the current step: 1120, finished 93.33%
+UTC Time: 2024-10-28 10:42:56 - the current step: 1130, finished 94.16%
+UTC Time: 2024-10-28 10:52:56 - the current step: 1140, finished 95.00%
+UTC Time: 2024-10-28 11:02:56 - the current step: 1150, finished 95.83%
+UTC Time: 2024-10-28 11:12:56 - the current step: 1160, finished 96.66%
+UTC Time: 2024-10-28 11:22:56 - the current step: 1170, finished 97.50%
+Machine ID: 43e5835f-6a38-ee57-bc7c-383d34d2924c - UTC Time: 2024-10-28 11:28:59 - {"DL Mbps": 270, "UL Mbps": 52, "Latency to US-East ms": 248.33, "Latency to EU-Cent ms": 389.31, "GPU": "NVIDIA GeForce RTX 4060 Ti", "CUDA": 12.7, "VRAM MiB": "16380 MiB", "VRAM_Free": "14983 MiB"}
+UTC Time: 2024-10-28 11:39:00 - the current step: 1180, finished 98.33%
+UTC Time: 2024-10-28 11:49:00 - the current step: 1190, finished 99.17%
+UTC Time: 2024-10-28 11:59:00 - the current step: 1200, finished 100.00%
+Machine ID: 43e5835f-6a38-ee57-bc7c-383d34d2924c - UTC Time: 2024-10-28 11:59:00 - The job is done
+-----> output:
+720600
+--------------------------------------------> job1
+-----> input:
+1
+1200
+-----> state:
+1
+1200
+1200
+720600
+-----> logs:
+Machine ID: 620f9151-3ff5-c350-9660-7949e423c0d3 - UTC Time: 2024-10-27 15:58:14 - {"DL Mbps": 60, "UL Mbps": 29, "Latency to US-East ms": 69.84, "Latency to EU-Cent ms": 143.36, "GPU": "NVIDIA GeForce RTX 4060 Ti", "CUDA": 12.6, "VRAM MiB": "16380 MiB", "VRAM_Free": "14725 MiB"}
+UTC Time: 2024-10-27 16:08:14 - the current step: 10, finished 0.75%
+UTC Time: 2024-10-27 16:18:14 - the current step: 20, finished 1.58%
+UTC Time: 2024-10-27 16:28:14 - the current step: 30, finished 2.42%
+UTC Time: 2024-10-27 16:38:14 - the current step: 40, finished 3.25%
+UTC Time: 2024-10-27 16:48:15 - the current step: 50, finished 4.09%
+UTC Time: 2024-10-27 16:58:15 - the current step: 60, finished 4.92%
+UTC Time: 2024-10-27 17:08:15 - the current step: 70, finished 5.75%
+UTC Time: 2024-10-27 17:18:15 - the current step: 80, finished 6.59%
+UTC Time: 2024-10-27 17:28:15 - the current step: 90, finished 7.42%
+UTC Time: 2024-10-27 17:38:15 - the current step: 100, finished 8.26%
+UTC Time: 2024-10-27 17:48:15 - the current step: 110, finished 9.09%
+UTC Time: 2024-10-27 17:58:15 - the current step: 120, finished 9.92%
+UTC Time: 2024-10-27 18:08:15 - the current step: 130, finished 10.76%
+UTC Time: 2024-10-27 18:18:15 - the current step: 140, finished 11.59%
+UTC Time: 2024-10-27 18:28:15 - the current step: 150, finished 12.43%
+UTC Time: 2024-10-27 18:38:15 - the current step: 160, finished 13.26%
+UTC Time: 2024-10-27 18:48:15 - the current step: 170, finished 14.10%
+UTC Time: 2024-10-27 18:58:15 - the current step: 180, finished 14.93%
+UTC Time: 2024-10-27 19:08:15 - the current step: 190, finished 15.76%
+UTC Time: 2024-10-27 19:18:15 - the current step: 200, finished 16.60%
+UTC Time: 2024-10-27 19:28:15 - the current step: 210, finished 17.43%
+UTC Time: 2024-10-27 19:38:15 - the current step: 220, finished 18.27%
+UTC Time: 2024-10-27 19:48:15 - the current step: 230, finished 19.10%
+UTC Time: 2024-10-27 19:58:15 - the current step: 240, finished 19.93%
+UTC Time: 2024-10-27 20:08:15 - the current step: 250, finished 20.77%
+UTC Time: 2024-10-27 20:18:15 - the current step: 260, finished 21.60%
+UTC Time: 2024-10-27 20:28:15 - the current step: 270, finished 22.44%
+UTC Time: 2024-10-27 20:38:15 - the current step: 280, finished 23.27%
+UTC Time: 2024-10-27 20:48:15 - the current step: 290, finished 24.10%
+UTC Time: 2024-10-27 20:58:15 - the current step: 300, finished 24.94%
+UTC Time: 2024-10-27 21:08:15 - the current step: 310, finished 25.77%
+UTC Time: 2024-10-27 21:18:15 - the current step: 320, finished 26.61%
+UTC Time: 2024-10-27 21:28:15 - the current step: 330, finished 27.44%
+UTC Time: 2024-10-27 21:38:15 - the current step: 340, finished 28.27%
+UTC Time: 2024-10-27 21:48:15 - the current step: 350, finished 29.11%
+UTC Time: 2024-10-27 21:58:15 - the current step: 360, finished 29.94%
+UTC Time: 2024-10-27 22:08:15 - the current step: 370, finished 30.78%
+UTC Time: 2024-10-27 22:18:15 - the current step: 380, finished 31.61%
+UTC Time: 2024-10-27 22:28:15 - the current step: 390, finished 32.44%
+UTC Time: 2024-10-27 22:38:15 - the current step: 400, finished 33.28%
+UTC Time: 2024-10-27 22:48:15 - the current step: 410, finished 34.11%
+UTC Time: 2024-10-27 22:58:15 - the current step: 420, finished 34.95%
+UTC Time: 2024-10-27 23:08:15 - the current step: 430, finished 35.78%
+UTC Time: 2024-10-27 23:18:15 - the current step: 440, finished 36.61%
+UTC Time: 2024-10-27 23:28:15 - the current step: 450, finished 37.45%
+UTC Time: 2024-10-27 23:38:15 - the current step: 460, finished 38.28%
+UTC Time: 2024-10-27 23:48:15 - the current step: 470, finished 39.12%
+UTC Time: 2024-10-27 23:58:15 - the current step: 480, finished 39.95%
+UTC Time: 2024-10-28 00:08:15 - the current step: 490, finished 40.78%
+UTC Time: 2024-10-28 00:18:15 - the current step: 500, finished 41.62%
+UTC Time: 2024-10-28 00:28:15 - the current step: 510, finished 42.45%
+UTC Time: 2024-10-28 00:38:15 - the current step: 520, finished 43.29%
+UTC Time: 2024-10-28 00:48:15 - the current step: 530, finished 44.12%
+UTC Time: 2024-10-28 00:58:15 - the current step: 540, finished 44.95%
+UTC Time: 2024-10-28 01:08:15 - the current step: 550, finished 45.79%
+UTC Time: 2024-10-28 01:18:15 - the current step: 560, finished 46.62%
+UTC Time: 2024-10-28 01:28:15 - the current step: 570, finished 47.46%
+UTC Time: 2024-10-28 01:38:15 - the current step: 580, finished 48.29%
+UTC Time: 2024-10-28 01:48:15 - the current step: 590, finished 49.12%
+UTC Time: 2024-10-28 01:58:15 - the current step: 600, finished 49.96%
+UTC Time: 2024-10-28 02:08:15 - the current step: 610, finished 50.79%
+UTC Time: 2024-10-28 02:18:15 - the current step: 620, finished 51.63%
+UTC Time: 2024-10-28 02:28:15 - the current step: 630, finished 52.46%
+UTC Time: 2024-10-28 02:38:15 - the current step: 640, finished 53.29%
+UTC Time: 2024-10-28 02:48:15 - the current step: 650, finished 54.13%
+UTC Time: 2024-10-28 02:58:15 - the current step: 660, finished 54.96%
+UTC Time: 2024-10-28 03:08:15 - the current step: 670, finished 55.80%
+UTC Time: 2024-10-28 03:18:15 - the current step: 680, finished 56.63%
+UTC Time: 2024-10-28 03:28:15 - the current step: 690, finished 57.46%
+UTC Time: 2024-10-28 03:38:15 - the current step: 700, finished 58.30%
+UTC Time: 2024-10-28 03:48:15 - the current step: 710, finished 59.13%
+UTC Time: 2024-10-28 03:58:15 - the current step: 720, finished 59.97%
+Machine ID: 1d9bc8c1-ca90-2e53-b22b-3688733141ad - UTC Time: 2024-10-28 03:59:12 - {"DL Mbps": 851, "UL Mbps": 208, "Latency to US-East ms": 107.65, "Latency to EU-Cent ms": 23.96, "GPU": "NVIDIA GeForce RTX 4070 Ti SUPER", "CUDA": 12.4, "VRAM MiB": "16376 MiB", "VRAM_Free": "15951 MiB"}
+UTC Time: 2024-10-28 04:09:13 - the current step: 730, finished 60.80%
+UTC Time: 2024-10-28 04:19:13 - the current step: 740, finished 61.63%
+UTC Time: 2024-10-28 04:29:13 - the current step: 750, finished 62.47%
+UTC Time: 2024-10-28 04:39:13 - the current step: 760, finished 63.30%
+UTC Time: 2024-10-28 04:49:13 - the current step: 770, finished 64.14%
+UTC Time: 2024-10-28 04:59:13 - the current step: 780, finished 64.97%
+UTC Time: 2024-10-28 05:09:13 - the current step: 790, finished 65.80%
+UTC Time: 2024-10-28 05:19:13 - the current step: 800, finished 66.64%
+UTC Time: 2024-10-28 05:29:13 - the current step: 810, finished 67.47%
+UTC Time: 2024-10-28 05:39:13 - the current step: 820, finished 68.31%
+UTC Time: 2024-10-28 05:49:13 - the current step: 830, finished 69.14%
+UTC Time: 2024-10-28 05:59:13 - the current step: 840, finished 69.97%
+UTC Time: 2024-10-28 06:09:13 - the current step: 850, finished 70.81%
+UTC Time: 2024-10-28 06:19:13 - the current step: 860, finished 71.64%
+UTC Time: 2024-10-28 06:29:13 - the current step: 870, finished 72.48%
+UTC Time: 2024-10-28 06:39:13 - the current step: 880, finished 73.31%
+UTC Time: 2024-10-28 06:49:13 - the current step: 890, finished 74.15%
+UTC Time: 2024-10-28 06:59:13 - the current step: 900, finished 74.98%
+UTC Time: 2024-10-28 07:09:13 - the current step: 910, finished 75.81%
+UTC Time: 2024-10-28 07:19:13 - the current step: 920, finished 76.65%
+UTC Time: 2024-10-28 07:29:13 - the current step: 930, finished 77.48%
+UTC Time: 2024-10-28 07:39:13 - the current step: 940, finished 78.32%
+UTC Time: 2024-10-28 07:49:13 - the current step: 950, finished 79.15%
+UTC Time: 2024-10-28 07:59:13 - the current step: 960, finished 79.98%
+UTC Time: 2024-10-28 08:09:13 - the current step: 970, finished 80.82%
+UTC Time: 2024-10-28 08:19:13 - the current step: 980, finished 81.65%
+UTC Time: 2024-10-28 08:29:13 - the current step: 990, finished 82.49%
+UTC Time: 2024-10-28 08:39:13 - the current step: 1000, finished 83.32%
+UTC Time: 2024-10-28 08:49:13 - the current step: 1010, finished 84.15%
+UTC Time: 2024-10-28 08:59:13 - the current step: 1020, finished 84.99%
+UTC Time: 2024-10-28 09:09:13 - the current step: 1030, finished 85.82%
+UTC Time: 2024-10-28 09:19:13 - the current step: 1040, finished 86.66%
+UTC Time: 2024-10-28 09:29:13 - the current step: 1050, finished 87.49%
+UTC Time: 2024-10-28 09:39:13 - the current step: 1060, finished 88.32%
+UTC Time: 2024-10-28 09:49:13 - the current step: 1070, finished 89.16%
+UTC Time: 2024-10-28 09:59:13 - the current step: 1080, finished 89.99%
+UTC Time: 2024-10-28 10:09:13 - the current step: 1090, finished 90.83%
+UTC Time: 2024-10-28 10:19:13 - the current step: 1100, finished 91.66%
+UTC Time: 2024-10-28 10:29:13 - the current step: 1110, finished 92.49%
+UTC Time: 2024-10-28 10:39:13 - the current step: 1120, finished 93.33%
+UTC Time: 2024-10-28 10:49:13 - the current step: 1130, finished 94.16%
+UTC Time: 2024-10-28 10:59:13 - the current step: 1140, finished 95.00%
+UTC Time: 2024-10-28 11:09:13 - the current step: 1150, finished 95.83%
+UTC Time: 2024-10-28 11:19:13 - the current step: 1160, finished 96.66%
+UTC Time: 2024-10-28 11:29:13 - the current step: 1170, finished 97.50%
+UTC Time: 2024-10-28 11:39:13 - the current step: 1180, finished 98.33%
+UTC Time: 2024-10-28 11:49:13 - the current step: 1190, finished 99.17%
+UTC Time: 2024-10-28 11:59:13 - the current step: 1200, finished 100.00%
+Machine ID: 1d9bc8c1-ca90-2e53-b22b-3688733141ad - UTC Time: 2024-10-28 11:59:13 - The job is done
+-----> output:
+720600
+--------------------------------------------> job2
+-----> input:
+1
+1200
+-----> state:
+1
+1200
+1200
+720600
+-----> logs:
+Machine ID: ecf5e78b-6fae-e15c-97e0-20b3be601949 - UTC Time: 2024-10-27 15:59:23 - {"DL Mbps": 265, "UL Mbps": 137, "Latency to US-East ms": 139.6, "Latency to EU-Cent ms": 200.91, "GPU": "NVIDIA GeForce RTX 4060 Ti", "CUDA": 12.7, "VRAM MiB": "16380 MiB", "VRAM_Free": "15375 MiB"}
+UTC Time: 2024-10-27 16:09:24 - the current step: 10, finished 0.75%
+UTC Time: 2024-10-27 16:19:24 - the current step: 20, finished 1.58%
+UTC Time: 2024-10-27 16:29:24 - the current step: 30, finished 2.42%
+UTC Time: 2024-10-27 16:39:24 - the current step: 40, finished 3.25%
+UTC Time: 2024-10-27 16:49:24 - the current step: 50, finished 4.09%
+UTC Time: 2024-10-27 16:59:24 - the current step: 60, finished 4.92%
+UTC Time: 2024-10-27 17:09:24 - the current step: 70, finished 5.75%
+Machine ID: bf4c6fb7-8bd9-5c5e-a4fc-48189bbb1eb5 - UTC Time: 2024-10-27 17:18:37 - {"DL Mbps": 93, "UL Mbps": 98, "Latency to US-East ms": 16.51, "Latency to EU-Cent ms": 97.51, "GPU": "NVIDIA GeForce RTX 4080 SUPER", "CUDA": 12.6, "VRAM MiB": "16376 MiB", "VRAM_Free": "15870 MiB"}
+UTC Time: 2024-10-27 17:28:37 - the current step: 80, finished 6.59%
+UTC Time: 2024-10-27 17:38:37 - the current step: 90, finished 7.42%
+UTC Time: 2024-10-27 17:48:37 - the current step: 100, finished 8.26%
+UTC Time: 2024-10-27 17:58:37 - the current step: 110, finished 9.09%
+UTC Time: 2024-10-27 18:08:37 - the current step: 120, finished 9.92%
+UTC Time: 2024-10-27 18:18:37 - the current step: 130, finished 10.76%
+UTC Time: 2024-10-27 18:28:37 - the current step: 140, finished 11.59%
+UTC Time: 2024-10-27 18:38:37 - the current step: 150, finished 12.43%
+UTC Time: 2024-10-27 18:48:37 - the current step: 160, finished 13.26%
+UTC Time: 2024-10-27 18:58:37 - the current step: 170, finished 14.10%
+UTC Time: 2024-10-27 19:08:37 - the current step: 180, finished 14.93%
+UTC Time: 2024-10-27 19:18:37 - the current step: 190, finished 15.76%
+UTC Time: 2024-10-27 19:28:37 - the current step: 200, finished 16.60%
+UTC Time: 2024-10-27 19:38:37 - the current step: 210, finished 17.43%
+UTC Time: 2024-10-27 19:48:37 - the current step: 220, finished 18.27%
+UTC Time: 2024-10-27 19:58:37 - the current step: 230, finished 19.10%
+UTC Time: 2024-10-27 20:08:37 - the current step: 240, finished 19.93%
+UTC Time: 2024-10-27 20:18:37 - the current step: 250, finished 20.77%
+UTC Time: 2024-10-27 20:28:37 - the current step: 260, finished 21.60%
+UTC Time: 2024-10-27 20:38:37 - the current step: 270, finished 22.44%
+UTC Time: 2024-10-27 20:48:37 - the current step: 280, finished 23.27%
+UTC Time: 2024-10-27 20:58:37 - the current step: 290, finished 24.10%
+UTC Time: 2024-10-27 21:08:37 - the current step: 300, finished 24.94%
+UTC Time: 2024-10-27 21:18:37 - the current step: 310, finished 25.77%
+UTC Time: 2024-10-27 21:28:37 - the current step: 320, finished 26.61%
+UTC Time: 2024-10-27 21:38:37 - the current step: 330, finished 27.44%
+UTC Time: 2024-10-27 21:48:37 - the current step: 340, finished 28.27%
+UTC Time: 2024-10-27 21:58:37 - the current step: 350, finished 29.11%
+UTC Time: 2024-10-27 22:08:37 - the current step: 360, finished 29.94%
+UTC Time: 2024-10-27 22:18:37 - the current step: 370, finished 30.78%
+UTC Time: 2024-10-27 22:28:37 - the current step: 380, finished 31.61%
+UTC Time: 2024-10-27 22:38:37 - the current step: 390, finished 32.44%
+UTC Time: 2024-10-27 22:48:37 - the current step: 400, finished 33.28%
+UTC Time: 2024-10-27 22:58:37 - the current step: 410, finished 34.11%
+UTC Time: 2024-10-27 23:08:37 - the current step: 420, finished 34.95%
+UTC Time: 2024-10-27 23:18:37 - the current step: 430, finished 35.78%
+UTC Time: 2024-10-27 23:28:37 - the current step: 440, finished 36.61%
+UTC Time: 2024-10-27 23:38:37 - the current step: 450, finished 37.45%
+UTC Time: 2024-10-27 23:48:37 - the current step: 460, finished 38.28%
+UTC Time: 2024-10-27 23:58:37 - the current step: 470, finished 39.12%
+UTC Time: 2024-10-28 00:08:37 - the current step: 480, finished 39.95%
+UTC Time: 2024-10-28 00:18:37 - the current step: 490, finished 40.78%
+UTC Time: 2024-10-28 00:28:37 - the current step: 500, finished 41.62%
+UTC Time: 2024-10-28 00:38:37 - the current step: 510, finished 42.45%
+UTC Time: 2024-10-28 00:48:37 - the current step: 520, finished 43.29%
+UTC Time: 2024-10-28 00:58:37 - the current step: 530, finished 44.12%
+UTC Time: 2024-10-28 01:08:37 - the current step: 540, finished 44.95%
+UTC Time: 2024-10-28 01:18:37 - the current step: 550, finished 45.79%
+UTC Time: 2024-10-28 01:28:37 - the current step: 560, finished 46.62%
+UTC Time: 2024-10-28 01:38:37 - the current step: 570, finished 47.46%
+UTC Time: 2024-10-28 01:48:37 - the current step: 580, finished 48.29%
+UTC Time: 2024-10-28 01:58:37 - the current step: 590, finished 49.12%
+UTC Time: 2024-10-28 02:08:37 - the current step: 600, finished 49.96%
+UTC Time: 2024-10-28 02:18:37 - the current step: 610, finished 50.79%
+UTC Time: 2024-10-28 02:28:37 - the current step: 620, finished 51.63%
+UTC Time: 2024-10-28 02:38:37 - the current step: 630, finished 52.46%
+UTC Time: 2024-10-28 02:48:37 - the current step: 640, finished 53.29%
+UTC Time: 2024-10-28 02:58:37 - the current step: 650, finished 54.13%
+UTC Time: 2024-10-28 03:08:37 - the current step: 660, finished 54.96%
+UTC Time: 2024-10-28 03:18:37 - the current step: 670, finished 55.80%
+UTC Time: 2024-10-28 03:28:37 - the current step: 680, finished 56.63%
+UTC Time: 2024-10-28 03:38:37 - the current step: 690, finished 57.46%
+UTC Time: 2024-10-28 03:48:37 - the current step: 700, finished 58.30%
+UTC Time: 2024-10-28 03:58:37 - the current step: 710, finished 59.13%
+UTC Time: 2024-10-28 04:08:37 - the current step: 720, finished 59.97%
+UTC Time: 2024-10-28 04:18:37 - the current step: 730, finished 60.80%
+UTC Time: 2024-10-28 04:28:37 - the current step: 740, finished 61.63%
+UTC Time: 2024-10-28 04:38:37 - the current step: 750, finished 62.47%
+UTC Time: 2024-10-28 04:48:37 - the current step: 760, finished 63.30%
+UTC Time: 2024-10-28 04:58:37 - the current step: 770, finished 64.14%
+UTC Time: 2024-10-28 05:08:37 - the current step: 780, finished 64.97%
+UTC Time: 2024-10-28 05:18:37 - the current step: 790, finished 65.80%
+Machine ID: 2757f48f-60fb-745b-b987-418475172de7 - UTC Time: 2024-10-28 05:19:41 - {"DL Mbps": 92, "UL Mbps": 41, "Latency to US-East ms": 57.02, "Latency to EU-Cent ms": 142.0, "GPU": "NVIDIA GeForce RTX 4060 Ti", "CUDA": 12.6, "VRAM MiB": "16380 MiB", "VRAM_Free": "15590 MiB"}
+UTC Time: 2024-10-28 05:29:41 - the current step: 800, finished 66.64%
+UTC Time: 2024-10-28 05:39:41 - the current step: 810, finished 67.47%
+UTC Time: 2024-10-28 05:49:41 - the current step: 820, finished 68.31%
+UTC Time: 2024-10-28 05:59:41 - the current step: 830, finished 69.14%
+UTC Time: 2024-10-28 06:09:41 - the current step: 840, finished 69.97%
+UTC Time: 2024-10-28 06:19:41 - the current step: 850, finished 70.81%
+UTC Time: 2024-10-28 06:29:41 - the current step: 860, finished 71.64%
+UTC Time: 2024-10-28 06:39:41 - the current step: 870, finished 72.48%
+UTC Time: 2024-10-28 06:49:41 - the current step: 880, finished 73.31%
+UTC Time: 2024-10-28 06:59:41 - the current step: 890, finished 74.15%
+UTC Time: 2024-10-28 07:09:41 - the current step: 900, finished 74.98%
+UTC Time: 2024-10-28 07:19:41 - the current step: 910, finished 75.81%
+UTC Time: 2024-10-28 07:29:41 - the current step: 920, finished 76.65%
+UTC Time: 2024-10-28 07:39:41 - the current step: 930, finished 77.48%
+UTC Time: 2024-10-28 07:49:41 - the current step: 940, finished 78.32%
+UTC Time: 2024-10-28 07:59:41 - the current step: 950, finished 79.15%
+UTC Time: 2024-10-28 08:09:41 - the current step: 960, finished 79.98%
+UTC Time: 2024-10-28 08:19:41 - the current step: 970, finished 80.82%
+UTC Time: 2024-10-28 08:29:41 - the current step: 980, finished 81.65%
+UTC Time: 2024-10-28 08:39:41 - the current step: 990, finished 82.49%
+UTC Time: 2024-10-28 08:49:41 - the current step: 1000, finished 83.32%
+UTC Time: 2024-10-28 08:59:41 - the current step: 1010, finished 84.15%
+UTC Time: 2024-10-28 09:09:41 - the current step: 1020, finished 84.99%
+UTC Time: 2024-10-28 09:19:41 - the current step: 1030, finished 85.82%
+UTC Time: 2024-10-28 09:29:41 - the current step: 1040, finished 86.66%
+UTC Time: 2024-10-28 09:39:41 - the current step: 1050, finished 87.49%
+UTC Time: 2024-10-28 09:49:41 - the current step: 1060, finished 88.32%
+UTC Time: 2024-10-28 09:59:41 - the current step: 1070, finished 89.16%
+UTC Time: 2024-10-28 10:09:41 - the current step: 1080, finished 89.99%
+UTC Time: 2024-10-28 10:19:41 - the current step: 1090, finished 90.83%
+UTC Time: 2024-10-28 10:29:41 - the current step: 1100, finished 91.66%
+UTC Time: 2024-10-28 10:39:41 - the current step: 1110, finished 92.49%
+UTC Time: 2024-10-28 10:49:41 - the current step: 1120, finished 93.33%
+UTC Time: 2024-10-28 10:59:41 - the current step: 1130, finished 94.16%
+UTC Time: 2024-10-28 11:09:41 - the current step: 1140, finished 95.00%
+UTC Time: 2024-10-28 11:19:41 - the current step: 1150, finished 95.83%
+UTC Time: 2024-10-28 11:29:41 - the current step: 1160, finished 96.66%
+UTC Time: 2024-10-28 11:39:41 - the current step: 1170, finished 97.50%
+UTC Time: 2024-10-28 11:49:41 - the current step: 1180, finished 98.33%
+UTC Time: 2024-10-28 11:59:41 - the current step: 1190, finished 99.17%
+UTC Time: 2024-10-28 12:09:41 - the current step: 1200, finished 100.00%
+Machine ID: 2757f48f-60fb-745b-b987-418475172de7 - UTC Time: 2024-10-28 12:09:41 - The job is done
+-----> output:
+720600
+--------------------------------------------> job3
+-----> input:
+1
+1200
+-----> state:
+1
+1200
+1200
+720600
+-----> logs:
+Machine ID: 43e5835f-6a38-ee57-bc7c-383d34d2924c - UTC Time: 2024-10-27 16:00:50 - {"DL Mbps": 270, "UL Mbps": 52, "Latency to US-East ms": 248.33, "Latency to EU-Cent ms": 389.31, "GPU": "NVIDIA GeForce RTX 4060 Ti", "CUDA": 12.7, "VRAM MiB": "16380 MiB", "VRAM_Free": "14983 MiB"}
+UTC Time: 2024-10-27 16:10:52 - the current step: 10, finished 0.75%
+UTC Time: 2024-10-27 16:20:52 - the current step: 20, finished 1.58%
+UTC Time: 2024-10-27 16:30:52 - the current step: 30, finished 2.42%
+UTC Time: 2024-10-27 16:40:52 - the current step: 40, finished 3.25%
+UTC Time: 2024-10-27 16:50:52 - the current step: 50, finished 4.09%
+UTC Time: 2024-10-27 17:00:52 - the current step: 60, finished 4.92%
+UTC Time: 2024-10-27 17:10:52 - the current step: 70, finished 5.75%
+UTC Time: 2024-10-27 17:20:52 - the current step: 80, finished 6.59%
+UTC Time: 2024-10-27 17:30:52 - the current step: 90, finished 7.42%
+UTC Time: 2024-10-27 17:40:52 - the current step: 100, finished 8.26%
+UTC Time: 2024-10-27 17:50:52 - the current step: 110, finished 9.09%
+UTC Time: 2024-10-27 18:00:52 - the current step: 120, finished 9.92%
+UTC Time: 2024-10-27 18:10:52 - the current step: 130, finished 10.76%
+UTC Time: 2024-10-27 18:20:52 - the current step: 140, finished 11.59%
+UTC Time: 2024-10-27 18:30:52 - the current step: 150, finished 12.43%
+UTC Time: 2024-10-27 18:40:52 - the current step: 160, finished 13.26%
+UTC Time: 2024-10-27 18:50:52 - the current step: 170, finished 14.10%
+UTC Time: 2024-10-27 19:00:52 - the current step: 180, finished 14.93%
+UTC Time: 2024-10-27 19:10:52 - the current step: 190, finished 15.76%
+UTC Time: 2024-10-27 19:20:52 - the current step: 200, finished 16.60%
+UTC Time: 2024-10-27 19:30:52 - the current step: 210, finished 17.43%
+Machine ID: dde6ca53-e56e-1154-9dd3-386ca9e7f60e - UTC Time: 2024-10-27 19:39:36 - {"DL Mbps": 559, "UL Mbps": 7, "Latency to US-East ms": 68.66, "Latency to EU-Cent ms": 3.8, "GPU": "NVIDIA GeForce RTX 4080", "CUDA": 12.7, "VRAM MiB": "16376 MiB", "VRAM_Free": "13608 MiB"}
+UTC Time: 2024-10-27 19:49:37 - the current step: 220, finished 18.27%
+UTC Time: 2024-10-27 19:59:37 - the current step: 230, finished 19.10%
+UTC Time: 2024-10-27 20:09:37 - the current step: 240, finished 19.93%
+UTC Time: 2024-10-27 20:19:37 - the current step: 250, finished 20.77%
+UTC Time: 2024-10-27 20:29:37 - the current step: 260, finished 21.60%
+UTC Time: 2024-10-27 20:39:37 - the current step: 270, finished 22.44%
+UTC Time: 2024-10-27 20:49:37 - the current step: 280, finished 23.27%
+UTC Time: 2024-10-27 20:59:37 - the current step: 290, finished 24.10%
+UTC Time: 2024-10-27 21:09:37 - the current step: 300, finished 24.94%
+UTC Time: 2024-10-27 21:19:37 - the current step: 310, finished 25.77%
+UTC Time: 2024-10-27 21:29:37 - the current step: 320, finished 26.61%
+UTC Time: 2024-10-27 21:39:37 - the current step: 330, finished 27.44%
+UTC Time: 2024-10-27 21:49:37 - the current step: 340, finished 28.27%
+UTC Time: 2024-10-27 21:59:37 - the current step: 350, finished 29.11%
+UTC Time: 2024-10-27 22:09:37 - the current step: 360, finished 29.94%
+UTC Time: 2024-10-27 22:19:37 - the current step: 370, finished 30.78%
+UTC Time: 2024-10-27 22:29:37 - the current step: 380, finished 31.61%
+UTC Time: 2024-10-27 22:39:37 - the current step: 390, finished 32.44%
+Machine ID: 43e5835f-6a38-ee57-bc7c-383d34d2924c - UTC Time: 2024-10-27 22:50:43 - {"DL Mbps": 270, "UL Mbps": 52, "Latency to US-East ms": 248.33, "Latency to EU-Cent ms": 389.31, "GPU": "NVIDIA GeForce RTX 4060 Ti", "CUDA": 12.7, "VRAM MiB": "16380 MiB", "VRAM_Free": "14983 MiB"}
+UTC Time: 2024-10-27 23:00:45 - the current step: 400, finished 33.28%
+UTC Time: 2024-10-27 23:10:45 - the current step: 410, finished 34.11%
+UTC Time: 2024-10-27 23:20:45 - the current step: 420, finished 34.95%
+UTC Time: 2024-10-27 23:30:45 - the current step: 430, finished 35.78%
+UTC Time: 2024-10-27 23:40:45 - the current step: 440, finished 36.61%
+UTC Time: 2024-10-27 23:50:45 - the current step: 450, finished 37.45%
+UTC Time: 2024-10-28 00:00:45 - the current step: 460, finished 38.28%
+UTC Time: 2024-10-28 00:10:45 - the current step: 470, finished 39.12%
+UTC Time: 2024-10-28 00:20:45 - the current step: 480, finished 39.95%
+UTC Time: 2024-10-28 00:30:45 - the current step: 490, finished 40.78%
+UTC Time: 2024-10-28 00:40:45 - the current step: 500, finished 41.62%
+UTC Time: 2024-10-28 00:50:45 - the current step: 510, finished 42.45%
+UTC Time: 2024-10-28 01:00:45 - the current step: 520, finished 43.29%
+UTC Time: 2024-10-28 01:10:45 - the current step: 530, finished 44.12%
+UTC Time: 2024-10-28 01:20:45 - the current step: 540, finished 44.95%
+UTC Time: 2024-10-28 01:30:45 - the current step: 550, finished 45.79%
+UTC Time: 2024-10-28 01:40:45 - the current step: 560, finished 46.62%
+UTC Time: 2024-10-28 01:50:45 - the current step: 570, finished 47.46%
+UTC Time: 2024-10-28 02:00:45 - the current step: 580, finished 48.29%
+UTC Time: 2024-10-28 02:10:45 - the current step: 590, finished 49.12%
+UTC Time: 2024-10-28 02:20:45 - the current step: 600, finished 49.96%
+UTC Time: 2024-10-28 02:30:45 - the current step: 610, finished 50.79%
+UTC Time: 2024-10-28 02:40:45 - the current step: 620, finished 51.63%
+UTC Time: 2024-10-28 02:50:45 - the current step: 630, finished 52.46%
+UTC Time: 2024-10-28 03:00:45 - the current step: 640, finished 53.29%
+UTC Time: 2024-10-28 03:10:45 - the current step: 650, finished 54.13%
+UTC Time: 2024-10-28 03:20:45 - the current step: 660, finished 54.96%
+UTC Time: 2024-10-28 03:30:45 - the current step: 670, finished 55.80%
+UTC Time: 2024-10-28 03:40:45 - the current step: 680, finished 56.63%
+UTC Time: 2024-10-28 03:50:45 - the current step: 690, finished 57.46%
+UTC Time: 2024-10-28 04:00:45 - the current step: 700, finished 58.30%
+UTC Time: 2024-10-28 04:10:45 - the current step: 710, finished 59.13%
+UTC Time: 2024-10-28 04:20:45 - the current step: 720, finished 59.97%
+UTC Time: 2024-10-28 04:30:45 - the current step: 730, finished 60.80%
+UTC Time: 2024-10-28 04:40:45 - the current step: 740, finished 61.63%
+UTC Time: 2024-10-28 04:50:45 - the current step: 750, finished 62.47%
+UTC Time: 2024-10-28 05:00:45 - the current step: 760, finished 63.30%
+UTC Time: 2024-10-28 05:10:45 - the current step: 770, finished 64.14%
+UTC Time: 2024-10-28 05:20:45 - the current step: 780, finished 64.97%
+UTC Time: 2024-10-28 05:30:45 - the current step: 790, finished 65.80%
+UTC Time: 2024-10-28 05:40:45 - the current step: 800, finished 66.64%
+UTC Time: 2024-10-28 05:50:45 - the current step: 810, finished 67.47%
+UTC Time: 2024-10-28 06:00:45 - the current step: 820, finished 68.31%
+UTC Time: 2024-10-28 06:10:45 - the current step: 830, finished 69.14%
+UTC Time: 2024-10-28 06:20:45 - the current step: 840, finished 69.97%
+UTC Time: 2024-10-28 06:30:45 - the current step: 850, finished 70.81%
+UTC Time: 2024-10-28 06:40:45 - the current step: 860, finished 71.64%
+UTC Time: 2024-10-28 06:50:45 - the current step: 870, finished 72.48%
+UTC Time: 2024-10-28 07:00:45 - the current step: 880, finished 73.31%
+UTC Time: 2024-10-28 07:10:45 - the current step: 890, finished 74.15%
+UTC Time: 2024-10-28 07:20:45 - the current step: 900, finished 74.98%
+UTC Time: 2024-10-28 07:30:45 - the current step: 910, finished 75.81%
+UTC Time: 2024-10-28 07:40:45 - the current step: 920, finished 76.65%
+UTC Time: 2024-10-28 07:50:45 - the current step: 930, finished 77.48%
+UTC Time: 2024-10-28 08:00:45 - the current step: 940, finished 78.32%
+UTC Time: 2024-10-28 08:10:45 - the current step: 950, finished 79.15%
+UTC Time: 2024-10-28 08:20:45 - the current step: 960, finished 79.98%
+UTC Time: 2024-10-28 08:30:45 - the current step: 970, finished 80.82%
+UTC Time: 2024-10-28 08:40:45 - the current step: 980, finished 81.65%
+UTC Time: 2024-10-28 08:50:45 - the current step: 990, finished 82.49%
+UTC Time: 2024-10-28 09:00:45 - the current step: 1000, finished 83.32%
+UTC Time: 2024-10-28 09:10:45 - the current step: 1010, finished 84.15%
+UTC Time: 2024-10-28 09:20:45 - the current step: 1020, finished 84.99%
+UTC Time: 2024-10-28 09:30:45 - the current step: 1030, finished 85.82%
+UTC Time: 2024-10-28 09:40:45 - the current step: 1040, finished 86.66%
+UTC Time: 2024-10-28 09:50:45 - the current step: 1050, finished 87.49%
+UTC Time: 2024-10-28 10:00:45 - the current step: 1060, finished 88.32%
+UTC Time: 2024-10-28 10:10:45 - the current step: 1070, finished 89.16%
+UTC Time: 2024-10-28 10:20:45 - the current step: 1080, finished 89.99%
+UTC Time: 2024-10-28 10:30:45 - the current step: 1090, finished 90.83%
+UTC Time: 2024-10-28 10:40:45 - the current step: 1100, finished 91.66%
+Machine ID: bf4c6fb7-8bd9-5c5e-a4fc-48189bbb1eb5 - UTC Time: 2024-10-28 10:50:36 - {"DL Mbps": 93, "UL Mbps": 98, "Latency to US-East ms": 16.51, "Latency to EU-Cent ms": 97.51, "GPU": "NVIDIA GeForce RTX 4080 SUPER", "CUDA": 12.6, "VRAM MiB": "16376 MiB", "VRAM_Free": "15870 MiB"}
+UTC Time: 2024-10-28 11:00:37 - the current step: 1110, finished 92.49%
+UTC Time: 2024-10-28 11:10:37 - the current step: 1120, finished 93.33%
+UTC Time: 2024-10-28 11:20:37 - the current step: 1130, finished 94.16%
+UTC Time: 2024-10-28 11:30:37 - the current step: 1140, finished 95.00%
+UTC Time: 2024-10-28 11:40:37 - the current step: 1150, finished 95.83%
+UTC Time: 2024-10-28 11:50:37 - the current step: 1160, finished 96.66%
+UTC Time: 2024-10-28 12:00:37 - the current step: 1170, finished 97.50%
+UTC Time: 2024-10-28 12:10:37 - the current step: 1180, finished 98.33%
+UTC Time: 2024-10-28 12:20:37 - the current step: 1190, finished 99.17%
+UTC Time: 2024-10-28 12:30:37 - the current step: 1200, finished 100.00%
+Machine ID: bf4c6fb7-8bd9-5c5e-a4fc-48189bbb1eb5 - UTC Time: 2024-10-28 12:30:37 - The job is done
+-----> output:
+720600
+--------------------------------------------> job4
+-----> input:
+1
+1200
+-----> state:
+1
+1200
+1200
+720600
+-----> logs:
+Machine ID: 2757f48f-60fb-745b-b987-418475172de7 - UTC Time: 2024-10-27 16:13:55 - {"DL Mbps": 92, "UL Mbps": 41, "Latency to US-East ms": 57.02, "Latency to EU-Cent ms": 142.0, "GPU": "NVIDIA GeForce RTX 4060 Ti", "CUDA": 12.6, "VRAM MiB": "16380 MiB", "VRAM_Free": "15590 MiB"}
+UTC Time: 2024-10-27 16:23:55 - the current step: 10, finished 0.75%
+UTC Time: 2024-10-27 16:33:55 - the current step: 20, finished 1.58%
+UTC Time: 2024-10-27 16:43:55 - the current step: 30, finished 2.42%
+UTC Time: 2024-10-27 16:53:55 - the current step: 40, finished 3.25%
+UTC Time: 2024-10-27 17:03:55 - the current step: 50, finished 4.09%
+UTC Time: 2024-10-27 17:13:55 - the current step: 60, finished 4.92%
+UTC Time: 2024-10-27 17:23:55 - the current step: 70, finished 5.75%
+UTC Time: 2024-10-27 17:33:55 - the current step: 80, finished 6.59%
+UTC Time: 2024-10-27 17:43:55 - the current step: 90, finished 7.42%
+UTC Time: 2024-10-27 17:53:55 - the current step: 100, finished 8.26%
+UTC Time: 2024-10-27 18:03:55 - the current step: 110, finished 9.09%
+UTC Time: 2024-10-27 18:13:55 - the current step: 120, finished 9.92%
+UTC Time: 2024-10-27 18:23:55 - the current step: 130, finished 10.76%
+UTC Time: 2024-10-27 18:33:55 - the current step: 140, finished 11.59%
+UTC Time: 2024-10-27 18:43:55 - the current step: 150, finished 12.43%
+UTC Time: 2024-10-27 18:53:55 - the current step: 160, finished 13.26%
+UTC Time: 2024-10-27 19:03:55 - the current step: 170, finished 14.10%
+UTC Time: 2024-10-27 19:13:55 - the current step: 180, finished 14.93%
+UTC Time: 2024-10-27 19:23:55 - the current step: 190, finished 15.76%
+UTC Time: 2024-10-27 19:33:55 - the current step: 200, finished 16.60%
+UTC Time: 2024-10-27 19:43:55 - the current step: 210, finished 17.43%
+UTC Time: 2024-10-27 19:53:55 - the current step: 220, finished 18.27%
+UTC Time: 2024-10-27 20:03:55 - the current step: 230, finished 19.10%
+UTC Time: 2024-10-27 20:13:55 - the current step: 240, finished 19.93%
+UTC Time: 2024-10-27 20:23:55 - the current step: 250, finished 20.77%
+UTC Time: 2024-10-27 20:33:55 - the current step: 260, finished 21.60%
+UTC Time: 2024-10-27 20:43:55 - the current step: 270, finished 22.44%
+UTC Time: 2024-10-27 20:53:55 - the current step: 280, finished 23.27%
+UTC Time: 2024-10-27 21:03:55 - the current step: 290, finished 24.10%
+UTC Time: 2024-10-27 21:13:55 - the current step: 300, finished 24.94%
+UTC Time: 2024-10-27 21:23:55 - the current step: 310, finished 25.77%
+UTC Time: 2024-10-27 21:33:55 - the current step: 320, finished 26.61%
+UTC Time: 2024-10-27 21:43:55 - the current step: 330, finished 27.44%
+UTC Time: 2024-10-27 21:53:55 - the current step: 340, finished 28.27%
+UTC Time: 2024-10-27 22:03:55 - the current step: 350, finished 29.11%
+UTC Time: 2024-10-27 22:13:55 - the current step: 360, finished 29.94%
+UTC Time: 2024-10-27 22:23:55 - the current step: 370, finished 30.78%
+UTC Time: 2024-10-27 22:33:55 - the current step: 380, finished 31.61%
+UTC Time: 2024-10-27 22:43:55 - the current step: 390, finished 32.44%
+UTC Time: 2024-10-27 22:53:55 - the current step: 400, finished 33.28%
+UTC Time: 2024-10-27 23:03:55 - the current step: 410, finished 34.11%
+UTC Time: 2024-10-27 23:13:55 - the current step: 420, finished 34.95%
+UTC Time: 2024-10-27 23:23:55 - the current step: 430, finished 35.78%
+UTC Time: 2024-10-27 23:33:55 - the current step: 440, finished 36.61%
+UTC Time: 2024-10-27 23:43:55 - the current step: 450, finished 37.45%
+UTC Time: 2024-10-27 23:53:55 - the current step: 460, finished 38.28%
+UTC Time: 2024-10-28 00:03:55 - the current step: 470, finished 39.12%
+UTC Time: 2024-10-28 00:13:55 - the current step: 480, finished 39.95%
+UTC Time: 2024-10-28 00:23:55 - the current step: 490, finished 40.78%
+UTC Time: 2024-10-28 00:33:55 - the current step: 500, finished 41.62%
+UTC Time: 2024-10-28 00:43:55 - the current step: 510, finished 42.45%
+UTC Time: 2024-10-28 00:53:55 - the current step: 520, finished 43.29%
+UTC Time: 2024-10-28 01:03:55 - the current step: 530, finished 44.12%
+UTC Time: 2024-10-28 01:13:55 - the current step: 540, finished 44.95%
+UTC Time: 2024-10-28 01:23:55 - the current step: 550, finished 45.79%
+UTC Time: 2024-10-28 01:33:55 - the current step: 560, finished 46.62%
+UTC Time: 2024-10-28 01:43:55 - the current step: 570, finished 47.46%
+UTC Time: 2024-10-28 01:53:55 - the current step: 580, finished 48.29%
+UTC Time: 2024-10-28 02:03:55 - the current step: 590, finished 49.12%
+UTC Time: 2024-10-28 02:13:55 - the current step: 600, finished 49.96%
+UTC Time: 2024-10-28 02:23:55 - the current step: 610, finished 50.79%
+UTC Time: 2024-10-28 02:33:55 - the current step: 620, finished 51.63%
+UTC Time: 2024-10-28 02:43:55 - the current step: 630, finished 52.46%
+UTC Time: 2024-10-28 02:53:55 - the current step: 640, finished 53.29%
+UTC Time: 2024-10-28 03:03:55 - the current step: 650, finished 54.13%
+UTC Time: 2024-10-28 03:13:55 - the current step: 660, finished 54.96%
+UTC Time: 2024-10-28 03:23:55 - the current step: 670, finished 55.80%
+UTC Time: 2024-10-28 03:33:55 - the current step: 680, finished 56.63%
+UTC Time: 2024-10-28 03:43:55 - the current step: 690, finished 57.46%
+UTC Time: 2024-10-28 03:53:55 - the current step: 700, finished 58.30%
+UTC Time: 2024-10-28 04:03:55 - the current step: 710, finished 59.13%
+UTC Time: 2024-10-28 04:13:55 - the current step: 720, finished 59.97%
+Machine ID: 620f9151-3ff5-c350-9660-7949e423c0d3 - UTC Time: 2024-10-28 04:15:04 - {"DL Mbps": 60, "UL Mbps": 29, "Latency to US-East ms": 69.84, "Latency to EU-Cent ms": 143.36, "GPU": "NVIDIA GeForce RTX 4060 Ti", "CUDA": 12.6, "VRAM MiB": "16380 MiB", "VRAM_Free": "14725 MiB"}
+UTC Time: 2024-10-28 04:25:04 - the current step: 730, finished 60.80%
+UTC Time: 2024-10-28 04:35:04 - the current step: 740, finished 61.63%
+UTC Time: 2024-10-28 04:45:04 - the current step: 750, finished 62.47%
+UTC Time: 2024-10-28 04:55:04 - the current step: 760, finished 63.30%
+UTC Time: 2024-10-28 05:05:04 - the current step: 770, finished 64.14%
+UTC Time: 2024-10-28 05:15:04 - the current step: 780, finished 64.97%
+UTC Time: 2024-10-28 05:25:04 - the current step: 790, finished 65.80%
+UTC Time: 2024-10-28 05:35:04 - the current step: 800, finished 66.64%
+UTC Time: 2024-10-28 05:45:04 - the current step: 810, finished 67.47%
+UTC Time: 2024-10-28 05:55:04 - the current step: 820, finished 68.31%
+UTC Time: 2024-10-28 06:05:04 - the current step: 830, finished 69.14%
+UTC Time: 2024-10-28 06:15:04 - the current step: 840, finished 69.97%
+UTC Time: 2024-10-28 06:25:04 - the current step: 850, finished 70.81%
+UTC Time: 2024-10-28 06:35:04 - the current step: 860, finished 71.64%
+UTC Time: 2024-10-28 06:45:04 - the current step: 870, finished 72.48%
+UTC Time: 2024-10-28 06:55:04 - the current step: 880, finished 73.31%
+UTC Time: 2024-10-28 07:05:04 - the current step: 890, finished 74.15%
+UTC Time: 2024-10-28 07:15:04 - the current step: 900, finished 74.98%
+UTC Time: 2024-10-28 07:25:04 - the current step: 910, finished 75.81%
+UTC Time: 2024-10-28 07:35:04 - the current step: 920, finished 76.65%
+UTC Time: 2024-10-28 07:45:04 - the current step: 930, finished 77.48%
+UTC Time: 2024-10-28 07:55:04 - the current step: 940, finished 78.32%
+UTC Time: 2024-10-28 08:05:04 - the current step: 950, finished 79.15%
+UTC Time: 2024-10-28 08:15:04 - the current step: 960, finished 79.98%
+UTC Time: 2024-10-28 08:25:04 - the current step: 970, finished 80.82%
+UTC Time: 2024-10-28 08:35:04 - the current step: 980, finished 81.65%
+UTC Time: 2024-10-28 08:45:04 - the current step: 990, finished 82.49%
+UTC Time: 2024-10-28 08:55:04 - the current step: 1000, finished 83.32%
+UTC Time: 2024-10-28 09:05:04 - the current step: 1010, finished 84.15%
+UTC Time: 2024-10-28 09:15:04 - the current step: 1020, finished 84.99%
+UTC Time: 2024-10-28 09:25:04 - the current step: 1030, finished 85.82%
+UTC Time: 2024-10-28 09:35:04 - the current step: 1040, finished 86.66%
+UTC Time: 2024-10-28 09:45:04 - the current step: 1050, finished 87.49%
+UTC Time: 2024-10-28 09:55:04 - the current step: 1060, finished 88.32%
+UTC Time: 2024-10-28 10:05:04 - the current step: 1070, finished 89.16%
+UTC Time: 2024-10-28 10:15:04 - the current step: 1080, finished 89.99%
+UTC Time: 2024-10-28 10:25:04 - the current step: 1090, finished 90.83%
+UTC Time: 2024-10-28 10:35:04 - the current step: 1100, finished 91.66%
+UTC Time: 2024-10-28 10:45:04 - the current step: 1110, finished 92.49%
+UTC Time: 2024-10-28 10:55:04 - the current step: 1120, finished 93.33%
+UTC Time: 2024-10-28 11:05:04 - the current step: 1130, finished 94.16%
+UTC Time: 2024-10-28 11:15:04 - the current step: 1140, finished 95.00%
+UTC Time: 2024-10-28 11:25:04 - the current step: 1150, finished 95.83%
+UTC Time: 2024-10-28 11:35:04 - the current step: 1160, finished 96.66%
+UTC Time: 2024-10-28 11:45:04 - the current step: 1170, finished 97.50%
+UTC Time: 2024-10-28 11:55:04 - the current step: 1180, finished 98.33%
+UTC Time: 2024-10-28 12:05:04 - the current step: 1190, finished 99.17%
+UTC Time: 2024-10-28 12:15:04 - the current step: 1200, finished 100.00%
+Machine ID: 620f9151-3ff5-c350-9660-7949e423c0d3 - UTC Time: 2024-10-28 12:15:04 - The job is done
+-----> output:
+720600

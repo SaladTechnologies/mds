@@ -2,6 +2,8 @@
 
 This demo app is designed to run long-running tasks on SaladCloud (GPU Compute) using AWS SQS (Job Queue) and Cloudflare R2 (AWS S3-Compatible Cloud Storage).
 
+Here is [the test result and analysis](test_result_analysis_5_jobs_each_20_hours.txt) with 5 jobs with each running 20 hours.
+
 Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE%20Architectural%20Overview/5%20reference%20design%20for%20long-running%20tasks.png) for the application.
 
 Its consists of two parts:
@@ -44,26 +46,21 @@ export CLOUDFLARE_KEY=************
 
 (2)The client, provides several tools (example code) to interact with the cloud storage - Cloudflare R2 and the job queue - AWS SQS.
 
+```
 1_upload_job_input.py, upload the job inputs to Cloudflare R2.
-
 2_submit_job.py, submit a batch of jobs to AWS SQS.
-
 7_queue_job.py, query the job queue - the available job number and the number of jobs that are being processed.
-
 8_download_job_output.py, download the logs and outputs from cloud storage after all jobs are finished.
 
 Before a test, you need to reset the environment:
-
 0_cloud_storage_remove.py, purge the previous job data (input, state and output) in cloud storage.
-
 0_job_queue_remove.py, remove the all jobs in AWS SQS.
 
 During a test, you can check the cloud storage in real time:
-
 0_cloud_strorage_check.py, show the contect in cloud stroage.
 
 You can manage all the settings in the config.py file.
-
+```
 
 ### Use Cases / Relevant Scenarios
 
@@ -82,7 +79,7 @@ docker run --rm -it \
 -e CLOUDFLARE_REGION=$CLOUDFLARE_REGION \
 -e CLOUDFLARE_ID=$CLOUDFLARE_ID \
 -e CLOUDFLARE_KEY=$CLOUDFLARE_KEY \
-docker.io/saladtechnologies/mds:demo-app2v2 /bin/bash
+docker.io/saladtechnologies/mds:demo-app2v2 
 ```
 
 ```
