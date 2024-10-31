@@ -72,7 +72,7 @@ https://github.com/SaladTechnologies/kelpie-api
 The SALAD_CONTAINER_GROUP_ID needs to match the CONTAINER_GROUP_ID used by the client. You can assign any name for the SALAD_MACHINE_ID. When running multiple instances locally, each instance should have a unique SALAD_MACHINE_ID.
 
 ```
-docker run --rm -it \
+docker run --rm --gpus all -it \
 -e KELPIE_API_URL=$KELPIE_API_URL \
 -e KELPIE_API_KEY=$KELPIE_API_KEY \
 -e AWS_ENDPOINT_URL=$AWS_ENDPOINT_URL \

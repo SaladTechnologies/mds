@@ -71,7 +71,7 @@ Since AWS SQS doesn’t provide a way to query the status of individual jobs, we
 ### Run the image locally
 
 ```
-docker run --rm -it \
+docker run --rm --gpus all -it \
 -e QUEUE_URL=$QUEUE_URL \
 -e AWS_ID=$AWS_ID \
 -e AWS_KEY=$AWS_KEY \
@@ -83,7 +83,7 @@ docker.io/saladtechnologies/mds:demo-app2v2
 ```
 
 ```
-docker run --rm -it -e QUEUE_URL=$QUEUE_URL -e AWS_ID=$AWS_ID -e AWS_KEY=$AWS_KEY -e CLOUDFLARE_URL=$CLOUDFLARE_URL -e CLOUDFLARE_REGION=$CLOUDFLARE_REGION -e CLOUDFLARE_ID=$CLOUDFLARE_ID -e CLOUDFLARE_KEY=$CLOUDFLARE_KEY docker.io/saladtechnologies/mds:demo-app2v2 /bin/bash
+docker run --rm --gpus all -it -e QUEUE_URL=$QUEUE_URL -e AWS_ID=$AWS_ID -e AWS_KEY=$AWS_KEY -e CLOUDFLARE_URL=$CLOUDFLARE_URL -e CLOUDFLARE_REGION=$CLOUDFLARE_REGION -e CLOUDFLARE_ID=$CLOUDFLARE_ID -e CLOUDFLARE_KEY=$CLOUDFLARE_KEY docker.io/saladtechnologies/mds:demo-app2v2 /bin/bash
 ```
 
 ### Run the image on SaladCloud

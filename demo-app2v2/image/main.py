@@ -1,6 +1,6 @@
 from config import Retrieve_A_Job, Delete_A_Job  
 from config import Uploader, VT_Renewal 
-from config import Get_Visibility_Timeout_Health, Get_Upload_Error, Reset_Upload_Error
+from config import Get_Visibility_Timeout_Health, Get_Reset_AWS_SQS_Error_Messages, Get_Upload_Error, Reset_Upload_Error
 from config import Wait, Reallocate
 from config import s3, WAITING, MAX_UPLOAD_TIME, MAX_UPLOAD_LOG_TIME
 from config import network_test, ping_test, Get_CUDA_Version, Get_GPU
@@ -14,53 +14,55 @@ import uuid
 import json
 from datetime import datetime, timezone
 
-
 # If run the container locally, use the random ID
 LOCAL_MACHINE = str(uuid.uuid4()) 
 salad_machine_id = os.getenv("SALAD_MACHINE_ID", LOCAL_MACHINE)
+
 g_continue_node = True # Run on this node 
 g_local_run = True if salad_machine_id == LOCAL_MACHINE else False
-
 
 # The instance only run a few seconds to perform the initial check, 
 # so the additional costs for this process are negligible.
 
 # Filer the node based on your need: bandwidth, latency, CUDA version and VRAM.
-# If the node is not ideal, then
-# call the Reallocate(g_local_run, "This node is not ideal to run this application")
+# If the node is not ideal, call the Reallocate(g_local_run, "This node is not ideal to run this application")
 
+if g_local_run:
+    g_environment= {}
+else:
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S") # Go-live time
 
-# Network test: latency to some location and bandwidth
-_, _, _, g_dlspeed, g_ulspeed = network_test() 
+    # Network test: bandwidth
+    _, _, _, g_dlspeed, g_ulspeed = network_test() 
+    if g_ulspeed < 5 or g_dlspeed < 20: # 20+ Mbps DL and 5+ Mbps UL are required to run this app
+        Reallocate(g_local_run, "poor network bandwith")
 
-if g_ulspeed < 5 or g_dlspeed < 20: # 20+ Mbps DL and 5+ Mbps UL are required to run this app
-    Reallocate(g_local_run, "poor network bandwith")
+    # Network test: latency to some locations
+    g_latency_us, g_latency_eu = ping_test(tCount = 10) 
 
-g_latency_us, g_latency_eu = ping_test(tCount = 10) 
-# Initial check: CUDA Version, VRAM and others
-g_CUDA_version = Get_CUDA_Version()
-g_GPU = Get_GPU()
+    # Initial check: CUDA Version, VRAM and others
+    g_CUDA_version = Get_CUDA_Version()
+    g_GPU = Get_GPU()
 
-g_environment = { "DL Mbps":       g_dlspeed, 
-                  "UL Mbps":       g_ulspeed,
-                  "Latency to US-East ms": g_latency_us,
-                  "Latency to EU-Cent ms": g_latency_eu,
-                  "GPU":           g_GPU['gpu'],
-                  "CUDA":          g_CUDA_version,
-                  "VRAM MiB":      g_GPU['vram_total'],
-                  "VRAM_Free":     g_GPU['vram_free'] }
+    g_environment = { "DL Mbps":       g_dlspeed, 
+                      "UL Mbps":       g_ulspeed,
+                      "Latency to US-East ms": g_latency_us,
+                      "Latency to EU-Cent ms": g_latency_eu,
+                      "GPU":           g_GPU['gpu'],
+                      "CUDA":          g_CUDA_version,
+                      "VRAM MiB":      g_GPU['vram_total'],
+                      "VRAM_Free":     g_GPU['vram_free'],
+                      "UTC Time Go-live": now }
 
-#print( g_dlspeed, g_ulspeed, g_latency_us, g_latency_eu )
-#print(g_CUDA_version)
-#print(g_GPU)
-print(g_environment)
-
+    #print( g_dlspeed, g_ulspeed, g_latency_us, g_latency_eu )
+    #print(g_CUDA_version)
+    #print(g_GPU)
+    print(g_environment)
 
 input_file  = os.path.join( os.path.dirname(__file__), 'data/input.txt'   ) # input
 state_file  = os.path.join( os.path.dirname(__file__), 'data/state.txt'   ) # state
 logs_file   = os.path.join( os.path.dirname(__file__), 'data/logs.txt'    ) # logs
 output_file = os.path.join( os.path.dirname(__file__), 'data/output.txt'  )  # output
-
 
 # The main thread --- upload tasks --> the ul thread
 upload_task_queue = queue.Queue()
@@ -102,7 +104,7 @@ while True:
         if os.path.exists( file ):
             os.remove( file)
 
-    ######################################## Blocking: Load the logs file
+    ######################################## Blocking: Load the previous logs file
     try:
         s3.download_file(BUCKET, FOLDER+"/logs.txt", logs_file )
         with open(logs_file, 'r') as f:
@@ -110,9 +112,10 @@ while True:
                 g_logs.append(temp)        
     except Exception as e:
         print("No logs file or download error !", flush=True) # Tolerable
-        
+
+    ######################################## Start logging this time
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
-    g_logs.append(f'Machine ID: {salad_machine_id} - UTC Time: {now} - {json.dumps(g_environment)}') # add this node info
+    g_logs.append(f'UTC Time: {now} - Machine ID: {salad_machine_id} - Begin processing the job - {json.dumps(g_environment)}') # add this node info
 
     ######################################## Blocking: Load the state file and resume from the previous state
     g_new_job = True
@@ -173,9 +176,9 @@ while True:
                 print("Reallocate the node !!!!!!!!!")
 
             vtr_queue.put( None ) # Notify the VTR thread to stop extending the visibility timeout
-            time.sleep(2)         # Ensure the VTR thread stops extending the visibility timeout
+            time.sleep(10)         # Ensure the VTR thread stops extending the visibility timeout
             Delete_A_Job(job) # We don't verify whether it is succeed
-                              # The job should be aborted (not deleted) if the error is from the node, 
+                              # The job should be interrupted (not deleted) if the error is from the node, 
                               # because another nodes can take the job after the visibility timeout
             continue # next job or node reallocation
  
@@ -185,7 +188,7 @@ while True:
     ######################################## Run the job - long running and interruptible
     time_start = time.perf_counter()
     
-    g_abort = False 
+    g_interrupt = False 
     Reset_Upload_Error() 
 
     for t_step in range(g_finishedStep+1, g_end+1):
@@ -203,26 +206,41 @@ while True:
         time_end = time.perf_counter()
         
         ############################################################################
-        # Monitor the system: visibility timeout, network performance and errors, processing capability 
-        t_vt_health = Get_Visibility_Timeout_Health()
-        t_length = upload_task_queue.qsize()
-        t_error = Get_Upload_Error()
-        print(f"Visibility Timeout Health: {t_vt_health}, The upload error: {t_error}, The upload queue length: {t_length}")
-            
-        if not t_vt_health: # Other nodes have already taken the job
-            g_abort = True 
-            print("Abort the job execution !!!!!!")
+        # Monitor the system: lease expiration, network performance and errors, processing capability 
+                    
+        if not Get_Visibility_Timeout_Health(): # Other nodes have already taken the job
+            g_interrupt = True 
+            print("Interrupt the job execution !!!!!!")
+            ####################
+            temp = Get_Reset_AWS_SQS_Error_Messages()
+            now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+            g_logs.append(f'UTC Time: {now} - Machine ID: {salad_machine_id} - Stop executing the job at the step {t_step}, here are the reasons: {temp}')
+
+            with open(logs_file, 'w') as f:   # Save the logs
+                for item in g_logs[0:-1]:
+                    f.write(f"{item}\n")
+                f.write(g_logs[-1])
+
+            logs_temp_file   = os.path.join( os.path.dirname(__file__), 'data/' + str(uuid.uuid4()) ) 
+            shutil.copyfile(logs_file, logs_temp_file)
+
+            # Put it into the upload queue 
+            # We don't verify whether it is succeed - best effort
+            task = { "sub_tasks"  : [ { "source": logs_temp_file, "bucket": BUCKET, "target": FOLDER+"/logs.txt" } ],
+                     "requiring_ack": True }   
+            upload_task_queue.put(task) 
+            ####################
             break
-        elif t_length >= 3 or t_error > 0: # the previous uploads failed or piled up
-            g_abort = True 
+        elif upload_task_queue.qsize() >= 3 or Get_Upload_Error() > 0: # the previous uploads failed or piled up
+            g_interrupt = True 
             g_continue_node = False
-            print("Abort the job execution !!!!!!")
+            print("Interrupt the job execution !!!!!!")
             print("Reallocate the node !!!!!!!!!")
             break
         # elif the processing capability is too bad (based on a reference value or prior experience)
-        #   g_abort = True 
+        #   g_interrupt = True 
         #   g_continue_node = False
-        #   print("Abort the job execution !!!!!!")
+        #   print("Interrupt the job execution !!!!!!")
         #   print("Reallocate the node !!!!!!!!!")
         #   break
         else:
@@ -235,7 +253,7 @@ while True:
         # After passing the health check and the designated time, save the state
         now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
         percentage = "{:0.2%}".format((t_step - g_start) / (g_end - g_start))
-        g_logs.append(f'UTC Time: {now} - the current step: {t_step}, finished {percentage}') # Record this event
+        g_logs.append(f'UTC Time: {now} - Saving the state at the step {t_step}, finished {percentage}') # Record this event
 
         with open(state_file, 'w') as f:  # Save the state
             temp = str(g_start) + '\n' + str(g_end) + '\n' + str(t_step) + '\n' + str(g_tempSum)
@@ -262,16 +280,18 @@ while True:
          
         time_start = time.perf_counter() # Update the timer for the next state saving
 
-    if g_abort:
-        vtr_queue.put( None ) # Notify the VTR thread to stop extending the visibility timeout
-        time.sleep(2)         # Ensure the VTR thread stops extending the visibility timeout
-        # Job Abortion: We will not delete the job from AWS SQS in this case, because it is not finished !!!
+    
+    # Job done or interruption
+    if g_interrupt:
+        vtr_queue.put( None )  # Notify the VTR thread to stop extending the visibility timeout
+        time.sleep(10)         # Ensure the VTR thread stops extending the visibility timeout
+        # Interrupt the job execution: We will not delete the job from AWS SQS in this case, because it is not finished !!!
         continue # next job or node reallocation
 
-    # The simulation is finished at this point.
+    # The simulation job is finished at this point and we will ignore the lease after this.
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
-    g_logs.append(f'Machine ID: {salad_machine_id} - UTC Time: {now} - The job is done') # add this node info
+    g_logs.append(f'UTC Time: {now} - Machine ID: {salad_machine_id} - The job is done') # add this node info
 
     with open(output_file, 'w') as f: # Save the output: sum
         f.write(f"{g_tempSum}")
@@ -300,12 +320,12 @@ while True:
         g_continue_node = False  # Intolerable
         
         vtr_queue.put( None ) # Notify the VTR thread to stop extending the visibility timeout
-        time.sleep(2)         # Ensure the VTR thread stops extending the visibility timeout
-        # Job Abortion: We will not delete the job from AWS SQS in this case, because the job is not uploaded successfully !!!
+        time.sleep(10)         # Ensure the VTR thread stops extending the visibility timeout
+        # Interrupt the job execution: We will not delete the job from AWS SQS in this case, because the job is not uploaded successfully !!!
         continue # node reallocation
     
     vtr_queue.put( None ) # Notify the VTR thread to stop extending the visibility timeout
-    time.sleep(2)         # Ensure the VTR thread stops extending the visibility timeout
-    Delete_A_Job(job) # We don't verify whether it is succeed
+    time.sleep(10)        # Ensure the VTR thread stops extending the visibility timeout
+    Delete_A_Job(job)     # We don't verify whether it is succeed
     continue # next job 
  

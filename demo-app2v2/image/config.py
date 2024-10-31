@@ -24,6 +24,8 @@ MAX_UPLOAD_TIME      = 600  # seconds
 g_visibility_timeout_health = True
 g_upload_error = 0
 
+g_aws_sqs_error_messages = []
+
 
 # Access to the Job Queue System - AWS SQS
 queue_url  = os.getenv("QUEUE_URL","")
@@ -48,7 +50,7 @@ s3 = boto3.client( service_name ="s3", endpoint_url = cloudflare_url,
 # If something goes wrong, it will exit, triggering reallocation.
 def Retrieve_A_Job(WAIT_TIME=10):    
     result = []
-    print("Retrieving ......", flush=True)
+    #print("Retrieving ......", flush=True)
     
     response = sqs_client.receive_message(QueueUrl=queue_url, MaxNumberOfMessages=1, WaitTimeSeconds=WAIT_TIME) # Block here
     temp = response.get("Messages", []) # return [] if empty    
@@ -74,57 +76,94 @@ def Delete_A_Job(job):
 
 
 # Extend the visibility timeout of a job in AWS SQS
-# It may fail if the job has been deleted by others or the visibility times out
+# It may fail if the job has been deleted by others or the lease times out
 def Renew_A_Job(job, description=""):
     current_time = time.perf_counter() 
     temp = current_time - job['time']
    
     #return False # Make the network the performance bottleneck for testing purposes.
-    if temp > VISIBILITY_TIMEOUT:
-        print(40 * "R" + " {}: ".format(description), end="")
-        print("running {} seconds, already times out", flush=True)
-        # Will not update the time in this case; after this point, it will always return False
-        return False  
+    
     try:
-        if temp > RENEWAL_TIME:
+        if temp < RENEWAL_TIME:           #  0  --HERE--  60        90
+            return True
+        elif temp >= VISIBILITY_TIMEOUT:  #  0            60        90--HERE--
+            print(40 * "R" + " {}: ".format(description), end="")
+            print("The lease expired {} seconds ago".format( abs(int(VISIBILITY_TIMEOUT - temp))), flush=True)
+            # Will not update the time in this case; after this point, it will always return False
+            g_aws_sqs_error_messages.append( "The lease expired {} seconds ago".format( abs(int(VISIBILITY_TIMEOUT - temp))) )    
+            return False  
+        else:                             #  0            60--HERE--90 
+            #raise ValueError("An faked error occurred") # for testing purposes.
+    
             # The successful rate is around 99.9% with the test
-            # Maybe add a retry if the API call fails (to prevent against temporary network errors or others)
+            # Need retry attempts if the API call fails (to prevent against transient network failures or others)
             sqs_client.change_message_visibility( QueueUrl=queue_url, ReceiptHandle=job['handle'],
                                                   VisibilityTimeout = VISIBILITY_TIMEOUT )
             
             job['time'] = current_time # Not able to update the time if the API call fails, and then it will always return False
             
-            print(40 * "R" + " {}: ".format(description), end="")
-            #print("only {} seconds remaining, ".format(VISIBILITY_TIMEOUT - temp), end="")
-            print("the visibility timeout is extended and the time is updated", flush=True)
+            #print(40 * "R" + " {}: ".format(description), end="")
+            ##print("only {} seconds remaining, ".format(VISIBILITY_TIMEOUT - temp), end="")
+            #print("the visibility timeout is extended and the time is updated", flush=True)
+            return True
     except Exception as e:
         print(40 * "R" + " {}: ".format(description) + str(e), flush=True)
+        # Capture the error
+        g_aws_sqs_error_messages.append( "Failed to renew the lease {} seconds before it expires".format(int(VISIBILITY_TIMEOUT - temp)) )
+        g_aws_sqs_error_messages.append( str(e) )
         return False
-    return True
 
 
 # Extend the visibility timeout regularly
 def VT_Renewal(queue):
     global g_visibility_timeout_health
     job = None    
+    tCount = 0
+
     while True:
-        time.sleep(1)
+        time.sleep(5)
 
         if (queue.qsize() > 0): # the new job handle or None
             job = queue.get()
             queue.task_done()     # task done     
             #print(40 * "R" + " The VTR thread: receive " + json.dumps(job), flush=True)
-            print(40 * "R" + " The VTR thread: received the signal", flush=True)
+            
+            if job != None:
+                print(40 * "R" + " The VTR thread: start monitoring the lease", flush=True)
+            else:
+                print(40 * "R" + " The VTR thread: stop", flush=True)
             g_visibility_timeout_health = True # Reset the value when recieving a new handle
-
+            tCount = 0
+    
         if job != None:
-            g_visibility_timeout_health = Renew_A_Job(job, "The VTR thread") # will update the job["time"]
+            temp = Renew_A_Job(job, "The VTR thread") # will update the job["time"] if successful
+            if temp == True:
+                g_visibility_timeout_health = True
+                tCount = 0
+                continue
+            else:
+                tCount = tCount + 1
+
+            # Designed to tolerate 4 consecutive failures of the AWS SQS API call (20-second service interruption)
+            if tCount >= 5:                          
+                g_visibility_timeout_health = False  # Since No.5 failure, notifiy the application
+                print(40 * "R" + " The VTR thread: the g_visibility_timeout_health is set to False", flush=True)
+                job = None # No need to monitor after this point
+                # If we tolerate too many or prolonged failures ( exceeding the saving interval )
+                # the app health check may not capture the failures !!!  
+                   
+
+def Get_Reset_AWS_SQS_Error_Messages():
+    global g_aws_sqs_error_messages
+    temp = json.dumps(g_aws_sqs_error_messages)
+    g_aws_sqs_error_messages = []
+    return temp
 
 
 # Whether the current job is still valid
 def Get_Visibility_Timeout_Health():
     return g_visibility_timeout_health
-
+           
 
 # Upload local files to Cloud Storage and return the result (optional)
 def Uploader(queue, ack_queue):
@@ -139,7 +178,7 @@ def Uploader(queue, ack_queue):
             try: 
                 # first upload the data files, and finally upload the metadata file (step/progress)
                 # A metadata file serves as index for one or more data files.
-                print(40 * "U" + " The UL thread: upload " + sub_task['target'], flush=True)
+                #print(40 * "U" + " The UL thread: upload " + sub_task['target'], flush=True)
                 s3.upload_file(sub_task['source'], sub_task['bucket'], sub_task['target'] )  
             except Exception as e:
                 print(40 * "U" + " The UL thread: " +str(e), flush=True)
@@ -159,7 +198,7 @@ def Get_Upload_Error():
 
 def Reset_Upload_Error():
     global g_upload_error 
-    g_upload_health = 0
+    g_upload_error = 0
 
 
 # Wait until the previous upload task completes and return the result
