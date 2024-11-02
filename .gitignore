@@ -7,6 +7,10 @@ access.txt
 demo-app1/client/.env
 demo-app1/client/__pycache__
 demo-app1/client/job_history.txt
+demo-app1/client/reset.sh
+
+demo-app1/image/backup
+demo-app1/image/__pycache__
 
 demo-app2-deprecated
 

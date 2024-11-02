@@ -21,7 +21,7 @@ CONTAINER_GROUP_ID = "8e78dce7-08b8-4854-b6ea-67a6bb6bcf03"
 # Keep the job IDs of all submitted jobs, which are used to query their status - PENDING, COMPLETED, RUNNING, FAILED..
 JOB_HISTORY = "job_history.txt"
 
-TASK_NUMBER = 1 # How many jobs are submitted for a test
+TASK_NUMBER = 5 # How many jobs are submitted for a test
 
 LOCAL_JOB_DIR = "local_jobs"  # The local folder to keep all job data
 REMOTE_FOLDER = "demoapp1"    # A folder in a cloud storage bucket

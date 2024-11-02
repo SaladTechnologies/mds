@@ -16,7 +16,8 @@ for i in range(TASK_NUMBER):
     "arguments": [
      "/app/main.py"
     ] ,
-    "environment": { "STATE_SAVING_INTERVAL": "60.0", "STEP_RUNNING_TIME":"10.0" },
+    "environment": { "STATE_SAVING_INTERVAL": "600.0", "STEP_RUNNING_TIME":"60.0" },
+    #"environment": { "STATE_SAVING_INTERVAL": "9.0", "STEP_RUNNING_TIME":"1.0" },
     "container_group_id": CONTAINER_GROUP_ID,
     "sync": {
       "before": [

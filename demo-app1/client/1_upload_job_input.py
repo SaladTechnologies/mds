@@ -26,5 +26,8 @@ for i in range(TASK_NUMBER):
     source = os.path.abspath( f"{LOCAL_JOB_DIR}/job{i}/input/input.txt" )
     target =                  f"{REMOTE_FOLDER}/job{i}/input/input.txt"
     
-    temp = s3.upload_file(source, BUCKET_NAME, target) 
-    print(source," -> ", target)
+    try:
+        temp = s3.upload_file(source, BUCKET_NAME, target) 
+        print(source," -> ", target)
+    except Exception as e:
+        pass  
