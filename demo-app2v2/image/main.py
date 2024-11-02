@@ -142,12 +142,14 @@ while True:
             g_tempSum = 0       
 
             if g_start > g_end:
-                log = f'{salad_machine_id} - Wrong input'
+                now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+                log = f'UTC Time: {now} - {salad_machine_id} - Wrong input'
                 print(log, flush=True)
                 g_logs.append(log)
                 g_continue = False # Intolerable
         except Exception as e:
-            log = f'{salad_machine_id} - No input file or download error, ' + str(e)
+            now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+            log = f'UTC Time: {now} - {salad_machine_id} - No input file or download error, ' + str(e)
             print(log, flush=True) 
             g_logs.append(log)
             g_continue = False # Intolerable 
@@ -214,7 +216,7 @@ while True:
             ####################
             temp = Get_Reset_AWS_SQS_Error_Messages()
             now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
-            g_logs.append(f'UTC Time: {now} - Machine ID: {salad_machine_id} - Stop executing the job at the step {t_step}, here are the reasons: {temp}')
+            g_logs.append(f'UTC Time: {now} - Machine ID: {salad_machine_id} - Stop executing the job at the step {t_step}, the reasons: {temp}')
 
             with open(logs_file, 'w') as f:   # Save the logs
                 for item in g_logs[0:-1]:

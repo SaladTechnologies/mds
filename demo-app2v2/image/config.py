@@ -13,8 +13,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-VISIBILITY_TIMEOUT   = 90   # seconds
-RENEWAL_TIME         = 60   # seconds
+#VISIBILITY_TIMEOUT   = 90   # seconds
+#RENEWAL_TIME         = 60   # seconds
+VISIBILITY_TIMEOUT   = 300   # seconds
+RENEWAL_TIME         = 150   # seconds
 
 
 MAX_UPLOAD_LOG_TIME  = 60   # seconds
@@ -117,11 +119,15 @@ def Renew_A_Job(job, description=""):
 # Extend the visibility timeout regularly
 def VT_Renewal(queue):
     global g_visibility_timeout_health
-    job = None    
+    job = None
+    counter = 0 
     tCount = 0
 
     while True:
+       
+
         time.sleep(5)
+        counter = counter + 1
 
         if (queue.qsize() > 0): # the new job handle or None
             job = queue.get()
@@ -133,9 +139,10 @@ def VT_Renewal(queue):
             else:
                 print(40 * "R" + " The VTR thread: stop", flush=True)
             g_visibility_timeout_health = True # Reset the value when recieving a new handle
+            counter = 0 
             tCount = 0
     
-        if job != None:
+        if (job != None) and (counter % 6 == 0) :
             temp = Renew_A_Job(job, "The VTR thread") # will update the job["time"] if successful
             if temp == True:
                 g_visibility_timeout_health = True
@@ -150,8 +157,8 @@ def VT_Renewal(queue):
                 print(40 * "R" + " The VTR thread: the g_visibility_timeout_health is set to False", flush=True)
                 job = None # No need to monitor after this point
                 # If we tolerate too many or prolonged failures ( exceeding the saving interval )
-                # the app health check may not capture the failures !!!  
-                   
+                # the app health check may not capture the failures !!!              
+
 
 def Get_Reset_AWS_SQS_Error_Messages():
     global g_aws_sqs_error_messages
