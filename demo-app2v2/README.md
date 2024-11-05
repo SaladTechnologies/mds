@@ -2,7 +2,10 @@
 
 This demo app is designed to run long-running tasks on SaladCloud (GPU Compute) using AWS SQS (Job Queue) and Cloudflare R2 (AWS S3-Compatible Cloud Storage).
 
-Here is [the test result and analysis with 5 jobs with each running 20 hours](test_result_analysis_5_jobs_each_20_hours.txt).
+
+Here is [the test result and analysis with 5 jobs with each running 48 hours](test_result_awssqs_5_jobs_each_48_hours.txt): all jobs have been completed successfully, and the final results are accurate. Due to the 12-hour maximum limit on the visibility timeout, the long-running solution built on AWS SQS can only support tasks for up to 12 hours at a time.
+
+![test_result](test_result_awssqs.png)
 
 Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE_Architectural_Overview/5_long_running_tasks.png) for the application.
 
