@@ -3,9 +3,10 @@
 This demo app is designed to run long-running tasks on SaladCloud (GPU Compute) using Salad Kelpie (Job Queue + built-in data management) and Cloudflare R2 (Cloud Storage).
 
 Here is the test result and analysis with 5 jobs with each running 48 hours: all jobs have been completed successfully, and the final results are accurate.
-![test_result](test_result_kelpie_5_jobs_each_48_hours.png).
 
-Please refer to the detailed specifications for Kelpie 0.4.4 (specs_kelpie_0.4.4.png) and the test data (test_result_kelpie_5_jobs_each_48_hours.txt).
+![test_result](test_result_kelpie_5_jobs_each_48_hours.png)
+
+Please refer to [the specifications for Kelpie 0.4.4] (specs_kelpie_0.4.4.png) and [the detailed test data] (test_result_kelpie_5_jobs_each_48_hours.txt).
 
 It consists of two parts:
 
