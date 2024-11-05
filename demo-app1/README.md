@@ -6,7 +6,7 @@ Here is the test result and analysis with 5 jobs with each running 48 hours: all
 
 ![test_result](test_result_kelpie_5_jobs_each_48_hours.png)
 
-Please refer to [the specifications for Kelpie 0.4.4] (specs_kelpie_0.4.4.png) and [the detailed test data] (test_result_kelpie_5_jobs_each_48_hours.txt).
+Please refer to [the specifications for Kelpie 0.4.4](specs_kelpie_0.4.4.png) and [the detailed test data](test_result_kelpie_5_jobs_each_48_hours.txt).
 
 It consists of two parts:
 
