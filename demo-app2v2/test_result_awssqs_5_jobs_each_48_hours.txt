@@ -7,6 +7,10 @@ Job progress was saved to the cloud every 10 minutes.
 - 5 replicas
 
 # Solution - AWS SQS
+- Message retention period: 7 days.
+- Default visibility timeout: 90 seconds.
+- Begin extending the timeout after 60 seconds.
+- Retry API calls up to 5 times, with a 5-second interval.
 
 # Jobs - 5 jobs with each running 48 hours (for loop only)
 
@@ -15,7 +19,7 @@ Job progress was saved to the cloud every 10 minutes.
 There were a total of 16 lease renewal errors from 14,400 API calls - change_message_visibility
 
 - 14 errors expected. Extending the visibility timeout doesn't reset the 12-hour maximum limit. 
-The long-running solution built upon AWS SQS can only support running 12 hours at a time.
+Due to the 12-hour maximum visibility timeout imposed by AWS SQS (starting from when the job is first received), the long-running solution built on AWS SQS can handle tasks for up to 12 hours at a time. After this period, the job reappears in the queue and can be picked up by another node or the previous node to continue execution.
 
 https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html#visibility-timeout-best-practices
 
