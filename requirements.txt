@@ -2,5 +2,7 @@ boto3
 python-dotenv
 requests
 fastapi[standard]
+flask
+janus
 pythonping
 speedtest-cli
