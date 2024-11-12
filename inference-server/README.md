@@ -13,6 +13,24 @@ In contrast to batched or single inference, using multiprocessing or multithread
 ![container_gateway](is_lb.png)
 
 
+### Test Result
+
+The server is configured to buffer up to 8 requests, processing them in batches of 4. Any requests beyond this limit are immediately rejected as a back-pressure mechanism, encouraging the client application to manage traffic proactively. This may involve stopping the acceptance of new user requests early during congestion, rather than allowing them to be dropped within the system due to timeouts.
+
+The server should also be capable of responding to health queries during GPU inference, displaying various status indicators such as READY, BUSY, and FAILED. These statuses can be used to inform the load balancer or the I/O worker whether to continue forwarding traffic to the inference server based on its current state.
+
+The code also simulates server-side errors, such as processing timeouts, to test and evaluate the client application's handling of such issues.
+
+![server_info](server_info.png)
+
+The client sends a burst of traffic to the server, comprising 4 health check queries and 9 inference requests:
+
+Of the 4 health queries, 2 return "READY" and 2 return "BUSY."
+
+Of the 9 inference requests, 1 is immediately rejected, 4 are processed successfully, and 4 result in 500 server-side errors.
+
+![client_info](client_info.png)
+
 ### [server_flask_counter.py](python_app/server_flask_counter.py)
 
 This Python code implements a Flask server designed to handle inference requests efficiently with batch processing, back-pressure mechanisms, and real-time health monitoring, making it well-suited for high-demand inference workloads. Below is a summary of the key features:
@@ -44,7 +62,6 @@ Provides a health check endpoint /health_check running on a separate thread, ens
 You can further customize the functionality, adding more status or simply returning OK.
 
 Due to Python's Global Interpreter Lock (GIL), concurrent execution of Python bytecode is restricted to a single thread within a process. This can create bottlenecks in CPU-bound tasks (like pre- and post-processing) and reduce parallel efficiency. Additionally, using multiple threads can increase scheduling overhead.
-
 
 ### [server_fastapi_count_2_threads.py](python_app/server_fastapi_count_2_threads.py)
 
