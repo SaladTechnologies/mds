@@ -1,0 +1,72 @@
+
+########## Install and Run
+
+# Install, build and run
+
+cd typescript_app
+npm install  
+
+npm run build
+
+npm run server
+node dist/server_express.js
+
+npm run client
+node dist/client.js   
+
+# Two ways to run the server_express.ts 
+
+npx ts-node src/server_express.ts
+npx nodemon src/server_express.ts
+
+# Two ways to run the client.ts
+
+npx ts-node src/client.ts
+npx nodemon src/client.ts
+
+########## Create the project from scratch
+
+# Create the package.json file 
+npm init -y 
+
+# Modify the package.json  file
+
+"scripts": {
+    "build": "tsc --build",
+    "server": "node ./dist/server_express.js",
+    "client": "node ./dist/client.js"
+}
+
+# Create the tsconfig.json file
+npx tsc --init 
+
+# Modify the tsconfig.json file
+
+"sourceMap": true, 
+"rootDir": "./src",    
+"outDir": "./dist",    
+
+# Install dependencies and devDependencies
+
+npm i express
+npm i axios
+npm i -D @types/express 
+npm i -D typescript
+npm i -D ts-node
+npm i -D nodemon
+
+########## Install nvm and node
+
+https://github.com/nvm-sh/nvm
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+
+# Install node
+nvm install --lts 
+
+# Test
+nvm -v
+nvm ls
+node -v
+npm -v
