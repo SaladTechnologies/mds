@@ -1,4 +1,4 @@
-## Reference Implementation of Inference Servers running on SaladCloud
+## Reference Implementation of Inference Servers on SaladCloud
 
 This demo app offers a reference implementation of inference servers in both Python and TypeScript, deployed on SaladCloud.
 
@@ -15,11 +15,11 @@ In contrast to batched or single inference, using multiprocessing or multithread
 
 ### Test Result
 
-The server is configured to buffer up to 8 requests, processing them in batches of 4. Any requests beyond this limit are immediately rejected as a back-pressure mechanism, encouraging the client application to manage traffic proactively. This may involve stopping the acceptance of new user requests early during congestion, rather than allowing them to be dropped within the system due to timeouts.
+The server is configured to buffer up to 8 requests, processing them in batches of 4. Any requests beyond this limit are immediately rejected as a back-pressure mechanism, encouraging the client application to manage traffic and resource proactively. This may involve implementing flow control to stop accepting new user requests early during congestion, rather than allowing them to be dropped within the system due to timeouts, or adjusting the replica count of a container group to align with system load.
 
 The server should also be capable of responding to health queries during GPU inference, displaying various status indicators such as READY, BUSY, and FAILED. These statuses can be used to inform the load balancer or the I/O worker whether to continue forwarding traffic to the inference server based on its current state.
 
-The code also simulates server-side errors, such as processing timeouts, to test and evaluate the client application's handling of such issues.
+The code also simulates server-side errors, such as processing timeouts, to test and evaluate the client application's handling of such issues, such as implementing retry logic for occasional errors.
 
 ![server_info](server_info.png)
 
@@ -43,7 +43,7 @@ The MAX_QUEUE_LENGTH variable limits the number of pending requests, rejecting a
 
 - Batch Processing
 
-A batch_processor function runs on a separate daemon thread (terminating when the main program exits), grouping incoming requests every interval or until the batch size is reached, and then processes them with a delay,  simulating a batched inference operation and optimizing the GPU resource utilization.
+A batch_processor function runs on a separate daemon thread (terminating when the main program exits), grouping incoming requests every interval or until the batch size is reached, and then processes them with a delay,  simulating a batched inference operation to optimize the GPU resource utilization.
 
 The PROCESS_INTERVAL and BATCH_SIZE variables define the interval at which requests are grouped and the maximum batch size for each inference.
 
@@ -51,9 +51,9 @@ The PROCESS_INTERVAL and BATCH_SIZE variables define the interval at which reque
 
 Each incoming request spawns a dedicated thread to manage request tasks, such as downloading, pre-processing, enqueueing and waiting for GPU inference, post-processing, uploading and response handling.
 
-Each request in the queue contains the input, a Condition object for synchronization and a list to store results.
+Each request in the queue contains the input, a condition object for synchronization and a list to store results.
 
-After processing, the batch processor uses the Condition object associated with each job to notify all waiting request threads, enabling them to retrieve their results and continue the post-processing. 
+After processing, the batch processor uses the condition object associated with each request to notify all waiting threads, enabling them to retrieve their results and continue the post-processing. 
 
 - Health Check Endpoint
 
@@ -65,7 +65,7 @@ Due to Python's Global Interpreter Lock (GIL), concurrent execution of Python by
 
 ### [server_fastapi_count_2_threads.py](python_app/server_fastapi_count_2_threads.py)
 
-This Python code implements a FastAPI-based version of the previously discussed Flask server, efficiently handling inference requests through a mix of asynchronous and synchronous processing.
+This Python code implements a FastAPI-based version of the previously Flask server, efficiently handling inference requests through a mix of asynchronous and synchronous processing.
 
 Since GPU inference (typically using frameworks like TensorFlow or PyTorch) often involves blocking operations, it is not fully compatible with asynchronous execution. To address this, a dedicated background thread is used to handle batched inference.
 
@@ -73,7 +73,7 @@ The main thread manages all other tasks asynchronously, including request handli
 
 Requests are placed into a Janus queue, which ensures thread-safe communication between the asynchronous FastAPI handlers and the synchronous batch processing thread. Additionally, thread-safe events are used for synchronization between the main and batch processing threads.
 
-Compared to the Flask version, this implementation utilizes only two threads, significantly reducing multithreading scheduling overhead and optimizing parallel execution efficiency. 
+Compared to the Flask server version, this implementation utilizes only two threads, significantly reducing multithreading scheduling overhead and optimizing parallel execution efficiency. 
 
 To further enhance performance, the application can be optimized by using two separate processes: one for handling CPU and I/O-bound tasks, and another dedicated to GPU inference. This process-based architecture can minimize contention for resources and improve scalability, resulting in a more efficient and responsive system.
 
@@ -85,13 +85,12 @@ The TypeScript code sets up a basic Express server that efficiently queues incom
 
 ## Use a job queue
 
-
 ![job_queue](is_jq.png)
 
-With a job queue, the inference server can be optimized to focus solely on GPU inference, while an I/O worker process handles all other tasks, such as pulling jobs, renewing leases, downloading inputs, pre-processing, invoking the GPU inference, post-processing, uploading outputs, returning job results, and deleting jobs. This clear separation of concerns allows the system to run more efficiently.
+With a job queue, the inference server can be simplified to focus solely on GPU inference, while an I/O worker process handles all other tasks, such as pulling jobs, renewing leases, downloading inputs, pre-processing, invoking the GPU inference, post-processing, uploading outputs, returning job results, and deleting jobs. This clear separation of concerns allows the system to run more efficiently.
 
 When the application handles only one job at a time, the I/O worker process can operate with a single thread, performing tasks sequentially. 
 
-However, if throughput is a priority and the application needs to handle multiple jobs concurrently, a multi-threaded approach with local queues can be employed. This approach uses a multi-pipeline, staged architecture where GPU inference remains sequential, but other tasks run in parallel. For example, while Job 1 is being post-processed/uploaded and Job 3 is downloaded/pre-processed, Job 2 can be processed by the GPU, significantly increasing resource utilization and overall system throughput.
+However, if throughput is a priority and the application needs to handle multiple jobs concurrently, a multi-threaded approach with local queues can be employed. This approach uses a multi-pipeline, staged architecture where GPU inference remains sequential, but other tasks run in parallel. For example, while Job 1 is being post-processed/uploaded and Job 3 is being downloaded/pre-processed, Job 2 can be processed by the GPU, significantly increasing resource utilization and overall system throughput.
 
-Please check this link for [further details](https://docs.salad.com/guides/transcription/sce/youtube#node-implementation-on-saladcloud-using-parakeet-tdt-1-1b) and [the example code](https://github.com/SaladTechnologies/yt-1m-hours-transcription-test/tree/main/node).
+Please check this link for [further details](https://docs.salad.com/guides/transcription/sce/youtube#node-implementation-on-saladcloud-using-parakeet-tdt-1-1b) and [the example code](https://github.com/SaladTechnologies/yt-1m-hours-transcription-test/tree/main/node) about the server implementation with AWS SQS.
