@@ -69,7 +69,7 @@ The TypeScript code sets up a basic Express server that efficiently queues incom
 ## Use a job queue
 
 
-![job_queue](is_jb.png)
+![job_queue](is_jq.png)
 
 With a job queue, the inference server can be optimized to focus solely on GPU inference, while an I/O worker process handles all other tasks, such as pulling jobs, renewing leases, downloading inputs, pre-processing, invoking the GPU inference, post-processing, uploading outputs, returning job results, and deleting jobs. This clear separation of concerns allows the system to run more efficiently.
 
