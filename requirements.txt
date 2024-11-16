@@ -6,3 +6,5 @@ flask
 janus
 pythonping
 speedtest-cli
+
+salad-cloud-sdk

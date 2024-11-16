@@ -29,4 +29,12 @@ demo-app2v2/notes.txt
 demo-app3
 
 
+inference-server/python_app/__pycache__
+inference-server/typescript_app/dist
+inference-server/typescript_app/node_modules
+
+high-performance-applications/.env
+high-performance-applications/__pycache__
+
+
 
