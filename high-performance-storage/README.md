@@ -1,4 +1,4 @@
-### High Performance Storage
+## High Performance Storage
 
 SCE provides a GPU-enabled container environment for running containerized applications. When a container group is stopped or nodes are reallocated, all images and associated runtime data are removed from the previously allocated nodes. To ensure data persistence, external cloud storage must be used.
 
@@ -65,8 +65,8 @@ export CLOUDFLARE_ENDPOINT_URL=https://************.r2.cloudflarestorage.com
 export CLOUDFLARE_REGION=auto
 export CLOUDFLARE_ID=************
 export CLOUDFLARE_KEY=************
-export BUCKET=transcripts              # bucket
-export FOLDER=high_performance_storage # foler
+export BUCKET=transcripts              # Bucket
+export FOLDER=high_performance_storage # Folder
 export SIZE=200   # MiB, the size of transferred data
 export ULSPEED=20 # Mbps
 export DLSPEED=50 # Mbps
