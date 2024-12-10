@@ -8,3 +8,10 @@ pythonping
 speedtest-cli
 
 salad-cloud-sdk
+
+jupyterlab
+ipywidgets
+
+pandas
+matplotlib
+seaborn
