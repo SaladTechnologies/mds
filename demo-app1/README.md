@@ -35,24 +35,19 @@ export AWS_SECRET_ACCESS_KEY=************
 
 (2)The client, provides several tools (example code) to interact with the cloud storage - Cloudflare R2 and the job queue - the Kelpie platform.
 
+```
 1_upload_job_input.py, upload the job inputs to cloud storage.
-
 2_submit_job.py, submit jobs to the Kelpie platform, and keeps the job IDs in the job_history.txt file.
-
 7_queue_job.py, query job status (PENDING, RUNNING, FAILED, COMPLETED) from the Kelpie platform using the job IDs.
-
 8_download_job_output.py, download the job outputs from cloud storage after all jobs are finished.
 
 Before a test, you need to reset the environment:
-
 0_cloud_storage_remove.py, purge the previous job data (input, state and output) in cloud storage.
-
 0_job_queue_remove.py, remove the previous jobs from the Kelpie platform.
 
 During a test, you can check the cloud storage in real time:
-
 0_cloud_strorage_check.py, show the contect in cloud stroage.
-
+```
 
 You can manage all the settings in the config.py file:
 
