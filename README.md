@@ -5,51 +5,43 @@ It includes blogs, reference designs, benchmarking code, demonstration applicati
 
 If you are new to SaladCloud, we recommend starting with [the SCE Architectural Overview](https://docs.salad.com/products/sce/getting-started/architectual-overview) and [the Docker Run on SaladCloud](https://docs.salad.com/tutorials/docker-run). The tutorial - [Build High-Performance Applications](https://docs.salad.com/tutorials/high-performance-apps) shares best practices along with proven insights from customers who have successfully built large-scale AI inference applications and run molecular dynamics simulations, using tens to thousands of Salad GPU nodes.
 
-### GROMACS Benchmark
 
-https://github.com/SaladTechnologies/mds/tree/main/gromacs-benchmark
+### Solution Options
 
-https://blog.salad.com/gromacs-benchmark/
+![Node Implementation](solution_options.png)
 
-### OpenMM Benchmark
+### GROMACS [Benchmark](https://blog.salad.com/gromacs-benchmark/) and [Code](https://github.com/SaladTechnologies/mds/tree/main/gromacs-benchmark)
 
-https://github.com/SaladTechnologies/mds/tree/main/openmm-benchmark
+### OpenMM [Benchmark](https://blog.salad.com/openmm-gpu-benchmark/) and [Code](https://github.com/SaladTechnologies/mds/tree/main/openmm-benchmark)
 
-https://blog.salad.com/openmm-gpu-benchmark/
+### Transcription [Benchmark](https://blog.salad.com/ai-batch-transcription-benchmark/),[Guide](https://docs.salad.com/guides/transcription/sce/youtube) and [Code](https://github.com/SaladTechnologies/yt-1m-hours-transcription-test/tree/main) for 1 Million Hours of YouTube Videos
 
-### Transcription Benchmark for 1 million hours of YouTube videos
+### [Long-Running Tasks - Demo App 1](https://github.com/SaladTechnologies/mds/tree/main/demo-app1) 
 
-https://docs.salad.com/guides/transcription/sce/youtube
+Use Kelpie as the job queue along with its built-in data management.
 
-https://blog.salad.com/ai-batch-transcription-benchmark/
+### [Long-Running Tasks - Demo App 3](https://github.com/SaladTechnologies/mds/tree/main/demo-app3)
 
-### Demo App 1 - Long-running tasks with built-in data management on SaladCloud
+Use Kelpie solely as a job queue, while implementing custom data management (Cloudflare R2 + rclone).
 
-Job Queue - Salad Kelpie, Cloud Storage - Cloudflare R2
+Demo App 3 outperform Demo App 2 v2 in several key areas:
+- Simplified Architecture: It significantly reduces application complexity by eliminating the need for job and leasing management, resulting in a 30% reduction (600 to 400 lines in Python) in the demo app.
+- Enhanced Task Duration: It resolves the limitation of AWS SQS's maximum 12-hour job execution at a time, enabling seamless support for longer-running tasks on our platform.
 
-https://github.com/SaladTechnologies/mds/tree/main/demo-app1
+### [Long-Running Tasks - Demo App 2 (v2), deprecated](https://github.com/SaladTechnologies/mds/tree/main/demo-app2v2)
 
-### Demo App 2 (v2) - Long-running tasks with progressive uploads on SaladCloud
+Use AWS SQS as a job queue, while implementing custom data management (Cloudflare R2 + boto3).
 
-Job Queue - AWS SQS, Cloud Storage - Cloudflare R2
-
-https://github.com/SaladTechnologies/mds/tree/main/demo-app2v2
-
-### High-Performance Inference Server
+### [High-Performance Inference Server](https://github.com/SaladTechnologies/mds/tree/main/inference-server)
 
 This implementation utilizes separate threads for I/O operations (including health checks) and AI inference, enabling efficient handling of concurrent requests with batched inference processing.
 It can be used for image generation, transcription, and non-streaming LLM tasks.
 
-https://github.com/SaladTechnologies/mds/tree/main/inference-server
-
-### High-Performance Storage
+### [High-Performance Storage](https://github.com/SaladTechnologies/mds/tree/main/high-performance-storage)
 
 Benchmarks and best practices for designing a high-performance and cost-effective storage solution for applications on SaladCloud.
 
-https://github.com/SaladTechnologies/mds/tree/main/high-performance-storage
-
-### High-Performance Applications
+### [High-Performance Applications](https://docs.salad.com/tutorials/high-performance-apps)
 
 Summarize the common challenges while migrating workloads from Hyperscalers to SaladCloud, and best practices for successful application deployments.
 
-https://docs.salad.com/tutorials/high-performance-apps

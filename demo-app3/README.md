@@ -2,7 +2,7 @@
 
 This demo app is designed to run long-running tasks on SaladCloud (GPU Compute) using [Salad Kelpie 0.5.0](specs_kelpie_0.5.0.pdf) solely as a job queue, while implementing flexible data management strategies, including selective downloads and progressive uploads (up to several hundred GB of data during the job execution). 
 
-The storage solution is built upon Cloudflare R2 and rclone, offering free egress traffic and supporting chunked and concurrent uploads and downloads for high throughput. For more details, please refer to [the high-performance storage solution](https://github.com/SaladTechnologies/mds/tree/main/high-performance-storage).
+The storage solution is built upon Cloudflare R2 and rclone, offering free ingress and egress traffic, and supporting chunked and concurrent uploads and downloads for high throughput. For more details, please refer to [the high-performance storage solution](https://github.com/SaladTechnologies/mds/tree/main/high-performance-storage).
 
 Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE_Architectural_Overview/5_long_running_tasks.png) for the application.
 
@@ -14,7 +14,7 @@ The Kelpie worker retrieves jobs — such as calculating the sum of the series f
 
 The code calculates the sum of the series, which could take long time (a few hours or days) and may be interrupted during the job execution. So, it saves the current state at specific intervals (configurable) to ensure progress is preserved. When a node is down and another node takes the unfinished job, the code needs to resume the previous state and continue the execution.
 
-The code manages data synchronization directly in this case, including downloading input and state, and uploading state and output. **An upload thread and a local queue are introduced to prevent the uploads from blocking the main thread.**
+The code manages data synchronization directly in this application, including downloading input and state, and uploading state and output. **An upload thread and a local queue are introduced to prevent the uploads from blocking the main thread.**
 
 ![Node Implementation](node_implementation.png)
 
