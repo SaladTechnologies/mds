@@ -16,19 +16,19 @@ If you are new to SaladCloud, we recommend starting with [the SCE Architectural 
 
 ### Transcription [Benchmark](https://blog.salad.com/ai-batch-transcription-benchmark/),[Guide](https://docs.salad.com/guides/transcription/sce/youtube) and [Code](https://github.com/SaladTechnologies/yt-1m-hours-transcription-test/tree/main) for 1 Million Hours of YouTube Videos
 
-### [Long-Running Tasks - Demo App 1](https://github.com/SaladTechnologies/mds/tree/main/demo-app1) 
+### Long-Running Tasks - [Demo App 1](https://github.com/SaladTechnologies/mds/tree/main/demo-app1) 
 
 Use Kelpie as the job queue along with its built-in data management.
 
-### [Long-Running Tasks - Demo App 3](https://github.com/SaladTechnologies/mds/tree/main/demo-app3)
+### Long-Running Tasks - [Demo App 3](https://github.com/SaladTechnologies/mds/tree/main/demo-app3)
 
 Use Kelpie solely as a job queue, while implementing custom data management (Cloudflare R2 + rclone).
 
 Demo App 3 outperform Demo App 2 v2 in several key areas:
-- Simplified Architecture: It significantly reduces application complexity by eliminating the need for job and leasing management, resulting in a 30% reduction (600 to 400 lines in Python) in the demo app.
-- Enhanced Task Duration: It resolves the limitation of AWS SQS's maximum 12-hour job execution at a time, enabling seamless support for longer-running tasks on our platform.
+- **Simplified Architecture:** It significantly reduces application complexity by eliminating the need for job and leasing management, resulting in a 30% reduction (600 to 400 lines in Python) in the demo app.
+- **Enhanced Task Duration:** It resolves the limitation of AWS SQS's maximum 12-hour job execution at a time, enabling seamless support for longer-running tasks on our platform.
 
-### [Long-Running Tasks - Demo App 2 (v2), deprecated](https://github.com/SaladTechnologies/mds/tree/main/demo-app2v2)
+### Long-Running Tasks - [Demo App 2 (v2)](https://github.com/SaladTechnologies/mds/tree/main/demo-app2v2) (deprecated)
 
 Use AWS SQS as a job queue, while implementing custom data management (Cloudflare R2 + boto3).
 
