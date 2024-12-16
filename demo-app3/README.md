@@ -6,6 +6,13 @@ The storage solution is built upon Cloudflare R2 and rclone, offering free ingre
 
 Please refer to [the system architecture and referrence design](https://github.com/SaladTechnologies/mds/blob/main/SCE_Architectural_Overview/5_long_running_tasks.png) for the application.
 
+Here is [the test result and analysis with 5 jobs with each running 48 hours](test_result_kelpie_0.5.0_jq_only_5_jobs_48_hours.txt): all 5 jobs have been completed successfully, and the final results are accurate. A total of 2,880 steps were completed for each job, with each step taking 1 minute. 
+Job progress and a test file (**100 MiB, 104.858 MB**) were saved to the cloud every 10 minutes.
+**More than 30GB of data was uploaded** during each job execution.
+
+![test_result](kelpie_0.5.0_test_result.png)
+
+
 **It consists of two parts:**
 
 (1)The image - The application to be run on SaladCloud (or local), which includes both the Kelpie worker (executable) and the application code.

@@ -1,0 +1,152 @@
+ubuntu@asus:~/mds/demo-app3/client$ python 7_query_job.py
+
+{
+    "id": "2b78481f-3b06-471c-9fc2-52a899d66776",
+    "user_id": "e243fb7b-f580-41e7-a851-161ffe74a920",
+    "status": "completed",
+    "created": "2024-12-14T03:06:33.000Z",
+    "started": "2024-12-14T08:31:58.000Z",
+    "completed": "2024-12-16T03:43:30.000Z",
+    "heartbeat": "2024-12-16T03:43:30.000Z",
+    "num_failures": 0,
+    "machine_id": "49fd2294-db2b-d359-b893-1a4094e87a53",
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "STATE_SAVING_INTERVAL": "600.0",
+        "STEP_RUNNING_TIME": "60.0",
+        "bucket": "transcripts",
+        "before": "demoapp3/job0/input",
+        "during": "demoapp3/job0/state",
+        "after": "demoapp3/job0/output"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "5c84c961-8cc6-4ac0-9211-5d7bf65f8961",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 5552,
+    "sync": {}
+}
+{
+    "id": "36052afd-e37e-481e-84d3-66c724ae42f7",
+    "user_id": "e243fb7b-f580-41e7-a851-161ffe74a920",
+    "status": "completed",
+    "created": "2024-12-14T03:06:34.000Z",
+    "started": "2024-12-16T00:52:34.000Z",
+    "completed": "2024-12-16T04:03:29.000Z",
+    "heartbeat": "2024-12-16T04:03:29.000Z",
+    "num_failures": 0,
+    "machine_id": "9f364273-68f1-9459-b594-ea7489922a41",
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "STATE_SAVING_INTERVAL": "600.0",
+        "STEP_RUNNING_TIME": "60.0",
+        "bucket": "transcripts",
+        "before": "demoapp3/job1/input",
+        "during": "demoapp3/job1/state",
+        "after": "demoapp3/job1/output"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "5c84c961-8cc6-4ac0-9211-5d7bf65f8961",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 5728,
+    "sync": {}
+}
+{
+    "id": "1d2c3c72-a68f-464a-96e9-a5a6104b71e5",
+    "user_id": "e243fb7b-f580-41e7-a851-161ffe74a920",
+    "status": "completed",
+    "created": "2024-12-14T03:06:34.000Z",
+    "started": "2024-12-16T00:44:58.000Z",
+    "completed": "2024-12-16T05:06:20.000Z",
+    "heartbeat": "2024-12-16T05:06:20.000Z",
+    "num_failures": 0,
+    "machine_id": "fc49d0a0-6e01-c850-b098-70ec3084aed8",
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "STATE_SAVING_INTERVAL": "600.0",
+        "STEP_RUNNING_TIME": "60.0",
+        "bucket": "transcripts",
+        "before": "demoapp3/job2/input",
+        "during": "demoapp3/job2/state",
+        "after": "demoapp3/job2/output"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "5c84c961-8cc6-4ac0-9211-5d7bf65f8961",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 5658,
+    "sync": {}
+}
+{
+    "id": "7d78cec3-8fd5-4647-b64e-06f906492753",
+    "user_id": "e243fb7b-f580-41e7-a851-161ffe74a920",
+    "status": "completed",
+    "created": "2024-12-14T03:06:35.000Z",
+    "started": "2024-12-14T08:12:03.000Z",
+    "completed": "2024-12-16T03:44:00.000Z",
+    "heartbeat": "2024-12-16T03:44:00.000Z",
+    "num_failures": 0,
+    "machine_id": "d415d7ba-1650-0c55-9c2d-ca63368893b8",
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "STATE_SAVING_INTERVAL": "600.0",
+        "STEP_RUNNING_TIME": "60.0",
+        "bucket": "transcripts",
+        "before": "demoapp3/job3/input",
+        "during": "demoapp3/job3/state",
+        "after": "demoapp3/job3/output"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "5c84c961-8cc6-4ac0-9211-5d7bf65f8961",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 5664,
+    "sync": {}
+}
+{
+    "id": "ea9f81eb-16c1-4896-8e8a-5e741a458f90",
+    "user_id": "e243fb7b-f580-41e7-a851-161ffe74a920",
+    "status": "completed",
+    "created": "2024-12-14T03:06:36.000Z",
+    "started": "2024-12-16T00:57:36.000Z",
+    "completed": "2024-12-16T04:19:41.000Z",
+    "heartbeat": "2024-12-16T04:19:41.000Z",
+    "num_failures": 0,
+    "machine_id": "e9179250-eac3-4a5d-8b93-12c9b427b6ff",
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "STATE_SAVING_INTERVAL": "600.0",
+        "STEP_RUNNING_TIME": "60.0",
+        "bucket": "transcripts",
+        "before": "demoapp3/job4/input",
+        "during": "demoapp3/job4/state",
+        "after": "demoapp3/job4/output"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "5c84c961-8cc6-4ac0-9211-5d7bf65f8961",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 5617,
+    "sync": {}
+}
