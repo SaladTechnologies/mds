@@ -3,10 +3,9 @@
 This repository provides resources for molecular dynamics simulations and other long-running tasks (such as model fine-tuning and hyperparameter tuning) on SaladCloud. 
 It includes blogs, reference designs, benchmarking code, demonstration applications, and test reports.
 
-If you are new to SaladCloud, we recommend starting with [the SCE Architectural Overview](https://docs.salad.com/products/sce/getting-started/architectual-overview) and [the Docker Run on SaladCloud](https://docs.salad.com/tutorials/docker-run). The tutorials - [Build High-Performance Applications](https://docs.salad.com/tutorials/high-performance-apps) and [Build High-Perforance Storage Solutions](https://docs.salad.com/tutorials/high-performance-storage-solutions) share best practices along with proven insights from customers who have successfully built large-scale AI inference applications and run molecular dynamics simulations, using tens to thousands of Salad GPU nodes.
+If you are new to SaladCloud, we recommend starting with [the SCE Architectural Overview](https://docs.salad.com/products/sce/getting-started/architectual-overview) and [the Docker Run on SaladCloud](https://docs.salad.com/tutorials/docker-run). The tutorials - [Build High-Performance Applications](https://docs.salad.com/tutorials/high-performance-apps) and [Build High-Performance Storage Solutions](https://docs.salad.com/tutorials/high-performance-storage-solutions) share best practices along with proven insights from customers who have successfully built large-scale AI inference applications and run molecular dynamics simulations, using tens to thousands of Salad GPU nodes.
 
-
-### [Long-Running Tasks - Solution Overview](https://docs.salad.com/guides/long-running-tasks/solution-overview)
+### [Long-Running Tasks - Solution Overview](https://docs.salad.com/guides/long-running-tasks/solution-overview) 
 
 ![Node Implementation](solution_options.png)
 
