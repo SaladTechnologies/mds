@@ -1,0 +1,29 @@
+
+services:
+  gromacs-srcg:
+    
+    #command: sleep infinity
+
+    image: docker.io/saladtechnologies/mds:001-gromacs-srcg 
+    container_name: "wsl-local"
+    restart: "no"
+    environment:
+      - CLOUDFLARE_ID=${CLOUDFLARE_ID}
+      - CLOUDFLARE_KEY=${CLOUDFLARE_KEY}
+      - CLOUDFLARE_ENDPOINT_URL=${CLOUDFLARE_ENDPOINT_URL}
+      - BUCKET=${BUCKET}
+      - PREFIX=${PREFIX}
+      - FOLDER=${FOLDER}
+      - TPR_FILE=${TPR_FILE}
+      - MAX_STEPS=${MAX_STEPS}
+      - SAVING_INTERVAL_HOURS=${SAVING_INTERVAL_HOURS}
+      - MAX_NO_RESPONSE_TIME=${MAX_NO_RESPONSE_TIME}
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    stdin_open: true
+    tty: true
