@@ -30,6 +30,7 @@ CONTAINER_GROUP_NAME = os.getenv("CONTAINER_GROUP_NAME","")
 # Dynamic creation
 TASK_CREATION_TIME    = datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d %H:%M:%S")  
 
+# docker.io/saladtechnologies/mds:001-gromacs-srcg
 IMAGE                 = os.getenv("IMAGE", "")
 
 ########################################
