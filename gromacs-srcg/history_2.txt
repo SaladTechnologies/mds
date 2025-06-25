@@ -1,0 +1,6434 @@
+{
+  "task_name": "job6/j6.tpr_30000000_steps",
+  "task_done": true,
+  "task_creation_time": "2025-06-19 16:16:59",
+  "task_completion_time": "2025-06-24 04:36:11",
+  "task_duration": "4 days, 12:19:12",
+  "task_history": [
+    [
+      "2025-06-19 16:25:00",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "online",
+      {
+        "cuda": 12.7,
+        "gpu": "NVIDIA GeForce RTX 4060 Ti",
+        "vram_total": "16380 MiB",
+        "vram_used": "172 MiB",
+        "vram_free": "15938 MiB",
+        "vram_utilization": "12 %",
+        "gpu_temperature": "51",
+        "gpu_utilization": "1 %"
+      }
+    ],
+    [
+      "2025-06-19 16:25:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "start"
+    ],
+    [
+      "2025-06-19 16:35:25",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 41000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 16:45:36",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 82000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 16:55:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 123000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 17:05:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 164000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 17:16:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 204700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 17:26:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 245700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 17:36:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 286700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 17:46:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 327700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 17:56:53",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 368700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 18:07:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 409400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 18:17:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 450400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 18:27:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 491400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 18:37:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 532200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 18:47:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 573200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 18:57:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 614300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 19:08:07",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 655400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 19:18:18",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 696200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 19:28:28",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 737200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 19:38:38",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 778300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 19:48:49",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 819300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 19:59:00",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 860000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 20:09:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 901000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 20:19:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 942100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 20:29:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 982900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 20:39:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 1024000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 20:49:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 1065100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 21:00:00",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 1106200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 21:10:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 1147300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 21:20:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1188500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 21:30:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1229700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 21:40:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 1270800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 21:50:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 1311900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 22:01:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1353100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 22:11:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 1393900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 22:21:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 1435000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 22:31:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 1476100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 22:41:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 1516800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 22:51:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1558000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 23:02:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1599200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 23:12:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1640400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 23:22:23",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1681600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 23:32:34",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 1722500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 23:42:44",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1763700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-19 23:52:55",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1804900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 00:03:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1846100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 00:13:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1887300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 00:23:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 1928300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 00:33:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 1969500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 00:43:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2010700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 00:53:58",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2051900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 01:04:08",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2093100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 01:14:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2134300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 01:24:29",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 2175100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 01:34:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2216300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 01:44:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2257500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 01:55:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2298700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 02:05:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2339900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 02:15:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 2380700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 02:25:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 2421500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 02:35:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 2462400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 02:45:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2503600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 02:56:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 2544500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 03:06:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2585700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 03:16:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 2626600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 03:26:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 2667500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 03:36:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2708700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 03:46:53",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2749900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 03:57:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2791100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 04:07:13",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 2832000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 04:17:23",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2873200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 04:27:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2914400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 04:37:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 2955600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 04:47:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 2996400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 04:58:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3037600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 05:08:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3078800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 05:18:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3120000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 05:28:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3161200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 05:38:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3202300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 05:48:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3243500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 05:59:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3284700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 06:09:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3325900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 06:19:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 3366700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 06:29:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 3407200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 06:39:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3448400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 06:50:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 3489600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 07:00:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 3530400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 07:10:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3571500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 07:20:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3612600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 07:30:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3653700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 07:40:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3694800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 07:51:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3735900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 08:01:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3777000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 08:11:23",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3818100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 08:21:33",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 3859100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 08:31:44",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3900200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 08:41:55",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 3941300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 08:52:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 3982300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 09:02:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 4023400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 09:12:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 4064400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 09:22:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 4105400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 09:32:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 4146400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 09:42:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 4187000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 09:53:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 4228000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 10:03:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 4268900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 10:13:29",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 4309800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 10:23:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 4350700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 10:33:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 4391600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 10:44:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 4432400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 10:54:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 4473200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 11:04:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 4514000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 11:14:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 4554800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 11:24:43",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 4595400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 11:34:53",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 4636200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 11:45:04",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 4676400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 11:55:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 4717100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 12:05:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 4757400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 12:15:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 4798200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 12:25:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 4838500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 12:35:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 4879100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 12:46:07",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 4919800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 12:56:18",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 4960500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 13:06:29",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 5001000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 13:16:39",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 5041600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 13:26:49",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 5082200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 13:37:00",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 5122900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 13:47:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 5163500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 13:57:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 5204100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 14:07:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 5244300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 14:17:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 5284500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 14:27:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 5325000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 14:38:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 5365600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 14:48:13",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 5405800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 14:58:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 5446300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 15:08:34",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 5486900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 15:18:44",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 5527100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 15:28:54",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 5567300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 15:39:04",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 5607900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 15:49:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 5648600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 15:59:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 5689300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 16:09:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 5730100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 16:19:46",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 5770600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 16:29:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 5811100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 16:40:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 5851600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 16:50:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 5892500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 17:00:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 5933400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 17:10:38",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 5974300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 17:20:49",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 6015200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 17:30:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 6056100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 17:41:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 6096600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 17:51:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40400,
+        "completed_steps": 6137000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 18:01:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 6177900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 18:11:39",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 6218800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 18:21:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6259800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 18:32:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6300800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 18:42:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6341800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 18:52:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 39900,
+        "completed_steps": 6381700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 19:02:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6422700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 19:12:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6463700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 19:22:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6504700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 19:33:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6545700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 19:43:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6586700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 19:53:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6627700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 20:03:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 6668700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 20:13:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 6709600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 20:23:53",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 6750400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 20:34:04",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 6791500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 20:44:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 6832600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 20:54:25",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 6873400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 21:04:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 6914200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 21:14:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 6955300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 21:24:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 6996400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 21:35:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 7037500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 21:45:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 7078600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 21:55:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 7119600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 22:05:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 7160400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 22:15:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 7201000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 22:25:57",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 7242100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 22:36:07",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 7282900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 22:46:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 7324000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 22:56:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 7365100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 23:06:36",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 7405900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 23:16:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 7447000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 23:26:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 7487700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 23:37:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 7528800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 23:47:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7570000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-20 23:57:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7611200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 00:07:38",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7652400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 00:17:49",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7693600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 00:27:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 7734500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 00:38:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7775700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 00:48:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7816900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 00:58:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7858100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 01:08:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7899300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 01:18:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7940500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 01:29:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 7981700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 01:39:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8022900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 01:49:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8064100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 01:59:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 8104700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 02:09:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8145900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 02:19:53",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8187100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 02:30:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 8227700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 02:40:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 8268400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 02:50:25",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8309600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 03:00:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 8350500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 03:10:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8391700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 03:20:54",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 8432500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 03:31:04",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8473700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 03:41:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8514900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 03:51:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8556100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 04:01:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 8597000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 04:11:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8638200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 04:21:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8679400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 04:32:05",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8720600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 04:42:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 8761500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 04:52:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8802700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 05:02:36",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8843900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 05:12:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 8885100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 05:22:55",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 8925900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 05:33:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 8966700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 05:43:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 9007400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 05:53:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 9048600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 06:03:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 9089400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 06:13:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 9130600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 06:23:58",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 9171500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 06:34:08",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40100,
+        "completed_steps": 9211600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 06:44:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 9252500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 06:54:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 9293700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 07:04:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 9334900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 07:14:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 9375900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 07:25:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 9417000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 07:35:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 9457900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 07:45:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 9498900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 07:55:33",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 9540000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 08:05:44",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 9580700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 08:15:55",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 9621700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 08:26:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 9662800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 08:36:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 9703900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 08:46:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 9744600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 08:56:39",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 9785400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 09:06:49",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 9826500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 09:16:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 9867500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 09:27:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 9908200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 09:37:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 9948900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 09:47:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 9989900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 09:57:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 10030500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 10:07:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 10071400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 10:18:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 10112400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 10:28:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 10153300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 10:38:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 10194200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 10:48:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 10235100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 10:58:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 10275600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 11:08:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 10316100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 11:19:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40400,
+        "completed_steps": 10356500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 11:29:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 10397300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 11:39:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 10438100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 11:49:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40400,
+        "completed_steps": 10478500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 11:59:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 10519200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 12:09:53",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 10560000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 12:20:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 10600800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 12:30:13",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 10641100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 12:40:23",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 10681400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 12:50:34",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 10722100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 13:00:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 10762400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 13:10:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 10803100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 13:21:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 10843400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 13:31:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 10884100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 13:41:28",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 10924400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 13:51:39",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 10964700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 14:01:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 11005400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 14:12:00",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 11046000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 14:22:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 11086700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 14:32:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 11127500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 14:42:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 11168200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 14:52:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 11209000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 15:02:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 11249800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 15:13:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 11290500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 15:23:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 11330700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 15:33:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 11371300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 15:43:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 11411500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 15:53:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 11452100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 16:03:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 11492700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 16:14:00",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 11533400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 16:24:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 11574100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 16:34:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40400,
+        "completed_steps": 11614500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 16:44:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 11655300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 16:54:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 11695800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 17:04:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 11736700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 17:15:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 11777200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 17:25:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 11818100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 17:35:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 11858600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 17:45:33",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 11899200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 17:55:44",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 11940200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 18:05:54",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 11980800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 18:16:05",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12021800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 18:26:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12062800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 18:36:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 12103700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 18:46:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12144700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 18:56:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12185700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 19:06:58",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12226700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 19:17:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12267700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 19:27:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12308700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 19:37:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12349700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 19:47:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12390700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 19:57:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12431800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 20:08:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 12472500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 20:18:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12513600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 20:28:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 12554300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 20:38:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 12595300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 20:48:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12636400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 20:58:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12677500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 21:09:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12718600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 21:19:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12759700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 21:29:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12800800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 21:39:33",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 12841600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 21:49:43",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12882700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 21:59:54",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 12923800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 22:10:04",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 12964500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 22:20:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 13005600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 22:30:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 13046700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 22:40:34",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 13087800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 22:50:44",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 13128900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 23:00:55",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13170100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 23:11:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13211300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 23:21:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13252500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 23:31:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 13293600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 23:41:36",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 13334400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-21 23:51:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13375600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 00:01:58",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 13416500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 00:12:08",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 13457200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 00:22:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 13498300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 00:32:28",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13539500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 00:42:38",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 13580100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 00:52:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 13620700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 01:02:58",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13661900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 01:13:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 13703000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 01:23:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 13743700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 01:33:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13784900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 01:43:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13826100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 01:53:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13867300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 02:04:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13908500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 02:14:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13949700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 02:24:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 13990900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 02:34:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14032100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 02:44:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14073300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 02:54:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14114500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 03:05:00",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 14155600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 03:15:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 14196500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 03:25:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14237700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 03:35:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14278900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 03:45:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14320100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 03:55:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 14361000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 04:06:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14402200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 04:16:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14443400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 04:26:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14484600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 04:36:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14525800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 04:46:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14567000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 04:56:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 14608100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 05:07:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 14649000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 05:17:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 14689800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 05:27:23",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40400,
+        "completed_steps": 14730200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 05:37:34",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 14771100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 05:47:44",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 14811800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 05:57:54",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14853000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 06:08:05",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14894200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 06:18:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14935400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 06:28:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 14976600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 06:38:36",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 15017700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 06:48:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 15058900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 06:58:57",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 15100000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 07:09:07",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 15140700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 07:19:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 15181800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 07:29:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 15222500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 07:39:38",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 15263600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 07:49:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 15304300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 07:59:58",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 15345300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 08:10:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 15386300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 08:20:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 15427300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 08:30:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 15468300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 08:40:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 15509200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 08:50:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 15550200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 09:01:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 15590800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 09:11:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 15631800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 09:21:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 15672800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 09:31:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 15713700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 09:41:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 15754600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 09:51:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 15795200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 10:02:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 15836100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 10:12:13",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 15876900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 10:22:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 15917200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 10:32:33",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 15958100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 10:42:44",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40400,
+        "completed_steps": 15998500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 10:52:54",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 16039300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 11:03:05",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 16080100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 11:13:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 16120400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 11:23:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 16161100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 11:33:36",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 16201400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 11:43:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 16242100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 11:53:57",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 16282400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 12:04:07",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 16323200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 12:14:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 16363900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 12:24:27",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 16404600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 12:34:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 16445200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 12:44:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 16485800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 12:54:58",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 16526500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 13:05:08",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 16567100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 13:15:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 16607300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 13:25:28",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 16647800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 13:35:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40200,
+        "completed_steps": 16688000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 13:45:49",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 16728600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 13:55:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 16769200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 14:06:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 16809800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 14:16:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 16850500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 14:26:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 16891200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 14:36:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 16931500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 14:46:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 16972300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 14:57:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 17013000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 15:07:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 17053700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 15:17:23",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 17094400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 15:27:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 17135200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 15:37:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 17176100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 15:47:53",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 17216700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 15:58:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17257700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 16:08:14",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17298700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 16:18:25",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17339700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 16:28:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17380700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 16:38:46",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17421700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 16:48:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17462700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 16:59:07",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17503700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 17:09:18",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17544700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 17:19:28",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17585700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 17:29:39",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17626700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 17:39:49",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17667700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 17:49:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17708700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 18:00:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17749700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 18:10:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17790700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 18:20:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 17831400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 18:30:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17872400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 18:40:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 17913100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 18:51:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 17953800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 19:01:13",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 17994800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 19:11:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18035900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 19:21:34",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18077000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 19:31:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 18117900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 19:41:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 18158800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 19:52:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18199900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 20:02:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18241000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 20:12:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18282100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 20:22:38",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 18322900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 20:32:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 18363600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 20:42:58",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18404700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 20:53:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 18445400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 21:03:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 18486600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 21:13:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 18527400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 21:23:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18568500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 21:33:51",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18609600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 21:44:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18650700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 21:54:11",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18691800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 22:04:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18732900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 22:14:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18774000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 22:24:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 18814700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 22:34:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18855800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 22:45:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18896900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 22:55:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 18938000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 23:05:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 18979200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 23:15:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 19019900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 23:25:43",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 19060700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 23:35:54",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19101900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 23:46:04",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 19142900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-22 23:56:15",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 19183900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 00:06:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19225100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 00:16:36",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 19265900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 00:26:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 19306900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 00:36:57",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19348100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 00:47:07",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 19388900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 00:57:18",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19430100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 01:07:29",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19471300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 01:17:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19512500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 01:27:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19553700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 01:38:00",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 19594800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 01:48:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19636000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 01:58:20",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19677200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 02:08:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19718400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 02:18:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19759600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 02:28:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 19800400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 02:39:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19841600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 02:49:13",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 19882400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 02:59:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 19923600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 03:09:35",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 19964500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 03:19:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20005700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 03:29:55",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20046900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 03:40:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20088100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 03:50:17",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 20129000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 04:00:28",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20170200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 04:10:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 20211000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 04:20:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20252200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 04:30:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 20292700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 04:41:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40800,
+        "completed_steps": 20333500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 04:51:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20374700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 05:01:28",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20415900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 05:11:38",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 20456800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 05:21:48",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40300,
+        "completed_steps": 20497100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 05:31:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 20538000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 05:42:09",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20579200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 05:52:19",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20620400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 06:02:30",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41200,
+        "completed_steps": 20661600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 06:12:40",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 39700,
+        "completed_steps": 20701300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 06:22:50",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 20742400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 06:33:01",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 20783500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 06:43:12",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 20824200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 06:53:22",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 20865300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 07:03:32",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 20906400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 07:13:42",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 20947500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 07:23:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 20988600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 07:34:03",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 21029300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 07:44:13",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21070300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 07:54:24",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 21111400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 08:04:34",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21152400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 08:14:45",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21193400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 08:24:56",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21234400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 08:35:06",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 21275500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 08:45:16",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 21316600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 08:55:26",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40700,
+        "completed_steps": 21357300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 09:05:37",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 21398400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 09:15:47",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21439400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 09:25:57",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41100,
+        "completed_steps": 21480500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 09:36:07",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21521500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 09:46:18",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 21562100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 09:56:28",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40000,
+        "completed_steps": 21602100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 10:06:38",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40100,
+        "completed_steps": 21642200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 10:16:49",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21683200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 10:26:59",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40500,
+        "completed_steps": 21723700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 10:37:10",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21764700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 10:47:21",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21805700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 10:57:31",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 21846600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 11:07:41",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 21887200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 11:17:52",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 21928200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 11:28:02",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 21969100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 11:38:13",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 22009700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 11:48:23",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 22050700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 11:58:33",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40900,
+        "completed_steps": 22091600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 12:08:43",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40400,
+        "completed_steps": 22132000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 12:18:53",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 22173000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 12:29:04",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 40600,
+        "completed_steps": 22213600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 12:39:15",
+      "602e45b0-1fd8-4352-bddc-f96270e1f048",
+      "run_chunk",
+      {
+        "chunk_steps": 41000,
+        "completed_steps": 22254600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 13:02:22",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "online",
+      {
+        "cuda": 12.7,
+        "gpu": "NVIDIA GeForce RTX 4070 Ti SUPER",
+        "vram_total": "16376 MiB",
+        "vram_used": "185 MiB",
+        "vram_free": "15879 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "36",
+        "gpu_utilization": "1 %"
+      }
+    ],
+    [
+      "2025-06-23 13:02:28",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "start"
+    ],
+    [
+      "2025-06-23 13:12:29",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 22338000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 13:22:30",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 22421300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 13:32:31",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 22504600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 13:42:32",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 22588000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 13:52:34",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 22671400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 14:02:35",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 81500,
+        "completed_steps": 22752900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 14:12:36",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 80900,
+        "completed_steps": 22833800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 14:22:37",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 22917200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 14:32:38",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 23000500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 14:42:39",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 23083800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 14:52:41",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 23167200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 15:02:42",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 23250700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 15:12:43",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 23334100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 15:22:44",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 23417600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 15:32:46",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 23501100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 15:42:47",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 23584400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 15:52:48",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 23667800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 16:02:49",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83600,
+        "completed_steps": 23751400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 16:12:50",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 23834800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 16:22:51",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 23917900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 16:32:52",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 24001300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 16:42:53",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83600,
+        "completed_steps": 24084900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 16:52:55",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 82400,
+        "completed_steps": 24167300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 17:02:56",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 24250800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 17:12:57",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83000,
+        "completed_steps": 24333800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 17:22:58",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 24417200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 17:32:59",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83000,
+        "completed_steps": 24500200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 17:43:00",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 24583600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 17:53:01",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 81500,
+        "completed_steps": 24665100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 18:03:03",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 80600,
+        "completed_steps": 24745700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 18:13:04",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 80900,
+        "completed_steps": 24826600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 18:23:06",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 79000,
+        "completed_steps": 24905600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 18:33:07",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 24988700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 18:43:08",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 25071800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 18:53:09",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 25154900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 19:03:10",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 25238100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 19:13:11",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 25321500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 19:23:13",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 25404800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 19:33:14",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 25488300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 19:43:15",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 25571700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 19:53:16",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 25655100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 20:03:17",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 25738300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 20:13:18",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 25821800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 20:23:19",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 25905200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 20:33:20",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 25988700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 20:43:21",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 26072000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 20:53:23",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 26155400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 21:03:24",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 26238600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 21:13:25",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 26322000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 21:23:26",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 82900,
+        "completed_steps": 26404900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 21:33:27",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 26488100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 21:43:28",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 26571400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 21:53:29",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 26654700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 22:03:30",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 26738200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 22:13:31",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83500,
+        "completed_steps": 26821700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 22:23:33",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 26905100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 22:33:33",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 26988400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 22:43:34",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 27071600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 22:53:35",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 27154800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 23:03:37",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 27238200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 23:13:38",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 27321500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 23:23:38",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 27404800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 23:33:39",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 27487900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 23:43:41",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 27571000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-23 23:53:42",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 27654300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 00:03:43",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 82900,
+        "completed_steps": 27737200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 00:13:44",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 27820500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 00:23:45",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 27903900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 00:33:47",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 27987300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 00:43:48",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 28070600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 00:53:49",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 28153900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 01:03:49",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 28237300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 01:13:51",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83000,
+        "completed_steps": 28320300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 01:23:52",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 28403700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 01:33:53",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83000,
+        "completed_steps": 28486700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 01:43:55",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 28570100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 01:53:56",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83000,
+        "completed_steps": 28653100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 02:03:57",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 28736500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 02:13:57",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83400,
+        "completed_steps": 28819900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 02:23:59",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 28903200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 02:34:00",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 28986500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 02:44:01",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 29069800,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 02:54:02",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 29153100,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 03:04:03",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83300,
+        "completed_steps": 29236400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 03:14:04",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 29319600,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 03:24:05",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 82900,
+        "completed_steps": 29402500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 03:34:06",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 29485700,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 03:44:07",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 29568900,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 03:54:08",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 29652000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 04:04:09",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83200,
+        "completed_steps": 29735200,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 04:14:11",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 29818300,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 04:24:12",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 29901400,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 04:34:13",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 83100,
+        "completed_steps": 29984500,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 04:36:11",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "run_chunk",
+      {
+        "chunk_steps": 15500,
+        "completed_steps": 30000000,
+        "total_steps:": 30000000
+      }
+    ],
+    [
+      "2025-06-24 04:36:11",
+      "3d18a605-08d6-1958-8795-e500065b2377",
+      "end"
+    ]
+  ]
+}
