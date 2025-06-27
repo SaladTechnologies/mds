@@ -34,6 +34,12 @@ CONTAINER_GROUP_NAME = os.getenv("CONTAINER_GROUP_NAME","")
 MAX_NO_RESPONSE_TIME = int(os.getenv("MAX_NO_RESPONSE_TIME","3600"))
 TASK_CREATION_TIME   = os.getenv("TASK_CREATION_TIME", datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d %H:%M:%S"))
 
+# if not provided, wait forever to keep the SRCG running on SaladCloud
+if CLOUDFLARE_ID == "" or CLOUDFLARE_KEY == "" or CLOUDFLARE_ENDPOINT_URL == "":
+    while True:
+        print("No access to cloud storage, sleep infinity ......", flush=True)
+        time.sleep(10)
+
 S3_CLIENT = boto3.client(
     "s3",
     endpoint_url=CLOUDFLARE_ENDPOINT_URL,
@@ -213,7 +219,7 @@ def Shutdown_SRCG():
         if not SALAD_API_KEY or not ORGANIZATION_NAME or not PROJECT_NAME or not CONTAINER_GROUP_NAME:
             while True:
                 time.sleep(10)
-                print("Sleep infinity ......", flush=True)
+                print("SaladCloud API access unavailable, sleep infinity ......", flush=True)
         
         print("Call the SaladCloud API to shutdown the SRCG ......", flush=True)
         # https://docs.salad.com/reference/saladcloud-api/container-groups/stop-container-group

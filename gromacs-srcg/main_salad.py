@@ -23,8 +23,14 @@ BUCKET     = os.getenv("BUCKET")
 PREFIX     = os.getenv("PREFIX","")  # Optional, can be empty
 FOLDER     = os.getenv("FOLDER")
 TPR_FILE   = os.getenv("TPR_FILE")  
-MAX_STEPS  = int(os.getenv("MAX_STEPS"))  
-SAVING_INTERVAL_HOURS = os.getenv("SAVING_INTERVAL_HOURS") 
+MAX_STEPS  = int(os.getenv("MAX_STEPS",'0'))  
+SAVING_INTERVAL_HOURS = os.getenv("SAVING_INTERVAL_HOURS",'0.5') 
+
+# if not provided, wait forever to keep the SRCG running on SaladCloud
+if not BUCKET or not FOLDER or not TPR_FILE or MAX_STEPS==0:
+    while True:
+        print("No input file, sleep infinity ......", flush=True)
+        time.sleep(10)
 
 LOCAL_FOLDER = "local" # FOLDER, or use the same folder name as the cloud folder
 if os.path.exists(LOCAL_FOLDER):

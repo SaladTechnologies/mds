@@ -1,0 +1,25 @@
+# Run the Jupyter terminal
+
+/bin/bash
+cd ./systems
+
+# https://docs.salad.com/guides/molecular-dynamics-simulation/gromacs-srcg
+
+# This command runs a 200,000-step GPU-accelerated simulation using the system defined in the j1.tpr file.
+
+gmx mdrun -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -s j1.tpr -deffnm j1 -nsteps 200000
+
+# Run the simulation for 200,000 steps with the input file, stopping gracefully after 1 minute.
+# The -noappend option ensures that output files are created with incremented suffixes automatically, rather than appending to existing files.
+
+gmx mdrun -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -noappend -s j1.tpr -deffnm j1 -nsteps 200000 -maxh 0.016
+
+# Extract the number of completed steps from the checkpoint file.
+
+gmx dump -cp j1.cpt | grep step
+
+# Continue the simulation to run 10000 steps or 1 minute
+
+gmx mdrun -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -noappend -s j1.tpr -deffnm j1 -nsteps 10000 -maxh 0.016 -cpi j1.cpt
+gmx mdrun -nb gpu -pme gpu -bonded gpu -update gpu -ntmpi 1 -ntomp 8 -pin on -pinstride 1 -noappend -s j1.tpr -deffnm j1 -nsteps 10000 -maxh 0.016 -cpi j1.cpt
+.....
