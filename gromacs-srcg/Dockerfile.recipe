@@ -26,13 +26,15 @@ RUN pip install jupyterlab ipywidgets
 ENV JUPYTERLAB_PORT=8888
 WORKDIR /app
 
-COPY Dockerfile.recipe commands.txt main_basic.py helper.py main_salad.py salad_monitor.py start.sh /app/
 COPY systems /app/systems
+COPY Dockerfile.recipe commands.txt start.sh /app/
+
 
 RUN chmod +x /app/start.sh
 
 # Default startup command
 CMD ["./start.sh"]
+
 
 
 # docker image build -t docker.io/saladtechnologies/mds:recipe-gromacs-srcg -f Dockerfile.recipe .
