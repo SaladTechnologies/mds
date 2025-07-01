@@ -5,6 +5,8 @@
 
 /bin/bash
 cd ./systems
+ls -ls
+nvidia-smi
 
 # Run a 200,000-step GPU-accelerated simulation using the system defined in the j1.tpr file.
 
