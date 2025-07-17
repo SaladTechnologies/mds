@@ -1,0 +1,15 @@
+name: openmm-srcg
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - openmm=8.3.0 
+  - cuda-version=12.6 
+  - openmm-setup 
+  - pip
+  - pip:
+      - python-dotenv
+      - boto3
+      - salad-cloud-sdk
+
+
