@@ -1,0 +1,62 @@
+# Python 3.12
+FROM continuumio/miniconda3:25.1.1-0 
+
+RUN apt-get update && apt-get install -y curl net-tools iputils-ping python3-pip nginx
+
+# Optional: Install VS Code Server for remote debugging
+# https://docs.salad.com/tutorials/vscode-remote-development#interactive-mode
+RUN curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' -o vscode_cli.tar.gz && \
+    tar -xf vscode_cli.tar.gz && \
+    mv code /usr/local/bin/code && \
+    rm vscode_cli.tar.gz
+
+# To connect using VS Code:
+# Log in the instance using the terminal, and then run the following commands:
+# code tunnel user login --provider github
+# nohup code tunnel --accept-server-license-terms --name XXX &> output.log &
+
+# http://docs.openmm.org/latest/userguide/application/01_getting_started.html#installing-openmm
+RUN conda install -c conda-forge openmm=8.3.0 cuda-version=12.6 -y
+
+# Enable dual-stack support for both IPv4 and IPv6 (if accessed directy using SaladCloud's Container Gateway)
+# Make the server listening on Port 8888 and add the prefix '/openmm'
+# https://github.com/openmm/openmm-setup/blob/master/README.md
+RUN conda install -c conda-forge openmm-setup=1.6 -y
+COPY openmmsetup.py /opt/conda/lib/python3.12/site-packages/openmmsetup/openmmsetup.py
+
+# Enable dual-stack support for both IPv4 and IPv6 (if accessed directy using SaladCloud's Container Gateway)
+# Make the server listening on Port 8889 and add the prefix '/jupyter'
+RUN pip install jupyterlab ipywidgets
+RUN pip install python-dotenv boto3 salad-cloud-sdk
+
+# Enable dual-stack support for both IPv4 and IPv6 (if accessed directy using SaladCloud's Container Gateway)
+# Make the server listening on Port 8000
+COPY routing.conf /etc/nginx/sites-available/routing.conf
+RUN ln -s /etc/nginx/sites-available/routing.conf /etc/nginx/sites-enabled/routing.conf
+
+#          Nginx
+# ------> 8000 IPv4/v6 --- /openmm  --> 8888 IPv4/v6, OpenMM Setup
+#                     \--- /jupyter --> 8889 IPv4/v6, Jupyter Lab
+
+# git clone --depth 1 --branch 8.3.0 https://github.com/openmm/openmm.git
+
+# Copy files as root (ensures proper permissions)
+WORKDIR /app
+COPY openmm/examples /app/examples
+
+COPY start.sh /app/start.sh
+RUN chmod +x /app/start.sh
+
+COPY Dockerfile main_basic.py helper.py main_salad.py salad_monitor.py /app/
+COPY Dockerfile.recipe routing.conf openmmsetup.py /app/
+
+# Default startup command
+CMD ["./start.sh"]
+
+# CMD ["python", "-m", "openmm.testInstallation"]
+# CMD ["openmm-setup"]
+# CMD ["sleep", "infinity"]
+
+
+# The pre-built image:
+# docker.io/saladtechnologies/mds:recipe-openmm-srcg
