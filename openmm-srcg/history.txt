@@ -1,0 +1,2004 @@
+{
+  "task_name": "job1/input.pdb_200000000_steps",
+  "task_done": true,
+  "task_creation_time": "2025-07-15 20:11:07",
+  "task_completion_time": "2025-07-17 13:18:24",
+  "task_duration": "1 day, 17:07:17",
+  "task_history": [
+    [
+      "2025-07-15 20:14:45",
+      "36b4fc34-d627-7b5c-a598-a2a070b7a3df",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4060 Ti",
+        "vram_total": "16380 MiB",
+        "vram_used": "199 MiB",
+        "vram_free": "15911 MiB",
+        "vram_utilization": "56 %",
+        "gpu_temperature": "47",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-15 20:15:06",
+      "36b4fc34-d627-7b5c-a598-a2a070b7a3df",
+      "start"
+    ],
+    [
+      "2025-07-15 20:22:39",
+      "36b4fc34-d627-7b5c-a598-a2a070b7a3df",
+      "run_chunk",
+      {
+        "chunk_steps": 886088,
+        "completed_steps": 886088,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 20:30:15",
+      "36b4fc34-d627-7b5c-a598-a2a070b7a3df",
+      "run_chunk",
+      {
+        "chunk_steps": 876088,
+        "completed_steps": 1762176,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 20:38:31",
+      "36b4fc34-d627-7b5c-a598-a2a070b7a3df",
+      "run_chunk",
+      {
+        "chunk_steps": 876088,
+        "completed_steps": 2638264,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 20:46:06",
+      "36b4fc34-d627-7b5c-a598-a2a070b7a3df",
+      "run_chunk",
+      {
+        "chunk_steps": 876088,
+        "completed_steps": 3514352,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 20:53:44",
+      "36b4fc34-d627-7b5c-a598-a2a070b7a3df",
+      "run_chunk",
+      {
+        "chunk_steps": 876088,
+        "completed_steps": 4390440,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 22:30:50",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4060 Ti",
+        "vram_total": "16380 MiB",
+        "vram_used": "166 MiB",
+        "vram_free": "15944 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "41",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-15 22:30:57",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "start"
+    ],
+    [
+      "2025-07-15 22:40:29",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1303508,
+        "completed_steps": 5693948,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 22:50:01",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 6987456,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 22:59:34",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 8280964,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 23:09:09",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 9574472,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 23:18:41",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 10867980,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 23:28:14",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 12161488,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 23:37:48",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 13454996,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 23:47:21",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 14748504,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-15 23:56:55",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 16042012,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 00:06:30",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 17335520,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 00:16:03",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 18629028,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 00:25:36",
+      "21d8761c-52c8-5758-bac6-e1560df15326",
+      "run_chunk",
+      {
+        "chunk_steps": 1293508,
+        "completed_steps": 19922536,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 01:36:12",
+      "c33ce783-5eca-9d5e-ae3b-2bd2a50f546e",
+      "online",
+      {
+        "cuda": 12.8,
+        "gpu": "NVIDIA GeForce RTX 4080",
+        "vram_total": "16376 MiB",
+        "vram_used": "799 MiB",
+        "vram_free": "15252 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "39",
+        "gpu_utilization": "3 %"
+      }
+    ],
+    [
+      "2025-07-16 01:36:18",
+      "c33ce783-5eca-9d5e-ae3b-2bd2a50f546e",
+      "start"
+    ],
+    [
+      "2025-07-16 01:44:57",
+      "c33ce783-5eca-9d5e-ae3b-2bd2a50f546e",
+      "run_chunk",
+      {
+        "chunk_steps": 1655317,
+        "completed_steps": 21577853,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 01:53:37",
+      "c33ce783-5eca-9d5e-ae3b-2bd2a50f546e",
+      "run_chunk",
+      {
+        "chunk_steps": 1645317,
+        "completed_steps": 23223170,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 03:07:02",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "vram_total": "24564 MiB",
+        "vram_used": "308 MiB",
+        "vram_free": "23835 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "40",
+        "gpu_utilization": "1 %"
+      }
+    ],
+    [
+      "2025-07-16 03:07:12",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "start"
+    ],
+    [
+      "2025-07-16 03:21:59",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1015165,
+        "completed_steps": 24238335,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 03:32:58",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 25243500,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 03:44:15",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 26248665,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 03:54:22",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 27253830,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 04:02:57",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 28258995,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 04:14:12",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 29264160,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 04:25:28",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 30269325,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 04:34:46",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 31274490,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 04:45:57",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 32279655,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 04:57:31",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 33284820,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 05:09:46",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 34289985,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 05:20:58",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 35295150,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 05:32:29",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 36300315,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 05:43:45",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 37305480,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 05:54:06",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 38310645,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 06:04:43",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 39315810,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 06:16:09",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 40320975,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 06:27:52",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 41326140,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 06:38:50",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 42331305,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 06:49:54",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 43336470,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 07:00:35",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 44341635,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 07:12:11",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 45346800,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 07:23:31",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 46351965,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 07:33:55",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 47357130,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 07:45:11",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 48362295,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 07:55:35",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 49367460,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 08:06:49",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 50372625,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 08:17:50",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 51377790,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 08:27:57",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 52382955,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 08:37:08",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 53388120,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 08:48:07",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 54393285,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 08:59:13",
+      "dca65ec5-f413-7354-8848-1faf189696a1",
+      "run_chunk",
+      {
+        "chunk_steps": 1005165,
+        "completed_steps": 55398450,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 10:06:41",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+        "vram_total": "16376 MiB",
+        "vram_used": "523 MiB",
+        "vram_free": "15525 MiB",
+        "vram_utilization": "5 %",
+        "gpu_temperature": "44",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-16 10:06:47",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "start"
+    ],
+    [
+      "2025-07-16 10:16:32",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1489326,
+        "completed_steps": 56887776,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 10:26:16",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 58367102,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 10:36:02",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 59846428,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 10:45:48",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 61325754,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 10:55:33",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 62805080,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 11:05:15",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 64284406,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 11:15:04",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 65763732,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 11:25:03",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 67243058,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 11:35:05",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 68722384,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 11:44:44",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 70201710,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 11:54:39",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 71681036,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 12:04:37",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 73160362,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 12:14:33",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 74639688,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 12:24:39",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 76119014,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 12:34:30",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 77598340,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 12:44:22",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 79077666,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 12:54:31",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 80556992,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 13:04:25",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 82036318,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 13:14:01",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 83515644,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 13:23:32",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 84994970,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 13:33:01",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 86474296,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 13:42:32",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 87953622,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 13:52:08",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 89432948,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 14:01:43",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 90912274,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 14:11:21",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 92391600,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 14:20:45",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 93870926,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 14:30:28",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 95350252,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 14:39:57",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 96829578,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 14:49:37",
+      "4b289768-7a45-cf57-b772-c90d0f2e0258",
+      "run_chunk",
+      {
+        "chunk_steps": 1479326,
+        "completed_steps": 98308904,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 15:54:24",
+      "b1b29854-35c3-3253-8730-f18d67ea56f6",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "vram_total": "24564 MiB",
+        "vram_used": "1270 MiB",
+        "vram_free": "22873 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "26",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-16 15:54:29",
+      "b1b29854-35c3-3253-8730-f18d67ea56f6",
+      "start"
+    ],
+    [
+      "2025-07-16 16:03:13",
+      "b1b29854-35c3-3253-8730-f18d67ea56f6",
+      "run_chunk",
+      {
+        "chunk_steps": 1978590,
+        "completed_steps": 100287494,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 17:06:06",
+      "0d494858-0f7d-1e5f-a69b-b72c736a5b17",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4080",
+        "vram_total": "16376 MiB",
+        "vram_used": "431 MiB",
+        "vram_free": "15620 MiB",
+        "vram_utilization": "29 %",
+        "gpu_temperature": "37",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-16 17:06:12",
+      "0d494858-0f7d-1e5f-a69b-b72c736a5b17",
+      "start"
+    ],
+    [
+      "2025-07-16 17:15:04",
+      "0d494858-0f7d-1e5f-a69b-b72c736a5b17",
+      "run_chunk",
+      {
+        "chunk_steps": 1941356,
+        "completed_steps": 102228850,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 17:23:54",
+      "0d494858-0f7d-1e5f-a69b-b72c736a5b17",
+      "run_chunk",
+      {
+        "chunk_steps": 1931356,
+        "completed_steps": 104160206,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 17:32:43",
+      "0d494858-0f7d-1e5f-a69b-b72c736a5b17",
+      "run_chunk",
+      {
+        "chunk_steps": 1931356,
+        "completed_steps": 106091562,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 17:41:34",
+      "0d494858-0f7d-1e5f-a69b-b72c736a5b17",
+      "run_chunk",
+      {
+        "chunk_steps": 1931356,
+        "completed_steps": 108022918,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 18:43:40",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "vram_total": "24564 MiB",
+        "vram_used": "405 MiB",
+        "vram_free": "23738 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "40",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-16 18:43:47",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "start"
+    ],
+    [
+      "2025-07-16 18:51:32",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1349093,
+        "completed_steps": 109372011,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 18:59:03",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 110711104,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 19:06:35",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 112050197,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 19:14:25",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 113389290,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 19:21:59",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 114728383,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 19:29:26",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 116067476,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 19:37:13",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 117406569,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 19:44:57",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 118745662,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 19:52:31",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 120084755,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 20:00:08",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 121423848,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 20:07:47",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 122762941,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 20:15:24",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 124102034,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 20:22:53",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 125441127,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 20:30:18",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 126780220,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 20:38:07",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 128119313,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 20:45:41",
+      "c9ee5b74-7be3-7e53-9c8e-4a17e796adc2",
+      "run_chunk",
+      {
+        "chunk_steps": 1339093,
+        "completed_steps": 129458406,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 21:58:01",
+      "3c89f888-828b-0955-a8de-4c2a55d93469",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4070 Ti SUPER",
+        "vram_total": "16376 MiB",
+        "vram_used": "874 MiB",
+        "vram_free": "15190 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "27",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-16 21:58:08",
+      "3c89f888-828b-0955-a8de-4c2a55d93469",
+      "start"
+    ],
+    [
+      "2025-07-16 22:07:28",
+      "3c89f888-828b-0955-a8de-4c2a55d93469",
+      "run_chunk",
+      {
+        "chunk_steps": 1585915,
+        "completed_steps": 131044321,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 22:16:47",
+      "3c89f888-828b-0955-a8de-4c2a55d93469",
+      "run_chunk",
+      {
+        "chunk_steps": 1575915,
+        "completed_steps": 132620236,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 22:26:01",
+      "3c89f888-828b-0955-a8de-4c2a55d93469",
+      "run_chunk",
+      {
+        "chunk_steps": 1575915,
+        "completed_steps": 134196151,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 23:28:35",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "vram_total": "24564 MiB",
+        "vram_used": "1551 MiB",
+        "vram_free": "22592 MiB",
+        "vram_utilization": "14 %",
+        "gpu_temperature": "59",
+        "gpu_utilization": "1 %"
+      }
+    ],
+    [
+      "2025-07-16 23:28:40",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "start"
+    ],
+    [
+      "2025-07-16 23:37:37",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "run_chunk",
+      {
+        "chunk_steps": 1883210,
+        "completed_steps": 136079361,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 23:46:32",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "run_chunk",
+      {
+        "chunk_steps": 1873210,
+        "completed_steps": 137952571,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-16 23:55:27",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "run_chunk",
+      {
+        "chunk_steps": 1873210,
+        "completed_steps": 139825781,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 00:04:15",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "run_chunk",
+      {
+        "chunk_steps": 1873210,
+        "completed_steps": 141698991,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 00:13:09",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "run_chunk",
+      {
+        "chunk_steps": 1873210,
+        "completed_steps": 143572201,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 00:21:56",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "run_chunk",
+      {
+        "chunk_steps": 1873210,
+        "completed_steps": 145445411,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 00:30:51",
+      "6fe84367-4154-7f55-8e25-7d2a79e12e6e",
+      "run_chunk",
+      {
+        "chunk_steps": 1873210,
+        "completed_steps": 147318621,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 01:34:56",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "online",
+      {
+        "cuda": 12.8,
+        "gpu": "NVIDIA GeForce RTX 4060 Ti",
+        "vram_total": "16380 MiB",
+        "vram_used": "366 MiB",
+        "vram_free": "15744 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "46",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-17 01:35:10",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "start"
+    ],
+    [
+      "2025-07-17 01:42:17",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 602264,
+        "completed_steps": 147920885,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 01:49:12",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 148513149,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 01:57:37",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 149105413,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 02:04:39",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 149697677,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 02:13:57",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 150289941,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 02:24:02",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 150882205,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 02:30:52",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 151474469,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 02:39:10",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 152066733,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 02:48:18",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 152658997,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 02:55:13",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 153251261,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 03:01:58",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 153843525,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 03:10:21",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 154435789,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 03:17:03",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 155028053,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 03:24:16",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 155620317,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 03:31:02",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 156212581,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 03:39:06",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 156804845,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 03:46:22",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 157397109,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 03:53:26",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 157989373,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 04:00:17",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 158581637,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 04:08:50",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 159173901,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 04:15:34",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 159766165,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 04:22:19",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 160358429,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 04:30:07",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 160950693,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 04:37:29",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 161542957,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 04:44:24",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 162135221,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 04:51:56",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 162727485,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 05:00:11",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 163319749,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 05:07:18",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 163912013,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 05:14:00",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 164504277,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 05:21:47",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 165096541,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 05:28:53",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 165688805,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 05:37:05",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 166281069,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 05:45:27",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 166873333,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 05:52:42",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 167465597,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 06:01:59",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 168057861,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 06:08:37",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 168650125,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 06:15:21",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 169242389,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 06:22:21",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 169834653,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 06:30:49",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 170426917,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 06:37:45",
+      "5f171762-050f-bd56-ae99-9139d6e71af8",
+      "run_chunk",
+      {
+        "chunk_steps": 592264,
+        "completed_steps": 171019181,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 07:40:03",
+      "317097b9-e367-735c-8151-b45b02a4dbd1",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "vram_total": "24564 MiB",
+        "vram_used": "406 MiB",
+        "vram_free": "23737 MiB",
+        "vram_utilization": "2 %",
+        "gpu_temperature": "28",
+        "gpu_utilization": "2 %"
+      }
+    ],
+    [
+      "2025-07-17 07:40:11",
+      "317097b9-e367-735c-8151-b45b02a4dbd1",
+      "start"
+    ],
+    [
+      "2025-07-17 07:48:24",
+      "317097b9-e367-735c-8151-b45b02a4dbd1",
+      "run_chunk",
+      {
+        "chunk_steps": 1408499,
+        "completed_steps": 172427680,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 07:56:35",
+      "317097b9-e367-735c-8151-b45b02a4dbd1",
+      "run_chunk",
+      {
+        "chunk_steps": 1398499,
+        "completed_steps": 173826179,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 08:04:47",
+      "317097b9-e367-735c-8151-b45b02a4dbd1",
+      "run_chunk",
+      {
+        "chunk_steps": 1398499,
+        "completed_steps": 175224678,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 08:12:58",
+      "317097b9-e367-735c-8151-b45b02a4dbd1",
+      "run_chunk",
+      {
+        "chunk_steps": 1398499,
+        "completed_steps": 176623177,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 08:21:09",
+      "317097b9-e367-735c-8151-b45b02a4dbd1",
+      "run_chunk",
+      {
+        "chunk_steps": 1398499,
+        "completed_steps": 178021676,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 09:26:16",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+        "vram_total": "16376 MiB",
+        "vram_used": "1491 MiB",
+        "vram_free": "14557 MiB",
+        "vram_utilization": "48 %",
+        "gpu_temperature": "37",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-17 09:26:22",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "start"
+    ],
+    [
+      "2025-07-17 09:36:10",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "run_chunk",
+      {
+        "chunk_steps": 1842823,
+        "completed_steps": 179864499,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 09:45:55",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "run_chunk",
+      {
+        "chunk_steps": 1832823,
+        "completed_steps": 181697322,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 09:55:40",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "run_chunk",
+      {
+        "chunk_steps": 1832823,
+        "completed_steps": 183530145,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 10:05:38",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "run_chunk",
+      {
+        "chunk_steps": 1832823,
+        "completed_steps": 185362968,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 10:15:24",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "run_chunk",
+      {
+        "chunk_steps": 1832823,
+        "completed_steps": 187195791,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 10:25:10",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "run_chunk",
+      {
+        "chunk_steps": 1832823,
+        "completed_steps": 189028614,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 10:34:58",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "run_chunk",
+      {
+        "chunk_steps": 1832823,
+        "completed_steps": 190861437,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 10:44:43",
+      "0566c760-7e99-a657-8a64-ee4ca5abf820",
+      "run_chunk",
+      {
+        "chunk_steps": 1832823,
+        "completed_steps": 192694260,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 12:07:51",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "vram_total": "24564 MiB",
+        "vram_used": "888 MiB",
+        "vram_free": "23255 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "38",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-17 12:07:56",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "start"
+    ],
+    [
+      "2025-07-17 12:16:39",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "run_chunk",
+      {
+        "chunk_steps": 1703687,
+        "completed_steps": 194397947,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 12:25:15",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "run_chunk",
+      {
+        "chunk_steps": 1693687,
+        "completed_steps": 196091634,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 12:33:57",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "run_chunk",
+      {
+        "chunk_steps": 1693687,
+        "completed_steps": 197785321,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 12:42:44",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "run_chunk",
+      {
+        "chunk_steps": 1693687,
+        "completed_steps": 199479008,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 13:15:49",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "online",
+      {
+        "cuda": 12.9,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "vram_total": "24564 MiB",
+        "vram_used": "899 MiB",
+        "vram_free": "23244 MiB",
+        "vram_utilization": "0 %",
+        "gpu_temperature": "49",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-07-17 13:15:53",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "start"
+    ],
+    [
+      "2025-07-17 13:18:24",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "run_chunk",
+      {
+        "chunk_steps": 520992,
+        "completed_steps": 200000000,
+        "total_steps:": 200000000
+      }
+    ],
+    [
+      "2025-07-17 13:18:24",
+      "398239a0-b54d-e958-9d97-cae9f24f2f69",
+      "end"
+    ]
+  ]
+}

@@ -199,4 +199,4 @@ def main():
     Shutdown_SRCG()
 
 if __name__ == "__main__":
-    main()
+    main() # Need exception handling for production use
