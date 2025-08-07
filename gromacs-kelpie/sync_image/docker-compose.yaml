@@ -1,0 +1,28 @@
+
+services:
+  gromacs-srcg:
+    #command: sleep infinity
+    image: docker.io/saladtechnologies/mds:001-gromacs-kelpie-sync 
+    container_name: ${MACHINE_ID}
+    restart: "no"
+    environment:
+      - KELPIE_API_URL=${KELPIE_API_URL}
+      - KELPIE_API_KEY=${KELPIE_API_KEY}
+
+      - SALAD_MACHINE_ID=${MACHINE_ID}
+      - SALAD_CONTAINER_GROUP_ID=${CONTAINER_GROUP_ID}
+
+      - AWS_ENDPOINT_URL=${AWS_ENDPOINT_URL}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    stdin_open: true
+    tty: true
