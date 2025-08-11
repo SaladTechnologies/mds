@@ -1,0 +1,44 @@
+{
+  "task_name": "job2/j2.tpr_50000_steps",
+  "task_done": true,
+  "task_creation_time": "2025-08-11 15:19:41",
+  "task_completion_time": "2025-08-11 15:20:35",
+  "task_duration": "0:00:54",
+  "task_history": [
+    [
+      "2025-08-11 15:20:15",
+      "7c53366c-ae08-4a57-ba98-090a8cf23760",
+      "online",
+      {
+        "cuda": 13.0,
+        "gpu": "NVIDIA GeForce RTX 4070 Ti SUPER",
+        "vram_total": "16376 MiB",
+        "vram_used": "185 MiB",
+        "vram_free": "15879 MiB",
+        "vram_utilization": "43 %",
+        "gpu_temperature": "44",
+        "gpu_utilization": "0 %"
+      }
+    ],
+    [
+      "2025-08-11 15:20:15",
+      "7c53366c-ae08-4a57-ba98-090a8cf23760",
+      "start"
+    ],
+    [
+      "2025-08-11 15:20:35",
+      "7c53366c-ae08-4a57-ba98-090a8cf23760",
+      "run_chunk",
+      {
+        "chunk_steps": 50000,
+        "completed_steps": 50000,
+        "total_steps:": 50000
+      }
+    ],
+    [
+      "2025-08-11 15:20:35",
+      "7c53366c-ae08-4a57-ba98-090a8cf23760",
+      "end"
+    ]
+  ]
+}

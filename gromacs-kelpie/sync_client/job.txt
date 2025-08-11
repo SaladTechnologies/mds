@@ -1,0 +1,95 @@
+########## Job submitted
+
+{
+    "id": "07d35638-2a49-4d2c-8586-4677268f7318",
+    "user_id": "5b0f6331-fc03-423c-919e-11728c2b97b2",
+    "status": "pending",
+    "created": "2025-08-11T22:19:43.000Z",
+    "num_failures": 0,
+    "machine_id": null,
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "BUCKET": "transcripts",
+        "PREFIX": "gromacs-kelpie",
+        "FOLDER": "job2",
+        "TPR_FILE": "j2.tpr",
+        "MAX_STEPS": "50000",
+        "SAVING_INTERVAL_HOURS": "0.0167",
+        "TASK_CREATION_TIME": "2025-08-11 15:19:41"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "5c1147cb-4a72-4c15-98d0-baeda549429b",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 0,
+    "sync": {
+        "during": [
+            {
+                "bucket": "transcripts",
+                "prefix": "gromacs-kelpie/job2/",
+                "local_path": "/app/kelpie_managed_upload_folder/",
+                "direction": "upload"
+            }
+        ]
+    }
+}
+
+########## Job Done
+
+{
+    "id": "07d35638-2a49-4d2c-8586-4677268f7318",
+    "user_id": "5b0f6331-fc03-423c-919e-11728c2b97b2",
+    "status": "completed",
+    "created": "2025-08-11T22:19:43.000Z",
+    "started": "2025-08-11T22:20:14.000Z",
+    "completed": "2025-08-11T22:20:49.000Z",
+    "heartbeat": "2025-08-11T22:20:49.000Z",
+    "num_failures": 0,
+    "machine_id": "7c53366c-ae08-4a57-ba98-090a8cf23760",
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "BUCKET": "transcripts",
+        "PREFIX": "gromacs-kelpie",
+        "FOLDER": "job2",
+        "TPR_FILE": "j2.tpr",
+        "MAX_STEPS": "50000",
+        "SAVING_INTERVAL_HOURS": "0.0167",
+        "TASK_CREATION_TIME": "2025-08-11 15:19:41"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "5c1147cb-4a72-4c15-98d0-baeda549429b",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 1,
+    "sync": {
+        "during": [
+            {
+                "bucket": "transcripts",
+                "prefix": "gromacs-kelpie/job2/",
+                "local_path": "/app/kelpie_managed_upload_folder/",
+                "direction": "upload"
+            }
+        ]
+    }
+}
+
+########## The folder 
+
+rclone lsf r2:transcripts/gromacs-kelpie/job2 -R
+
+history.txt
+j2.cpt
+j2.part0001.edr
+j2.part0001.gro
+j2.part0001.log
+j2.part0001.trr
+j2.part0001.xtc
+j2.tpr

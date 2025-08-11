@@ -1,0 +1,44 @@
+{
+  "task_name": "job1/j1.tpr_50000_steps",
+  "task_done": true,
+  "task_creation_time": "2025-08-11 14:49:42",
+  "task_completion_time": "2025-08-11 14:49:58",
+  "task_duration": "0:00:16",
+  "task_history": [
+    [
+      "2025-08-11 14:49:36",
+      "74c5f980-3480-7952-b432-5007dc1a2629",
+      "online",
+      {
+        "cuda": 13.0,
+        "gpu": "NVIDIA GeForce RTX 4090",
+        "vram_total": "24564 MiB",
+        "vram_used": "1195 MiB",
+        "vram_free": "22948 MiB",
+        "vram_utilization": "5 %",
+        "gpu_temperature": "46",
+        "gpu_utilization": "4 %"
+      }
+    ],
+    [
+      "2025-08-11 14:49:37",
+      "74c5f980-3480-7952-b432-5007dc1a2629",
+      "start"
+    ],
+    [
+      "2025-08-11 14:49:58",
+      "74c5f980-3480-7952-b432-5007dc1a2629",
+      "run_chunk",
+      {
+        "chunk_steps": 50000,
+        "completed_steps": 50000,
+        "total_steps:": 50000
+      }
+    ],
+    [
+      "2025-08-11 14:49:58",
+      "74c5f980-3480-7952-b432-5007dc1a2629",
+      "end"
+    ]
+  ]
+}

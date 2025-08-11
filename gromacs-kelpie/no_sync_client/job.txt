@@ -1,0 +1,78 @@
+########## Job submitted
+
+{
+    "id": "1a5fac9a-ac35-402f-96f2-8ac006ef0a9e",
+    "user_id": "5b0f6331-fc03-423c-919e-11728c2b97b2",
+    "status": "pending",
+    "created": "2025-08-11T21:49:44.000Z",
+    "num_failures": 0,
+    "machine_id": null,
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "BUCKET": "transcripts",
+        "PREFIX": "gromacs-kelpie",
+        "FOLDER": "job1",
+        "TPR_FILE": "j1.tpr",
+        "MAX_STEPS": "50000",
+        "SAVING_INTERVAL_HOURS": "0.0167",
+        "MAX_NO_RESPONSE_TIME": "3600",
+        "TASK_CREATION_TIME": "2025-08-11 14:49:42"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "ca437282-a1dc-4163-aae9-ef6fe568bad6",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 0,
+    "sync": {}
+}
+
+########## Job Done
+
+{
+    "id": "1a5fac9a-ac35-402f-96f2-8ac006ef0a9e",
+    "user_id": "5b0f6331-fc03-423c-919e-11728c2b97b2",
+    "status": "completed",
+    "created": "2025-08-11T21:49:44.000Z",
+    "started": "2025-08-11T21:49:54.000Z",
+    "completed": "2025-08-11T21:50:57.000Z",
+    "heartbeat": "2025-08-11T21:50:57.000Z",
+    "num_failures": 0,
+    "machine_id": "74c5f980-3480-7952-b432-5007dc1a2629",
+    "command": "python",
+    "arguments": [
+        "/app/main.py"
+    ],
+    "environment": {
+        "BUCKET": "transcripts",
+        "PREFIX": "gromacs-kelpie",
+        "FOLDER": "job1",
+        "TPR_FILE": "j1.tpr",
+        "MAX_STEPS": "50000",
+        "SAVING_INTERVAL_HOURS": "0.0167",
+        "MAX_NO_RESPONSE_TIME": "3600",
+        "TASK_CREATION_TIME": "2025-08-11 14:49:42"
+    },
+    "max_failures": 3,
+    "heartbeat_interval": 30,
+    "container_group_id": "ca437282-a1dc-4163-aae9-ef6fe568bad6",
+    "webhook": null,
+    "compression": false,
+    "num_heartbeats": 2,
+    "sync": {}
+}
+
+########## The folder 
+
+rclone lsf r2:transcripts/gromacs-kelpie/job1 -R
+
+history.txt
+j1.cpt
+j1.part0001.edr
+j1.part0001.gro
+j1.part0001.log
+j1.part0001.trr
+j1.tpr

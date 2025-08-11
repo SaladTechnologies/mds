@@ -30,3 +30,7 @@ COPY helper.py main.py /app/
 # Run the Kelpie worker
 CMD ["/kelpie"]
 
+# The pre-built image:
+# docker.io/saladtechnologies/mds:001-gromacs-kelpie-no-sync 
+
+
