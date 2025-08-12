@@ -1,0 +1,13 @@
+name: gromacs-kelpie
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - gromacs=2024.5=nompi_cuda_h5cb645a_0 
+  - pip
+  - pip:
+      - python-dotenv
+      - boto3
+      - salad-cloud-sdk
+
+
