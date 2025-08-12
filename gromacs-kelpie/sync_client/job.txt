@@ -86,10 +86,10 @@
 rclone lsf r2:transcripts/gromacs-kelpie/job2 -R
 
 history.txt
-j2.cpt
+j2.cpt (Checkpoint)
 j2.part0001.edr
 j2.part0001.gro
 j2.part0001.log
 j2.part0001.trr
 j2.part0001.xtc
-j2.tpr
+j2.tpr (Input)
